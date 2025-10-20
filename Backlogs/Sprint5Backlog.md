@@ -29,7 +29,7 @@ Current Assign Total Points: 27
  | RC-008 | As a costomer I want to see a introduction page on the deleoper thats working on this product (about page) - Alan | 10 | 2 | N | Ready | Alan |
  | RC-009 | As a user I want to make a sketch of how the site will look like and influnce the direction of the product | 5 | 4 | N | Ready | Tom |
  | RC-010 | As a developer we'll be hosting out GTKEO website on AWS | 8 | 1 | Y | Ready | Andrew |
- | RC-011 | As a user, I want my inputs validated in the deposit page | 8 | 4 | N | Ready | Name |
+ | RC-011 | As a user, I want my inputs validated in the deposit page | 6 | 4 | N | Ready | Edgar |
  | RC-012 | As a user, I want to be able to see each developer credit page through the GTKEO credit page| 7 | 4 | N | Ready | Andrew |
  | RC-013 | As a deleoper, I will sign the Amazon E-Swag Student Contract | 9 | 0 | N | Ready | Everyone |
 
