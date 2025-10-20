@@ -18,3 +18,6 @@ Sprint 5 Backlog:
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
  RC-004 | - | - | - | - | - | - |
+
+
+6 points per person
