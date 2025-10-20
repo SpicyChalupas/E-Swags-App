@@ -5,6 +5,8 @@ permalink: /backlogs/product-backlog/
 
 # 📋 Product Backlog – *E-Swag Application*
 
+Definition of Done: The Requrment is testable and able to be demonstrated.
+
 Scrum Master: Andrew
 
 Product Owner: Glaycon Cezarotto
