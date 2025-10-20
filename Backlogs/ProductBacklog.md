@@ -1,3 +1,4 @@
+---
 layout: default
 title: Product Backlog
 permalink: /backlogs/product-backlog/
@@ -13,7 +14,7 @@ Product Owner: Glaycon Cezarotto
 
 Sprint 5 Planning Date/Time:
 
-Sprint 5 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan
+Sprint 5 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan, Katie
 
 Sprint 5 Backlog:
 
