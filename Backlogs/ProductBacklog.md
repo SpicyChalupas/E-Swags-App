@@ -14,7 +14,7 @@ Product Owner: Glaycon Cezarotto
 
 Sprint 5 Planning Date/Time:
 
-Sprint 5 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan, Katie
+Sprint 5 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan, 
 
 Sprint 5 Backlog:
 
@@ -23,4 +23,4 @@ Sprint 5 Backlog:
  RC-004 | - | - | - | - | - | - |
 
 
-6 points per person
+6 points per person, 30 capacity
