@@ -4,7 +4,7 @@ title: Product Backlog
 permalink: /backlogs/product-backlog/
 ---
 
-# 📋 Product Backlog – *E-Swag Application*
+# 📋 Product Backlog – *E-Swag App*
 
 Definition of Done: The Requrment is testable and able to be demonstrated.
 Definition of Spikes: Things done to make it easier for the team but isnt necessary for the customer. 
@@ -21,7 +21,7 @@ Sprint 5 Backlog:
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-001 | As a Scrum Team, we want to identify the Sprint 5 Scrum Master and Product Owner so that I can ensure team responsibilities are clearly defined for the sprint, | 10 | 0 | Y | - | - Team |
+| RC-001 | As a Scrum Team, we want to identify the Sprint 5 Scrum Master and Product Owner so that I can ensure team responsibilities are clearly defined for the sprint, | 10 | 0 | Y | - | - |
 | RC-002 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. | 8 | 2 | Y | - | - |
 | RC-003 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. | 8 | 2 | Y | - | - |
  | RC-004 | As a costomer I want to see a introduction page on the deleoper thats working on this product (about page) - Glaycon | 10 | 2 | N | - | - |
