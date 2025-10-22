@@ -21,7 +21,7 @@ Sprint 5 Backlog:
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-014 | As a Developer, I will host the a basic starter static and server page for E-Swag App AWS | 7 | 2 | Y | Ready | Glaycon |
+| RC-014 | As a Developer, I will host the a basic starter static and server page for E-Swag App on AWS | 7 | 2 | Y | Ready | Glaycon |
  
 
 6 points per person, 30 capacity
