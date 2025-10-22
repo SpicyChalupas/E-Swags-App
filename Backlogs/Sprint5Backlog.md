@@ -15,7 +15,7 @@ Sprint 5 Planning Date/Time: 10-20 to 11-02
 Sprint 5 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan
 
 Sprint 5 Backlog:
-Current Assign Total Points: 29
+Current Assign Total Points: 33
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
