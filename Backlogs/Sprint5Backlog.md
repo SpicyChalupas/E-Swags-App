@@ -4,7 +4,7 @@ title: Sprint 5 Backlog
 permalink: /backlogs/sprint-05-backlog/
 ---
 
-# 📋 Sprint 05 Backlog – *Insurance Risk Calculator*
+# 📋 Sprint 05 Backlog – *E-Swag App*
 
 Scrum Master: Andrew
 
