@@ -32,6 +32,7 @@ Current Assign Total Points: 27
  | RC-011 | As a user, I want my inputs validated in the deposit page | 6 | 4 | N | Ready | Edgar |
  | RC-012 | As a user, I want to be able to see each developer credit page through the GTKEO credit page| 7 | 4 | N | Ready | Andrew |
  | RC-013 | As a deleoper, I will sign the Amazon E-Swag Student Contract | 9 | 0 | N | Ready | Everyone |
+ | RC-014 | As a Developer, I will host the a basic starter static and server page for E-Swag App on AWS | 7 | 2 | Y | Ready | Glaycon |
 
 Todo:
 1. Team members request the highest priority stories (required for MVP) 
