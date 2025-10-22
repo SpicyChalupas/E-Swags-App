@@ -35,5 +35,5 @@ Current Assign Total Points: 27
 
 Todo:
 1. Team members request the highest priority stories (required for MVP) 
-2. These high-priority stories are assigned to the team member and **moved** from the Product Backlog to the Sprint 4 Backlog 
+2. These high-priority stories are assigned to the team member and **moved** from the Product Backlog to the Sprint 5 Backlog 
 3. Team commits to Sprint 5 Backlog
