@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Risk App — Sprint</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- minimal styles for new elements only -->
+  <style>
+    .status { font-size: 0.95rem; margin-bottom: 8px; }
+    .ok { color: #0a0; }
+    .bad { color: #c00; }
+    .error { outline: 2px solid #d00; background: #ffecec; }
+    .result-card { border: 1px solid #ccc; padding: 12px; border-radius: 8px; }
+    .instructions { background: #f7f7ff; padding: 10px; border-radius: 8px; margin-bottom: 10px; }
+    .family-group label { display: inline-block; margin-right: 14px; }
+  </style>
+</head>
+<body>
+  <img src="bmilogo.png" width="200" height="200" alt="BMI Logo" />
+
+  <h1 id="myH1">Health Risk App</h1>
+
+  <div class="instructions">
+    <p><b>Instructions:</b> Enter the client’s info using English units (feet/inches, pounds) and blood pressure (e.g., 120/80). The app validates inputs, sends them to the server API, and displays the final Risk Category with a points breakdown.</p>
+  </div>
+
+  <p class="status">
+    Server status: <span id="status">checking…</span>
+    <button id="ping" type="button">Ping</button>
+  </p>
+
+  <h2>Calculate Your BMI</h2>
+  <p>
+    BMI is one signal used with other factors. It does not account for muscle mass or body composition.
+  </p>
+
+  <div class="myBCatTable">
+    <h3 class="myBHead">BMI CATEGORIES</h3>
+    <table id="myTable">
+      <tr><th>BMI Category</th><th>BMI Range</th></tr>
+      <tr><td>Underweight</td><td>Below 18.5</td></tr>
+      <tr><td>Healthy</td><td>18.5 – 24.9</td></tr>
+      <tr><td>Overweight</td><td>25.0 – 29.9</td></tr>
+      <tr><td>Obesity</td><td>30.0 or above</td></tr>
+    </table>
+  </div>
+
+  <h3 class="myBHead">Client Inputs</h3>
+
+  <div id="errors"></div>
+
+  <div class="formContainer">
+    <label>Name
+      <input id="name" type="text" placeholder="e.g., Justin" required />
+    </label>
+
+    <label>Age
+      <input id="age" type="number" min="0" placeholder="e.g., 21" required />
+    </label>
+
+    <label>Height (feet)
+      <input id="feet" type="number" min="2" placeholder="min 2 feet" required />
+    </label>
+
+    <label>Height (inches)
+      <input id="inches" type="number" min="0" max="11" placeholder="0 to 11" required />
+    </label>
+
+    <label>Weight (pounds)
+      <input id="pounds" type="number" min="1" placeholder="e.g., 160" required />
+    </label>
+    
+    <label>Blood Pressure
+      <input id="bloodPressure" type="text" placeholder="e.g., 120/80" required />
+    </label>
+    <fieldset id="familyGroup" class="family-group">
+      <legend>Family History (select all that apply)</legend>
+      <label><input type="checkbox" name="family" value="diabetes" id="fam-diabetes"> Diabetes</label>
+      <label><input type="checkbox" name="family" value="cancer" id="fam-cancer"> Cancer</label>
+      <label><input type="checkbox" name="family" value="alzheimer's" id="fam-alz"> Alzheimer’s</label>
+      <label><input type="checkbox" name="family" value="none" id="fam-none"> None</label>
+    </fieldset>
+
+    <button id="calculate" type="button">Submit</button>
+    <p id="result"></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
