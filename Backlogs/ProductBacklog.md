@@ -6,7 +6,8 @@ permalink: /backlogs/product-backlog/
 
 # 📋 Product Backlog – *E-Swag App*
 
-Definition of Done: The Requrment is testable and able to be demonstrated.
+Definition of Done: The Requrment is testable, able to be demonstrated, and demoable in production.
+
 Definition of Spikes: Things done to make it easier for the team but isnt necessary for the customer. 
 
 Scrum Master: Andrew
