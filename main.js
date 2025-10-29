@@ -1,8 +1,8 @@
 // ==== Configure API base ====
 // For local dev:  const API_BASE = "http://localhost:3000";
 // For Old Azure Server:      const API_BASE = "https://<your-azure-appservice>.azurewebsites.net";
-// For AWS Server: https://mxf3cs9vte.us-east-1.awsapprunner.com/
-const API_BASE = (window.API_BASE_OVERRIDE || "https://mxf3cs9vte.us-east-1.awsapprunner.com/");
+// For AWS Server: https://mxf3cs9vte.us-east-1.awsapprunner.com
+const API_BASE = (window.API_BASE_OVERRIDE || "https://mxf3cs9vte.us-east-1.awsapprunner.com");
 
 const els = {
   status: document.getElementById("status"),
