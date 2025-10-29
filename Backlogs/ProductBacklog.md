@@ -22,7 +22,8 @@ Sprint Backlog:
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-010 | - | - | - | - | - | - |
+| RC-010 | As a user, I want to see the basic design of the webpage so I can see how to use the credits | 6 | 3 | y | ready | - |
+| RC-010 | As a customer, I want to see Amazon's color palate and style to insure intergration with Amazon products | 7 | 3 | n | ready | - |
 
 
  
