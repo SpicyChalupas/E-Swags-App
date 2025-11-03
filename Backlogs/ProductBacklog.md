@@ -28,7 +28,8 @@ Sprint Backlog:
 | RC-019 | As a user, I want to see the basic design of the webpage so I can see how to use the credits to purchase merchendice. | 6 | 3 | n | ready | Tom |
 | RC-020 | As a customer, I want to see Amazon's color palate and style to insure intergration with Amazon products | 7 | 3 | n | ready | - |
 | RC-021 | As a Dev, I want to make sure all pages follow the same domain name. | 9 | 4 | y | ready | - |
-| RC-022 | As a Dev,  | 9 | 4 | y | ready | - |
+| RC-022 | As a customer, I want to see images of the products on the client page. | 10 | 5 | y | ready | - |
+| RC-023 | As a dev, I want to see compile images for products to implement them | 5 | 2 | n | ready | - |
 | RC-007 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
 | RC-008 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Alan | 10 | 2 | N | Ready | Alan |
 
