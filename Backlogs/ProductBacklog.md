@@ -29,6 +29,8 @@ Sprint Backlog:
 | RC-020 | As a customer, I want to see Amazon's color palate and style to insure intergration with Amazon products | 7 | 3 | n | ready | - |
 | RC-021 | As a Dev, I want to make sure all pages follow the same domain name. | 9 | 4 | y | ready | - |
 | RC-022 | As a Dev,  | 9 | 4 | y | ready | - |
+| RC-007 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
+| RC-008 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Alan | 10 | 2 | N | Ready | Alan |
 
 
 
