@@ -18,7 +18,7 @@ Sprint 6 Planning Date/Time: 11/03 - 11/15
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan, 
 
-Sprint Backlog:
+Product Backlog Total: 26
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
