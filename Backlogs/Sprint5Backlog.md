@@ -31,8 +31,8 @@ Current Assign Total Points: 33
  | RC-010 | As a developer we'll be hosting out GTKEO website on AWS | 8 | 1 | Y | Done | Andrew |
  | RC-012 | As a user, I want to be able to see each developer credit page through the GTKEO credit page| 7 | 4 | N | Done | Andrew |
  | RC-014 | As a Developer, I will host the a basic starter static and server page for E-Swag App on AWS | 7 | 2 | Y | Done | Glaycon |
- | RC-011 | As a user, I want my inputs validated in the deposit page | 6 | 4 | N | Ready | Edgar |
- | RC-015 | As a Developer, I will verify the code to see if its up to our coding standards to verify for easy editing across platforms | 6 | 4 | Y | Ready | Alan |
+ | RC-011 | As a user, I want my inputs validated in the deposit page | 6 | 4 | N | Done | Edgar |
+ | RC-015 | As a Developer, I will verify the code to see if its up to our coding standards to verify for easy editing across platforms | 6 | 4 | Y | Done | Alan |
  | RC-009 | As a user I want to make a sketch of how the site will look like and influnce the direction of the product | 5 | 4 | N | Done | Tom |
 
 Todo:
