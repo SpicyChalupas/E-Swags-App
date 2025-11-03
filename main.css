@@ -1,2 +1,29 @@
-/* Insurance Risk Calculator - CSS file */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
 
+.topnav {
+  overflow: hidden;
+  background-color: #000000bb;
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 28px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e28e0f;
+  color: rgb(253, 253, 253);
+}
