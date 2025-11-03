@@ -28,8 +28,8 @@ Current Assign Total Points: 33
  | RC-013 | As a deleoper, I will sign the Amazon E-Swag Student Contract | 9 | 0 | N | Ready | Everyone |
  | RC-002 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. | 8 | 2 | Y | Done | Glaycon |
  | RC-003 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. | 8 | 2 | Y | Done | Andrew |
- | RC-010 | As a developer we'll be hosting out GTKEO website on AWS | 8 | 1 | Y | Ready | Andrew |
- | RC-012 | As a user, I want to be able to see each developer credit page through the GTKEO credit page| 7 | 4 | N | Ready | Andrew |
+ | RC-010 | As a developer we'll be hosting out GTKEO website on AWS | 8 | 1 | Y | Done | Andrew |
+ | RC-012 | As a user, I want to be able to see each developer credit page through the GTKEO credit page| 7 | 4 | N | Done | Andrew |
  | RC-014 | As a Developer, I will host the a basic starter static and server page for E-Swag App on AWS | 7 | 2 | Y | Done | Glaycon |
  | RC-011 | As a user, I want my inputs validated in the deposit page | 6 | 4 | N | Ready | Edgar |
  | RC-015 | As a Developer, I will verify the code to see if its up to our coding standards to verify for easy editing across platforms | 6 | 4 | Y | Ready | Alan |
