@@ -22,7 +22,6 @@ Product Backlog Total: 26
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-
 | RC-021 | As a Dev, I want to make sure all pages follow the same domain name. | 9 | 4 | y | ready | Glaycon |
 | RC-021 | As a user I want the credtis and GTKEOT page to be visible on the contact page. | 7 | 2 | y | ready | Andrew |
 
