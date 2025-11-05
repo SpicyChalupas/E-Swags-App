@@ -28,11 +28,7 @@ Product Backlog Total: 26
 | RC-019 | As a user, I want to see the basic design of the webpage so I can see how to use the credits to purchase merchendice. | 6 | 3 | n | Done | Edgar |
 | RC-020 | As a customer, I want to see Amazon's color palate and style to insure intergration with Amazon products | 7 | 3 | n | ready | tom |
 | RC-021 | As a Dev, I want to make sure all pages follow the same domain name. | 9 | 4 | y | ready | - |
-| RC-022 | As a customer, I want to see images of the products on the client page. | 10 | 5 | y | ready | Alan |
-| RC-023 | As a dev, I want to see compile images for products to implement them | 5 | 2 | n | ready | Alan |
-| RC-007 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
-| RC-008 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Alan | 10 | 2 | N | Ready | Alan |
-| RC-024 | As a developer I want the e-swag app remains functional on AWS to implement with AWS products  | 10 | 2 | N | Done | Glaycon |
+
 | RC-008 |  | 10 | 2 | N | Ready | Alan |
 
 
