@@ -28,3 +28,10 @@ Current Assign Total Points: #
 | RC-018 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 6) | 8 | 2 | Y | Done | Andrew |
 | RC-019 | As a user, I want to see the basic design of the webpage so I can see how to use the credits to purchase merchendice. | 6 | 3 | n | Done | Edgar |
 | RC-020 | As a customer, I want to see Amazon's color palate and style to insure intergration with Amazon products | 7 | 3 | n | ready | tom |
+| RC-021 | As a Dev, I want to make sure all pages follow the same domain name. | 9 | 4 | y | ready | Glaycon |
+| RC-026 | As a user I want the credtis and GTKEOT page to be visible on the contact page. | 7 | 2 | y | ready | Andrew |
+| RC-027 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Andrew |
+| RC-028 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Glaycon |
+| RC-025 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Edgar |
+| RC-029 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Tom |
+| RC-030 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Alan |
