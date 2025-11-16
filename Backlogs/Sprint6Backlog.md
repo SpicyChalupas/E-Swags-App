@@ -14,7 +14,8 @@ Sprint 6 Planning Date/Time: 11/02 to 11/16
 
 Sprint 6 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan
 
-Current Assign Total Points: #40
+Current Assign Total Points: 42
+
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
