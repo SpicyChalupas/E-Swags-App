@@ -31,7 +31,7 @@ Current Assign Total Points: #40
 | RC-026 | As a user I want the credtis and GTKEOT page to be visible on the contact page. | 7 | 2 | n | ready | Andrew |
 | RC-027 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Andrew |
 | RC-028 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Glaycon |
-| RC-025 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Edgar |
+| RC-025 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | Done | Edgar |
 | RC-029 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Tom |
 | RC-030 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Alan |
 | RC-032 | As a User I want to see a news page that shows information on the progress of the E-swag app creation | 7 | 2 | y | ready | Edgar |
