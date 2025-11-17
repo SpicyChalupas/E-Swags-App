@@ -17,6 +17,7 @@ td img {
     padding: 6px;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
     transition: transform 0.2s;
+    cursor: pointer;
 }
 
 td img:hover {
@@ -25,10 +26,11 @@ td img:hover {
 
 
 .buy-btn {
+    display: block;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 6px 12px;
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     background-color: #ff9900;
     color: white;
     font-weight: bold;
@@ -36,6 +38,7 @@ td img:hover {
     cursor: pointer;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
+    margin: auto;
 }
 
 .buy-btn:hover {
@@ -54,14 +57,16 @@ td img:hover {
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+    cursor: pointer;
 }
 
 
 thead th {
     font-size: 1.7rem;
-    color: #ff9900;
+    color:#232f3e;
     font-weight: bold;
     padding-bottom: 10px;
+    text-decoration: underline;
 }
 
 
@@ -69,14 +74,21 @@ body {
     background-color: #fafafa;
 }
 
-table:hover {
-    transform: scale(1.01);
-    transition: 0.2s ease-in-out;
-}
+
+
 
 h2{
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
-    color: #e68a01;
+    color: #f2f2f2;
+    border-style: solid;
+    background-color: #00A8E1;
+    padding-top: 60px;
+    
+    
+    
+    
+
+    
 }
