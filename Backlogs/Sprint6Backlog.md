@@ -24,7 +24,7 @@ Current Assign Total Points: 42
 | RC-020 | As a customer, I want to see Amazon's color palate and style to insure intergration with Amazon products | 7 | 3 | n | done | tom |
 | RC-021 | As a Dev, I want to make sure all pages follow the same domain name. | 9 | 3 | n | done | Glaycon |
 | RC-023 | As a dev, I want to compile images for products to implement them | 5 | 2 | n | done| Tom |
-| RC-007 | As a customer I want to see a merch page on the developer thats working on this product (about page) - Tom | 10 | 2 | N | done | Tom |
+| RC-007 | As a customer I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
 | RC-008 | As a customer I want to see a introduction page on the developer thats working on this product (about page) - Alan | 10 | 2 | N | done | Alan |
 | RC-024 | As a developer I want the e-swag app remains functional on AWS to implement with AWS products | 10 | 2 | N | Done | Glaycon |
 | RC-017 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 6) | 8 | 2 | Y | Done | Glaycon |
