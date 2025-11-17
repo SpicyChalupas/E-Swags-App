@@ -29,8 +29,8 @@ Product Backlog Total:
 | RC-033 | As a customer, I want a secure login with midway authentication for admin uses | 10 | 6 | N | - | - |
 | RC-034 | As a customer, I want a secure login with midway authentication for employees uses | 10 | 6 | N | - | - |
 | RC-035 | As a developer, I want use angular and/or react libariares to allow scalability | 8 | - | - | - | - |
-| RC-036 | As a develeper, I want to be able to add products as a manager to the merch page  | - | - | - | - | - |
-| RC-033 | - | - | - | - | - | - |
+| RC-036 | As a develeper, I want to be able to add products as a manager to the merch page  | - | - | - | N | - |
+| RC-033 | As a developer, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | - | - | N | - | - |
 | RC-033 | - | - | - | - | - | - |
 | RC-033 | - | - | - | - | - | - |
 | RC-033 | - | - | - | - | - | - |
