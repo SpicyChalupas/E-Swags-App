@@ -29,12 +29,12 @@ Current Assign Total Points: 42
 | RC-024 | As a developer I want the e-swag app remains functional on AWS to implement with AWS products | 10 | 2 | N | Done | Glaycon |
 | RC-017 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 6) | 8 | 2 | Y | Done | Glaycon |
 | RC-018 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 6) | 8 | 2 | Y | Done | Andrew |
-| RC-026 | As a user I want the credtis and GTKEOT page to be visible on the contact page. | 7 | 2 | n | ready | Andrew |
-| RC-027 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Andrew |
+| RC-026 | As a user I want the credtis and GTKEOT page to be visible on the contact page. | 7 | 2 | n | done | Andrew |
+| RC-027 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | done | Andrew |
 | RC-028 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | done | Glaycon |
 | RC-025 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | Done | Edgar |
 | RC-029 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | done | Tom |
 | RC-030 | As a Developer I want to watch https://www.youtube.com/watch?v=2k2GINpO308 so I can know how to use DynamoDB in future sprints | 7 | 2 | y | ready | Alan |
 | RC-032 | As a User I want to see a news page that shows information on the progress of the E-swag app creation | 7 | 2 | y | Done | Edgar |
-| RC-031 | As a Developer I want to research midway authentication so I can know how to use DynamoDB in future sprints | 5 | 1 | y | ready | Andrew |
+| RC-031 | As a Developer I want to research midway authentication so I can know how to use DynamoDB in future sprints | 5 | 1 | y | done | Andrew |
 | RC-016 | As a Scrum Team, we want to identify the permanent Scrum Master and Product Owner for the rest of the sprints so that we can ensure team responsibilities are clearly defined for the sprint, | 10 | 0 | Y | Done | Full Team |
