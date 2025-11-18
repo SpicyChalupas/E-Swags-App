@@ -28,12 +28,12 @@ Product Backlog Total:
 | RC-007 | As a customer, I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
 | RC-033 | As a customer, I want a secure login with midway authentication for admin uses | 10 | 6 | N | - | - |
 | RC-034 | As a customer, I want a secure login with midway authentication for employees uses | 10 | 6 | N | - | - |
-| RC-035 | As a developer, I want reasearch react libariares to allow scalability | 8 | 4 | - | - | - |
-| RC-035 | As a developer, I want use react libariares to allow scalability | 8 | 7 | - | - | - |
-| RC-035 | As a developer, I want reasearch tailwind libariares to allow scalability | 8 | 4 | - | - | - |
-| RC-035 | As a developer, I want use tailwind libariares to allow scalability | 6 | 5 | - | - | - |
+| RC-035 | As a developer, I want reasearch react libariares to allow scalability | 8 | 4 | y | - | - |
+| RC-035 | As a developer, I want use react libariares to allow scalability | 8 | 7 | n | - | - |
+| RC-035 | As a developer, I want reasearch tailwind libariares to allow scalability | 8 | 4 | y | - | - |
+| RC-035 | As a developer, I want use tailwind libariares to allow scalability | 6 | 5 | n | - | - |
 | RC-036 | As a develeper, I want to be able to add products as a manager to the merch page  | - | - | N | - | - |
-| RC-037 | As a developer, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | - | - | N | - | - |
+| RC-037 | As a manager, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | 7 | 4 | N | - | - |
 | RC-038 | As a developer I want to reaserch Atlas Live Migration servvices for AWS | 7 | 3 | - | - | - |
 | RC-033 | - | - | - | - | - | - |
 | RC-033 | - | - | - | - | - | - |
