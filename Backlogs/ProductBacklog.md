@@ -48,7 +48,7 @@ Product Backlog SP Total: 106
 | RC-048 | As a user, I want a simple “profile page” where I can see my name, email, and role so I know how I’m set up in the system. | 6 | 4 | N | - | - |
 | RC-049 | As a developer, I want to continue to ensure the static website is up and running propperly for sprint 7 | 10 | 2 | N | Done | Glaycon |
 | RC-050 | As a developer, I want to setup the dynamoDB on AWS  | 11 | 15 | n | Ready | Andrew |
-| RC-051 | As a developer, I want to create fake CSV data for dynamoDB | 9 | 8 | Y | - | - |
+| RC-051 | As a developer, I want to create fake CSV data for dynamoDB | 9 | 3 | Y | - | - |
 | RC-052 | As a team, we will be ready to demo our product on December 10, 1:30 to 3:30pm  | 10 | 2 | y | ready | Whole Team |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
