@@ -11,6 +11,7 @@ Scrum Master: Andrew
 Product Owner: Glaycon Cezarotto
 
 Sprint 6 Planning Date/Time: 11/16 to 12/07
+
 Sprint 6 Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan
 
 Current Assign Total Points: 
