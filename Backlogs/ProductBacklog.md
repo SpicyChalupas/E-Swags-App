@@ -19,6 +19,7 @@ Sprint 6 Planning Date/Time: 11/17 - 12/7
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Alan, 
 
 Product Backlog SP Total: 106
+
 20 points for each person.
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
