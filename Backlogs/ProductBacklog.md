@@ -32,15 +32,15 @@ Product Backlog SP Total: 106
 | RC-035 | As a developer, I want reasearch react libariares to allow scalability | 8 | 4 | y | Ready | Tom |
 | RC-035 | As a developer, I want use react libariares to allow scalability | 8 | 7 | n | Ready | Tom |
 | RC-035 | As a developer, I want reasearch tailwind libariares to allow scalability | 8 | 4 | y | ready | Tom |
-| RC-035 | As a developer, I want use tailwind libariares to allow scalability | 6 | 5 | n | - | Tom |
-| RC-036 | As a Manager, I want to be able to add products to the merch page  | 7 | 5 | N | - | - |
+| RC-035 | As a developer, I want use tailwind libariares to allow scalability | 6 | 5 | n | Ready | Tom |
+| RC-036 | As a Admin, I want to be able to update products by adding and removing them to the merch page  | 7 | 6 | N | Ready | Alan |
 | RC-037 | As a manager, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | 7 | 5 | N | - | - |
 | RC-038 | As a developer I want to reaserch Atlas Live Migration servvices for AWS | 7 | 3 | Y | Ready | Andrew |
 | RC-039 | As an employee, I want to see my current Swag Bucks balance on the dashboard so that I know how much I can spend | 10 | 5 | N | - | - |
 | RC-040 | As an employee, I want to add items to a “cart” and see the total Swag Bucks cost so I can confirm before redeeming | 9 | 6 | N | Ready | Edagar |
 | RC-041 | As an employee, I want to see a confirmation page before finalizing a redemption so I don’t spend my Swag Bucks by accident. | 8 | 4 | N | - | - |
-| RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 5 | N | - | - |
-| RC-043 | As a manager, I want to edit and delete existing products so I can keep the merch catalog up to date. | 9 | 5 | N | - | - |
+| RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 6 | N | Ready | Edgar |
+| RC-043 | As a manager, I want to edit and delete existing products so I can keep the merch catalog up to date. | 9 | 5 | N | - |  |
 | RC-044 | As a manager, I want to adjust an employee’s Swag Bucks balance (bonus, corrections) so I can reward performance or fix errors. | 9 | 5 | - | - | - |
 | RC-045 | As a manager, I want to see a dashboard of total Swag Bucks issued vs. redeemed so I can monitor overall usage. | 7 | 5 | - | - | - |
 | RC-046 | As an admin, I want role-based access control (admin/manager/employee) so that sensitive features are restricted. | 10 | 8 | N | - | - |
