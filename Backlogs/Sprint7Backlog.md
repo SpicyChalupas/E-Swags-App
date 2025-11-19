@@ -35,3 +35,9 @@ Current Assign Total Points:
 | RC-041 | As an employee, I want to see a confirmation page before finalizing a redemption so I don’t spend my Swag Bucks by accident. | 8 | 4 | N | - | Alan |
 | RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 6 | N | Ready | Edgar |
 | RC-043 | As a developer, I want to make sure the code is properly formated and runs correctly for all programs | 4 | 3 | N | Ready | Alan |
+| RC-047 | As a Developer, I want to ensure the site still uses Amazon's color scheme as we continue to work. | 3 | 2 | N | - | Edgar |
+| RC-048 | As a user, I want a simple “profile page” where I can see my name, email, and role so I know how I’m set up in the system. | 6 | 4 | N | Ready | Edgar |
+| RC-049 | As a developer, I want to continue to ensure the static website is up and running propperly for sprint 7 | 10 | 2 | N | Done | Glaycon |
+| RC-050 | As a developer, I want to setup the dynamoDB on AWS  | 11 | 15 | n | Ready | Andrew |
+| RC-051 | As a developer, I want to create fake CSV data for dynamoDB | 9 | 3 | Y | Ready | Andrew |
+| RC-052 | As a team, we will be ready to demo our product on December 10, 1:30 to 3:30pm  | 10 | 2 | y | ready | Whole Team |
