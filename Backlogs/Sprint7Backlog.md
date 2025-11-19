@@ -31,3 +31,7 @@ Current Assign Total Points:
 | RC-036 | As a Admin, I want to be able to update products by adding and removing them to the merch page  | 7 | 6 | N | Ready | Alan |
 | RC-037 | As a manager, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | 7 | 5 | N | Ready | Alan |
 | RC-038 | As a developer I want to reaserch Atlas Live Migration servvices for AWS | 7 | 3 | Y | Ready | Andrew |
+| RC-040 | As an employee, I want to add items to a “cart” and see the total Swag Bucks cost so I can confirm before redeeming | 9 | 6 | N | Ready | Edagar |
+| RC-041 | As an employee, I want to see a confirmation page before finalizing a redemption so I don’t spend my Swag Bucks by accident. | 8 | 4 | N | - | Alan |
+| RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 6 | N | Ready | Edgar |
+| RC-043 | As a developer, I want to make sure the code is properly formated and runs correctly for all programs | 4 | 3 | N | Ready | Alan |
