@@ -35,10 +35,17 @@ Product Backlog Total:
 | RC-036 | As a develeper, I want to be able to add products as a manager to the merch page  | - | - | N | - | - |
 | RC-037 | As a manager, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | 7 | 4 | N | - | - |
 | RC-038 | As a developer I want to reaserch Atlas Live Migration servvices for AWS | 7 | 3 | - | - | - |
-| RC-033 | - | - | - | - | - | - |
-| RC-033 | - | - | - | - | - | - |
-| RC-033 | - | - | - | - | - | - |
-| RC-033 | - | - | - | - | - | - |
+| RC-039 | As an employee, I want to see my current Swag Bucks balance on the dashboard so that I know how much I can spend | 10 | 5 | N | - | - |
+| RC-040 | As an employee, I want to add items to a “cart” and see the total Swag Bucks cost so I can confirm before redeeming | 9 | 6 | N | - | - |
+| RC-041 | As an employee, I want to see a confirmation page before finalizing a redemption so I don’t spend my Swag Bucks by accident. | 8 | 4 | N | - | - |
+| RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 5 | N | - | - |
+| RC-043 | As a manager, I want to edit and delete existing products so I can keep the merch catalog up to date. | 9 | 5 | N | - | - |
+| RC-044 | As a manager, I want to adjust an employee’s Swag Bucks balance (bonus, corrections) so I can reward performance or fix errors. | 9 | 5 | - | - | - |
+| RC-045 | As a manager, I want to see a dashboard of total Swag Bucks issued vs. redeemed so I can monitor overall usage. | 7 | 5 | - | - | - |
+| RC-046 | As an admin, I want role-based access control (admin/manager/employee) so that sensitive features are restricted. | 10 | 8 | N | - | - |
+| RC-047 | As a Developer, I want to ensure the site still uses Amazon's color scheme as we continue to work. | 3 | 2 | N | - | - |
+| RC-048 | As a user, I want a simple “profile page” where I can see my name, email, and role so I know how I’m set up in the system. | 6 | 4 | N | - | - |
+| RC-049 | As a developer, I want to continue to ensure the static website is up and running propperly for sprint 7 | 10 | 2 | N | Done | Glaycon |
 | RC-033 | - | - | - | - | - | - |
 | RC-033 | - | - | - | - | - | - |
 | RC-033 | - | - | - | - | - | - |
