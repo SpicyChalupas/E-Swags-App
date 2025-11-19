@@ -27,8 +27,8 @@ Product Backlog SP Total: 106
 | RC-031 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 7) | 8 | 2 | Y | Done | Glaycon |
 | RC-032 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 7) | 8 | 2 | Y | Done | Andrew |
 | RC-007 | As a customer, I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
-| RC-033 | As a customer, I want a secure login with midway authentication for admin uses | 10 | 6 | N | ready | Glaycon |
-| RC-034 | As a customer, I want a secure login with midway authentication for employees uses | 10 | 6 | N | Ready | Glaycon |
+| RC-033 | As a customer, I want a secure login with midway authentication for admin uses | 10 | 7 | N | ready | Glaycon |
+| RC-034 | As a customer, I want a secure login with midway authentication for employees uses | 10 | 7 | N | Ready | Glaycon |
 | RC-035 | As a developer, I want reasearch react libariares to allow scalability | 8 | 4 | y | Ready | Tom |
 | RC-035 | As a developer, I want use react libariares to allow scalability | 8 | 7 | n | Ready | Tom |
 | RC-035 | As a developer, I want reasearch tailwind libariares to allow scalability | 8 | 4 | y | ready | Tom |
