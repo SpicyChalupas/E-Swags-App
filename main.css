@@ -27,3 +27,73 @@ body {
   background-color: #e28e0f;
   color: rgb(253, 253, 253);
 }
+
+.topnav-right {
+  float: right;
+}
+
+#nav-user {
+  color: white;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.auth-text {
+  max-width: 45%;
+}
+
+.auth-card {
+  max-width: 320px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.auth-card h2 {
+  margin-top: 0;
+}
+
+.auth-card label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff9900;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background-color: #e68a00;
+}
+
+.auth-error {
+  color: red;
+  min-height: 1.2em;
+}
+
+.auth-links {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}

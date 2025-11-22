@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Swag Authentication</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <div class="topnav">
+    <a href="/index.html">Home</a>
+    <a href="/News Page/News.html">News</a>
+    <a href="/Deposit Page/Deposit.html">Deposit</a>
+    <a href="/Merch Page/Merch.html">Merch</a>
+    <a href="/Contact Page/Contact.html">Contact</a>
+    <a href="/About Page/About.html">About</a>
+
+    <div class="topnav-right">
+      <span id="nav-user"></span>
+      <a href="/Authentication Page/Authentication.html" id="nav-login">Login</a>
+      <a href="#" id="nav-logout" style="display:none;">Logout</a>
+    </div>
+  </div>
+
+  <main class="auth-layout">
+    <section class="auth-text">
+      <h1>Authentication</h1>
+      <h2>Midway Authentication</h2>
+      <p>
+        For this project, we simulate Amazon's Midway authentication.
+        A user signs in once per day with their security key PIN, and that
+        login is shared across all E-Swag tools.
+      </p>
+      <p>
+        In the future, this screen will be wired to a real backend / SSO
+        provider. For now it is a front-end only demo.
+      </p>
+    </section>
+
+    <section class="auth-card">
+      <h2>Sign in</h2>
+      <p class="auth-subtitle">to access corporate resources</p>
+
+      <form id="login-form">
+        <label>
+          Welcome
+          <input type="text" id="username" required placeholder="username">
+        </label>
+
+        <label>
+          Security Key PIN *
+          <input type="password" id="pin" required placeholder="••••">
+        </label>
+
+        <button type="submit" class="auth-submit">Submit</button>
+
+        <p id="login-error" class="auth-error"></p>
+      </form>
+
+      <div class="auth-links">
+        <a href="#">Not you?</a><br>
+        <a href="#">Forgot your security key PIN?</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/auth.js"></script>
+</body>
+</html>
