@@ -1,24 +1,20 @@
-// auth.js
-// Front-end only "Midway" simulation. One login per day.
-// Everyone logs in the same way; role is stored for later.
+// Simple front-end "Midway" login gate for the whole site.
 
-// Demo accounts
+// === CONFIG ===
+// IMPORTANT: use the path with the space, exactly like the folder name.
+const LOGIN_PATH = "/Authentication%20Page/Authentication.html";
+
+const SESSION_KEY    = "eswag.session";
+const POST_LOGIN_KEY = "eswag.postLoginRedirect";
+const ONE_DAY_MS     = 24 * 60 * 60 * 1000;
+
+// Demo users: same login flow, different roles
 const DEMO_USERS = [
   { username: "employee", displayName: "Employee User", role: "employee", pin: "1111" },
   { username: "manager",  displayName: "Manager User",  role: "manager",  pin: "2222" },
 ];
 
-const SESSION_KEY     = "eswag.session";
-const POST_LOGIN_KEY  = "eswag.postLoginRedirect";
-const ONE_DAY_MS      = 24 * 60 * 60 * 1000;
-
-// adjust this to match login page path
-const LOGIN_PATHS = [
-  "/Authentication%20Page/Authentication.html",
-  "/Authentication.html"
-];
-
-// ---------- basic session helpers ----------
+// === Session helpers ===
 
 function findUser(username) {
   return DEMO_USERS.find(
@@ -56,7 +52,6 @@ function getCurrentUser() {
 
   const age = Date.now() - session.loginTime;
   if (age > ONE_DAY_MS) {
-    // login expired after a day → force login again
     clearSession();
     return null;
   }
@@ -82,32 +77,40 @@ async function loginWithPin(username, pin) {
 
 function logout() {
   clearSession();
-  window.location.href = "/index.html"; // after logout go to home → will be sent to login again
+  // go to home; global gate will push them to login again
+  window.location.href = "/index.html";
 }
 
-// ---------- global login gate ----------
+// === Global login gate ===
 
 function isLoginPage(pathname) {
-  // normalize little differences like trailing slashes
-  const clean = pathname.replace(/\/+$/, "");
-  return LOGIN_PATHS.some(p => p.replace(/\/+$/, "") === clean);
+  // normalize both sides and decode spaces
+  const cleanPath = decodeURIComponent(pathname.replace(/\/+$/, ""));
+  const cleanLogin = decodeURIComponent(LOGIN_PATH.replace(/\/+$/, ""));
+  return cleanPath === cleanLogin;
 }
 
 function enforceGlobalLogin() {
   const path = window.location.pathname;
+  console.log("[auth] current path:", path);
 
-  // don't guard the login page itself
-  if (isLoginPage(path)) return;
+  // Allow the login page itself
+  if (isLoginPage(path)) {
+    console.log("[auth] on login page, no redirect");
+    return;
+  }
 
-  // if not logged in, remember where they wanted to go and send to login
   if (!isLoggedIn()) {
+    console.log("[auth] not logged in, redirecting to login");
     const target = path + window.location.search + window.location.hash;
     localStorage.setItem(POST_LOGIN_KEY, target || "/index.html");
-    window.location.href = LOGIN_PATHS[0]; // first login path in the list
+    window.location.href = LOGIN_PATH;
+  } else {
+    console.log("[auth] already logged in");
   }
 }
 
-// ---------- nav + login form UI ----------
+// === Nav + login form ===
 
 function initNav() {
   const user      = getCurrentUser();
@@ -134,7 +137,7 @@ function initNav() {
 
 function initLoginForm() {
   const form = document.getElementById("login-form");
-  if (!form) return;
+  if (!form) return; // not on login page
 
   const usernameInput = document.getElementById("username");
   const pinInput      = document.getElementById("pin");
@@ -157,12 +160,13 @@ function initLoginForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("[auth] DOMContentLoaded, initializing auth");
   initNav();
   initLoginForm();
-  enforceGlobalLogin();   // <--- this is what forces login for the whole site
+  enforceGlobalLogin();
 });
 
-// Expose minimal API for later (role-based stuff)
+// Expose for later manager-only features
 window.Auth = {
   isLoggedIn,
   hasRole,
