@@ -12,10 +12,9 @@ const SESSION_KEY     = "eswag.session";
 const POST_LOGIN_KEY  = "eswag.postLoginRedirect";
 const ONE_DAY_MS      = 24 * 60 * 60 * 1000;
 
-// adjust this to match your actual login page path
-// if yours is /Authentication.html instead, change below
+// adjust this to match login page path
 const LOGIN_PATHS = [
-  "/Authentication Page/Authentication.html",
+  "/Authentication%20Page/Authentication.html",
   "/Authentication.html"
 ];
 
