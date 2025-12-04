@@ -1,8 +1,9 @@
 // ==== Configure API base ====
 // For local dev:  const API_BASE = "http://localhost:3000";
-// For Old Azure Server:      const API_BASE = "https://<your-azure-appservice>.azurewebsites.net";
-// For AWS Server: https://mxf3cs9vte.us-east-1.awsapprunner.com
-const API_BASE = (window.API_BASE_OVERRIDE || "https://mxf3cs9vte.us-east-1.awsapprunner.com");
+// For AWS App Runner: https://your-app-runner-url.us-east-1.apprunner.amazonaws.com
+// Set window.API_BASE before loading this script to override
+// Default to deployed App Runner URL; allow override via `window.API_BASE` for local testing
+const API_BASE = (window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com");
 
 const els = {
   status: document.getElementById("status"),

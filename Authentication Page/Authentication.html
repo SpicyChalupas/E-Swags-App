@@ -27,13 +27,14 @@
       <h1>Authentication</h1>
       <h2>Midway Authentication</h2>
       <p>
-        For this project, we simulate Amazon's Midway authentication.
-        A user signs in once per day with their security key PIN, and that
-        login is shared across all E-Swag tools. (change this later)
+        Sign in with your username and password to access the E-Swag store.
+        Employees can use their assigned credits to purchase merchandise.
+        Admins can manage user credits and inventory.
       </p>
       <p>
-        In the future, this screen will be wired to a real backend / SSO
-        provider. For now it is a front-end only demo. (change this later)
+        <strong>Demo Credentials:</strong><br>
+        Admin: <code>admin</code> / <code>admin123</code><br>
+        Employee: <code>employee</code> / <code>employee123</code>
       </p>
     </section>
 
@@ -43,16 +44,16 @@
 
       <form id="login-form">
         <label>
-          Welcome
+          Username
           <input type="text" id="username" required placeholder="username">
         </label>
 
         <label>
-          Security Key PIN *
-          <input type="password" id="pin" required placeholder="••••">
+          Password
+          <input type="password" id="password" required placeholder="••••••••">
         </label>
 
-        <button type="submit" class="auth-submit">Submit</button>
+        <button type="submit" class="auth-submit">Sign In</button>
 
         <p id="login-error" class="auth-error"></p>
       </form>
