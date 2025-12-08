@@ -40,4 +40,4 @@ Current Assign Total Points: 109
 | RC-049 | As a developer, I want to continue to ensure the static website is up and running propperly for sprint 7 | 10 | 2 | N | Done | Glaycon |
 | RC-050 | As a developer, I want to setup the dynamoDB on AWS  | 11 | 15 | n | Done | Andrew |
 | RC-051 | As a developer, I want to create fake CSV data for dynamoDB | 9 | 3 | Y | Done | Andrew |
-| RC-052 | As a team, we will be ready to demo our product on December 10, 1:30 to 3:30pm  | 10 | 2 | y | ready | Whole Team |
+| RC-052 | As a team, we will be ready to demo our product on December 10, 1:30 to 3:30pm  | 10 | 2 | y | Done | Whole Team |
