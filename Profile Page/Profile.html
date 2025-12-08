@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Swag Contact</title>
-    <link rel="stylesheet" href="/main.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Swag Profile</title>
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/Profile Page/Profile.css">
 </head>
-<body>   
+<body>
     <header>
         <div class="topnav">
             <div class="topnav-left">
@@ -15,16 +15,16 @@
                 <a href="/News Page/News.html">News</a>
                 <a href="/Deposit Page/Deposit.html">Deposit</a>
                 <a href="/Merch Page/Merch.html">Merch</a>
-                <a class="active" href="/Contact Page/Contact.html">Contact</a>
+                <a href="/Contact Page/Contact.html">Contact</a>
                 <a href="/About Page/About.html">About</a>
             </div>
 
-        <!-- Right side: login status -->
+            <!-- Right side: login status -->
             <div class="topnav-right">
                 <a href="/Cart Page/Cart.html" class="cart">
                     <img src="/Cart Page/shoppingcart.png" alt="Shopping Cart">
                 </a>
-                <a href="/Profile Page/Profile.html" class="pfp">
+                <a href="/Profile Page/Profile.html" class="active-pfp">
                     <img src="/Profile Page/pfp.jpg" alt="Profile Picture">
                 </a>
                 <span id="nav-user"></span>
@@ -33,11 +33,26 @@
             </div>
         </div>
     </header>
-    <div style="padding-left:16px">
-        <h2>Contact Page</h2>
-        <p>This is the contact page content.</p>
+    <div class="profile-box" style="padding-left:16px">
+        <h2>(Name)</h2>
+        <p>Welcome back!</p>
+
+        <div class="info-box">
+            <h3>Name</h3>
+            <p>Loading... </p>
+        </div>
+
+        <div class="info-box">
+            <h3>Email</h3>
+            <p>Loading... </p>
+        </div>
+
+        <div class="info-box">
+            <h3>Role</h3>
+            <p>Loading... </p>
+        </div>
     </div>
-    <script src="Contact.js"></script>
+    <script src="Profile.js"></script>
     <script src="/auth.js"></script>
-</body>
+  </body>
 </html>

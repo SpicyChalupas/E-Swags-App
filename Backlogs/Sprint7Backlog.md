@@ -31,12 +31,12 @@ Current Assign Total Points: 109
 | RC-036 | As a Admin, I want to be able to update products by adding and removing them to the merch page  | 7 | 6 | N | Ready | Alan |
 | RC-037 | As a manager, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | 7 | 5 | N | Done | Alan |
 | RC-038 | As a developer I want to reaserch Atlas Live Migration servvices for AWS | 7 | 3 | Y | Ready | Andrew |
-| RC-040 | As an employee, I want to add items to a “cart” and see the total Swag Bucks cost so I can confirm before redeeming | 9 | 6 | N | Ready | Edagar |
+| RC-040 | As an employee, I want to add items to a “cart” and see the total Swag Bucks cost so I can confirm before redeeming | 9 | 6 | N | Done | Edagar |
 | RC-041 | As an employee, I want to see a confirmation page before finalizing a redemption so I don’t spend my Swag Bucks by accident. | 8 | 4 | N | Done | Alan |
-| RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 6 | N | Ready | Edgar |
+| RC-042 | As an employee, I want to see my history (date, items, amount spent) so I can track past rewards. | 7 | 6 | N | Done | Edgar |
 | RC-043 | As a developer, I want to make sure the code is properly formated and runs correctly for all programs | 4 | 3 | N | Done | Alan |
-| RC-047 | As a Developer, I want to ensure the site still uses Amazon's color scheme as we continue to work. | 3 | 2 | N | ready | Edgar |
-| RC-048 | As a user, I want a simple “profile page” where I can see my name, email, and role so I know how I’m set up in the system. | 6 | 4 | N | Ready | Edgar |
+| RC-047 | As a Developer, I want to ensure the site still uses Amazon's color scheme as we continue to work. | 3 | 2 | N | Done | Edgar |
+| RC-048 | As a user, I want a simple “profile page” where I can see my name, email, and role so I know how I’m set up in the system. | 6 | 4 | N | Done | Edgar |
 | RC-049 | As a developer, I want to continue to ensure the static website is up and running propperly for sprint 7 | 10 | 2 | N | Done | Glaycon |
 | RC-050 | As a developer, I want to setup the dynamoDB on AWS  | 11 | 15 | n | Ready | Andrew |
 | RC-051 | As a developer, I want to create fake CSV data for dynamoDB | 9 | 3 | Y | Ready | Andrew |

@@ -2,9 +2,12 @@
 // This script manages user sessions, handles login/logout, and provides auth helpers
 
 // === CONFIG ===
-const LOGIN_PATH = "/Authentication%20Page/Authentication.html";
+
+const LOGIN_PATH = "/Authentication%20Page/Authentication.html";  
+
 // Default to deployed App Runner URL; still allow overriding via `window.API_BASE`
 const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com"; // Override with window.API_BASE if needed
+
 
 const SESSION_KEY = "eswag.session";
 const TOKEN_KEY = "eswag.token";

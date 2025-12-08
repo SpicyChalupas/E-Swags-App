@@ -1,0 +1,16 @@
+.topnav a.active-pfp{
+  background-color: orange;
+}
+
+.info-box {
+    border: 1px solid #000000;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 25px;
+    background: #cec6c6a9;
+}
+
+.profile-box {
+  padding: 30px;
+  max-width: 650px;
+}
