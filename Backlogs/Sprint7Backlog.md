@@ -27,9 +27,9 @@ Current Assign Total Points: 109
 | RC-033 | As a customer, I want a secure login with midway authentication for admin uses | 10 | 7 | N | done | Glaycon |
 | RC-034 | As a customer, I want a secure login with midway authentication for employees uses | 10 | 7 | N | done | Glaycon |
 | RC-035 | As a developer, I want reasearch react libariares to allow scalability | 8 | 4 | y | Done | Tom |
-| RC-035 | As a developer, I want use react libariares to allow scalability | 8 | 7 | n | Ready | Tom |
+| RC-035 | As a developer, I want use react libariares to allow scalability | 8 | 7 | n | Done | Tom |
 | RC-035 | As a developer, I want reasearch tailwind libariares to allow scalability | 8 | 4 | y | Done | Tom |
-| RC-035 | As a developer, I want use tailwind libariares to allow scalability | 6 | 5 | n | Ready | Tom |
+| RC-035 | As a developer, I want use tailwind libariares to allow scalability | 6 | 5 | n | Done| Tom |
 | RC-036 | As a Admin, I want to be able to update products by adding and removing them to the merch page  | 7 | 6 | N | Ready | Alan |
 | RC-037 | As a manager, I want to be able to add employees to the roster to allow adding Swag Bucks to the Amazon Account | 7 | 5 | N | Done | Alan |
 | RC-038 | As a developer I want to reaserch Atlas Live Migration servvices for AWS | 7 | 3 | Y | Done | Andrew |
