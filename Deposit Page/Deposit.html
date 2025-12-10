@@ -32,12 +32,14 @@
       You must be an admin to view this page.
     </p>
 
+    <!-- Summary -->
     <section id="summary-section" style="display:none; margin-bottom:20px;">
       <h3>Token Summary</h3>
       <p>Total users: <strong id="total-users">0</strong></p>
       <p>Total tokens in circulation: <strong id="total-tokens">0</strong></p>
     </section>
 
+    <!-- Table of users -->
     <section id="users-section" style="display:none; margin-bottom:20px;">
       <h3>Users and Balances</h3>
       <table id="users-table" border="1" cellpadding="8" style="width:100%; border-collapse:collapse;">
@@ -55,16 +57,46 @@
       </table>
     </section>
 
-    <section id="deposit-all-section" style="display:none; margin-top:20px;">
-      <h3>Deposit Tokens To All Users</h3>
-      <form id="deposit-all-form">
+    <!-- NEW: single-user adjust -->
+    <section id="adjust-user-section" style="display:none; margin-top:20px;">
+      <h3>Adjust Tokens For One User</h3>
+      <form id="single-adjust-form">
         <label>
-          Amount to deposit to each user:
-          <input type="number" id="deposit-amount" min="0" required>
+          User:
+          <select id="single-user-select"></select>
         </label>
-        <button type="submit">Deposit</button>
+        <label style="margin-left:10px;">
+          Amount:
+          <input type="number" id="single-amount" min="0" required>
+        </label>
+        <label style="margin-left:10px;">
+          <input type="radio" name="single-op" value="add" checked> Add
+        </label>
+        <label style="margin-left:10px;">
+          <input type="radio" name="single-op" value="remove"> Remove
+        </label>
+        <button type="submit" style="margin-left:10px;">Apply</button>
       </form>
-      <p id="deposit-status"></p>
+      <p id="single-status"></p>
+    </section>
+
+    <!-- UPDATED: all-users adjust (add OR remove) -->
+    <section id="adjust-all-section" style="display:none; margin-top:30px;">
+      <h3>Adjust Tokens For All Users</h3>
+      <form id="all-adjust-form">
+        <label>
+          Amount to apply to each user:
+          <input type="number" id="all-amount" min="0" required>
+        </label>
+        <label style="margin-left:10px;">
+          <input type="radio" name="all-op" value="add" checked> Add
+        </label>
+        <label style="margin-left:10px;">
+          <input type="radio" name="all-op" value="remove"> Remove
+        </label>
+        <button type="submit" style="margin-left:10px;">Apply</button>
+      </form>
+      <p id="all-status"></p>
     </section>
   </main>
 

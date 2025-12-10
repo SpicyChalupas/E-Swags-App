@@ -1,118 +1,231 @@
 // Deposit.js
-// Admin only dashboard for viewing balances and depositing tokens
+// Admin-only dashboard for viewing balances and adjusting tokens
+
+let adminUsers = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("[Deposit] Initializing");
 
   const user = window.Auth?.getCurrentUser();
 
+  // Block non-admins
   if (!user || !window.Auth.hasRole("admin")) {
-    document.getElementById("admin-warning").style.display = "block";
-    // Optionally send them back home after a short delay
+    const warn = document.getElementById("admin-warning");
+    if (warn) {
+      warn.style.display = "block";
+      warn.textContent = "You must be an admin to view this page. Redirecting to Home...";
+    }
     setTimeout(() => {
       window.location.href = "/index.html";
     }, 2000);
     return;
   }
 
-  // If we reached here, user is admin
-  document.getElementById("summary-section").style.display = "block";
-  document.getElementById("users-section").style.display = "block";
-  document.getElementById("deposit-all-section").style.display = "block";
+  // Show all admin sections
+  showAdminSections();
 
+  // Load users + summary
   loadUsersAndSummary();
 
-  const form = document.getElementById("deposit-all-form");
-  form.addEventListener("submit", onDepositAll);
+  // Hook forms
+  const singleForm = document.getElementById("single-adjust-form");
+  if (singleForm) singleForm.addEventListener("submit", onSingleAdjust);
+
+  const allForm = document.getElementById("all-adjust-form");
+  if (allForm) allForm.addEventListener("submit", onAllAdjust);
 });
 
-// Load all users and compute totals
+function showAdminSections() {
+  ["summary-section", "users-section", "adjust-user-section", "adjust-all-section"]
+    .forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = "block";
+    });
+}
+
+// Load users, fill table + dropdown + totals
 async function loadUsersAndSummary() {
   const tbody = document.getElementById("users-body");
-  tbody.innerHTML = "<tr><td colspan='4'>Loading...</td></tr>";
+  if (tbody) {
+    tbody.innerHTML = "<tr><td colspan='4'>Loading...</td></tr>";
+  }
 
   try {
     const users = await window.Auth.getAdminUsers();
+    adminUsers = Array.isArray(users) ? users : [];
 
-    if (!Array.isArray(users) || users.length === 0) {
-      tbody.innerHTML = "<tr><td colspan='4'>No users found.</td></tr>";
-      document.getElementById("total-users").textContent = "0";
-      document.getElementById("total-tokens").textContent = "0";
+    if (!adminUsers.length) {
+      if (tbody) {
+        tbody.innerHTML = "<tr><td colspan='4'>No users found.</td></tr>";
+      }
+      setSummary(0, 0);
+      populateSingleUserSelect(adminUsers);
       return;
     }
 
     let totalTokens = 0;
-    tbody.innerHTML = "";
-    users.forEach((u) => {
-      totalTokens += u.credits || 0;
 
-      const tr = document.createElement("tr");
+    if (tbody) {
+      tbody.innerHTML = "";
+      adminUsers.forEach(u => {
+        totalTokens += u.credits || 0;
 
-      const tdUser = document.createElement("td");
-      tdUser.textContent = u.username;
+        const tr = document.createElement("tr");
 
-      const tdName = document.createElement("td");
-      tdName.textContent = u.displayName || "";
+        const tdUser = document.createElement("td");
+        tdUser.textContent = u.username;
 
-      const tdRole = document.createElement("td");
-      tdRole.textContent = u.role || "";
+        const tdName = document.createElement("td");
+        tdName.textContent = u.displayName || "";
 
-      const tdCredits = document.createElement("td");
-      tdCredits.textContent = u.credits ?? 0;
+        const tdRole = document.createElement("td");
+        tdRole.textContent = u.role || "";
 
-      tr.appendChild(tdUser);
-      tr.appendChild(tdName);
-      tr.appendChild(tdRole);
-      tr.appendChild(tdCredits);
+        const tdCredits = document.createElement("td");
+        tdCredits.textContent = u.credits ?? 0;
 
-      tbody.appendChild(tr);
-    });
+        tr.appendChild(tdUser);
+        tr.appendChild(tdName);
+        tr.appendChild(tdRole);
+        tr.appendChild(tdCredits);
 
-    document.getElementById("total-users").textContent = users.length;
-    document.getElementById("total-tokens").textContent = totalTokens;
+        tbody.appendChild(tr);
+      });
+    }
+
+    setSummary(adminUsers.length, totalTokens);
+    populateSingleUserSelect(adminUsers);
+
   } catch (err) {
     console.error("[Deposit] Error loading users:", err);
-    tbody.innerHTML = `<tr><td colspan='4' style='color:red;'>Error loading users: ${err.message}</td></tr>`;
+    if (tbody) {
+      tbody.innerHTML =
+        "<tr><td colspan='4' style='color:red;'>Error loading users.</td></tr>";
+    }
   }
 }
 
-// Handle "deposit to all" submit
-async function onDepositAll(e) {
+function setSummary(totalUsers, totalTokens) {
+  const usersEl = document.getElementById("total-users");
+  const tokensEl = document.getElementById("total-tokens");
+  if (usersEl) usersEl.textContent = totalUsers;
+  if (tokensEl) tokensEl.textContent = totalTokens;
+}
+
+function populateSingleUserSelect(users) {
+  const select = document.getElementById("single-user-select");
+  if (!select) return;
+
+  select.innerHTML = "";
+  users.forEach(u => {
+    const opt = document.createElement("option");
+    opt.value = u.username;
+    opt.textContent = `${u.username} (${u.displayName || ""})`;
+    select.appendChild(opt);
+  });
+}
+
+// ---- Single user adjust ----
+async function onSingleAdjust(e) {
   e.preventDefault();
 
-  const amountInput = document.getElementById("deposit-amount");
-  const statusEl = document.getElementById("deposit-status");
+  const username = document.getElementById("single-user-select")?.value;
+  const amountInput = document.getElementById("single-amount");
+  const statusEl = document.getElementById("single-status");
+  const opEl = document.querySelector('input[name="single-op"]:checked');
+
+  if (!username || !amountInput || !opEl) return;
 
   const amount = parseInt(amountInput.value, 10);
+  const op = opEl.value; // "add" or "remove"
+
   if (!Number.isFinite(amount) || amount <= 0) {
-    statusEl.textContent = "Enter a positive number.";
-    statusEl.style.color = "red";
+    if (statusEl) {
+      statusEl.textContent = "Enter a positive amount.";
+      statusEl.style.color = "red";
+    }
     return;
   }
 
-  statusEl.textContent = "Depositing credits to all users...";
-  statusEl.style.color = "black";
+  // Use positive for add, negative for remove
+  const delta = op === "add" ? amount : -amount;
+
+  if (statusEl) {
+    statusEl.textContent = "Applying change...";
+    statusEl.style.color = "black";
+  }
 
   try {
-    const users = await window.Auth.getAdminUsers();
-    if (!Array.isArray(users) || users.length === 0) {
-      statusEl.textContent = "No users to deposit to.";
-      statusEl.style.color = "red";
-      return;
+    // Backend treats credits as a delta via assignCredits
+    await window.Auth.assignCredits(username, delta, "add");
+
+    if (statusEl) {
+      statusEl.textContent =
+        `${op === "add" ? "Added" : "Removed"} ${amount} credits for ${username}.`;
+      statusEl.style.color = "green";
     }
 
-    for (const u of users) {
-      await window.Auth.assignCredits(u.username, amount, "add");
-    }
-
-    statusEl.textContent = `Successfully deposited ${amount} credits to ${users.length} users.`;
-    statusEl.style.color = "green";
-
-    // Reload table and totals
     await loadUsersAndSummary();
   } catch (err) {
-    console.error("[Deposit] Deposit to all failed:", err);
-    statusEl.textContent = `Error: ${err.message}`;
-    statusEl.style.color = "red";
+    console.error("[Deposit] Single adjust failed:", err);
+    if (statusEl) {
+      statusEl.textContent = `Error: ${err.message || "Failed to adjust credits."}`;
+      statusEl.style.color = "red";
+    }
+  }
+}
+
+// ---- All users adjust ----
+async function onAllAdjust(e) {
+  e.preventDefault();
+
+  const amountInput = document.getElementById("all-amount");
+  const statusEl = document.getElementById("all-status");
+  const opEl = document.querySelector('input[name="all-op"]:checked');
+
+  if (!amountInput || !opEl) return;
+
+  const amount = parseInt(amountInput.value, 10);
+  const op = opEl.value; // "add" or "remove"
+
+  if (!Number.isFinite(amount) || amount <= 0) {
+    if (statusEl) {
+      statusEl.textContent = "Enter a positive amount.";
+      statusEl.style.color = "red";
+    }
+    return;
+  }
+
+  const delta = op === "add" ? amount : -amount;
+
+  if (statusEl) {
+    statusEl.textContent =
+      `${op === "add" ? "Depositing" : "Removing"} credits for all users...`;
+    statusEl.style.color = "black";
+  }
+
+  try {
+    if (!adminUsers.length) {
+      adminUsers = await window.Auth.getAdminUsers();
+    }
+
+    for (const u of adminUsers) {
+      await window.Auth.assignCredits(u.username, delta, "add");
+    }
+
+    if (statusEl) {
+      statusEl.textContent =
+        `${op === "add" ? "Deposited" : "Removed"} ${amount} credits for ${adminUsers.length} users.`;
+      statusEl.style.color = "green";
+    }
+
+    await loadUsersAndSummary();
+  } catch (err) {
+    console.error("[Deposit] All adjust failed:", err);
+    if (statusEl) {
+      statusEl.textContent =
+        `Error: ${err.message || "Failed to adjust credits for all users."}`;
+      statusEl.style.color = "red";
+    }
   }
 }
