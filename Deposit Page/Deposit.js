@@ -128,7 +128,7 @@ async function onSingleAdjust(e) {
   if (!username || !amountInput || !opEl) return;
 
   const amount = parseInt(amountInput.value, 10);
-  const op = opEl.value; // "add" or "remove"
+  const op = opEl.value; // "add" or "remove" (Set)
 
   if (!Number.isFinite(amount) || amount <= 0) {
     if (statusEl) {
@@ -144,12 +144,14 @@ async function onSingleAdjust(e) {
   }
 
   try {
-    // backend wants positive credits + operation string
     await window.Auth.assignCredits(username, amount, op);
 
     if (statusEl) {
-      statusEl.textContent =
-        `${op === "add" ? "Added" : "Removed"} ${amount} credits for ${username}.`;
+      if (op === "add") {
+        statusEl.textContent = `Added ${amount} credits for ${username}.`;
+      } else {
+        statusEl.textContent = `Set ${username}'s credits to ${amount}.`;
+      }
       statusEl.style.color = "green";
     }
 
@@ -174,7 +176,7 @@ async function onAllAdjust(e) {
   if (!amountInput || !opEl) return;
 
   const amount = parseInt(amountInput.value, 10);
-  const op = opEl.value; // "add" or "remove"
+  const op = opEl.value; // "add" or "remove" (Set)
 
   if (!Number.isFinite(amount) || amount <= 0) {
     if (statusEl) {
@@ -186,7 +188,7 @@ async function onAllAdjust(e) {
 
   if (statusEl) {
     statusEl.textContent =
-      `${op === "add" ? "Applying" : "Removing"} credits for all users...`;
+      `${op === "add" ? "Applying" : "Setting"} credits for all users...`;
     statusEl.style.color = "black";
   }
 
@@ -200,8 +202,13 @@ async function onAllAdjust(e) {
     }
 
     if (statusEl) {
-      statusEl.textContent =
-        `${op === "add" ? "Added" : "Removed"} ${amount} credits for ${adminUsers.length} users.`;
+      if (op === "add") {
+        statusEl.textContent =
+          `Added ${amount} credits for ${adminUsers.length} users.`;
+      } else {
+        statusEl.textContent =
+          `Set credits to ${amount} for ${adminUsers.length} users.`;
+      }
       statusEl.style.color = "green";
     }
 
