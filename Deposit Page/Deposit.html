@@ -18,27 +18,57 @@
         <a href="/Contact Page/Contact.html">Contact</a>
         <a href="/About Page/About.html">About</a>
       </div>
-
-      <!-- Right side: login status -->
       <div class="topnav-right">
-        <a href="/Cart Page/Cart.html" class="cart">
-          <img src="/Cart Page/shoppingcart.png" alt="Shopping Cart">
-        </a>
-        <a href="/Profile Page/Profile.html" class="pfp">
-          <img src="/Profile Page/pfp.jpg" alt="Profile Picture">
-        </a>
         <span id="nav-user"></span>
-        <a href="/Authentication Page/Authentication.html" id="nav-login">Login</a>
+        <a href="/Authentication.html" id="nav-login">Login</a>
         <a href="#" id="nav-logout" style="display:none;">Logout</a>
       </div>
     </div>
   </header>
-  <div style="padding-left:16px">
-    <h2>Deposit Page</h2>
-    <p>This is the deposit page content.</p>
-  </div>
-  <script src="Deposit.js"></script>
-  <script src="/auth.js"></script>
 
+  <main style="padding:16px;">
+    <h2>Admin Deposit Dashboard</h2>
+    <p id="admin-warning" style="color:red; display:none;">
+      You must be an admin to view this page.
+    </p>
+
+    <section id="summary-section" style="display:none; margin-bottom:20px;">
+      <h3>Token Summary</h3>
+      <p>Total users: <strong id="total-users">0</strong></p>
+      <p>Total tokens in circulation: <strong id="total-tokens">0</strong></p>
+    </section>
+
+    <section id="users-section" style="display:none; margin-bottom:20px;">
+      <h3>Users and Balances</h3>
+      <table id="users-table" border="1" cellpadding="8" style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Display Name</th>
+            <th>Role</th>
+            <th>Credits</th>
+          </tr>
+        </thead>
+        <tbody id="users-body">
+          <tr><td colspan="4">Loading...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="deposit-all-section" style="display:none; margin-top:20px;">
+      <h3>Deposit Tokens To All Users</h3>
+      <form id="deposit-all-form">
+        <label>
+          Amount to deposit to each user:
+          <input type="number" id="deposit-amount" min="0" required>
+        </label>
+        <button type="submit">Deposit</button>
+      </form>
+      <p id="deposit-status"></p>
+    </section>
+  </main>
+
+  <script src="/auth.js"></script>
+  <script src="Deposit.js"></script>
 </body>
 </html>
