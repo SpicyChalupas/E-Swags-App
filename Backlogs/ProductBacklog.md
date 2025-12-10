@@ -24,7 +24,6 @@ Product Backlog SP Total: 106
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-
 | RC-039 | As an employee, I want to see my current Swag Bucks balance on the dashboard so that I know how much I can spend | 10 | 5 | N | - | - |
 | RC-044 | As a manager, I want to adjust an employee’s Swag Bucks balance (bonus, corrections) so I can reward performance or fix errors. | 9 | 5 | - | - | - |
 | RC-045 | As a manager, I want to see a dashboard of total Swag Bucks issued vs. redeemed so I can monitor overall usage. | 7 | 5 | - | - | - |
