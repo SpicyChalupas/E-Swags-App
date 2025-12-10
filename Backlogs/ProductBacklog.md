@@ -28,7 +28,6 @@ Product Backlog SP Total: 106
 | RC-044 | As a manager, I want to adjust an employee’s Swag Bucks balance (bonus, corrections) so I can reward performance or fix errors. | 9 | 5 | - | - | - |
 | RC-045 | As a manager, I want to see a dashboard of total Swag Bucks issued vs. redeemed so I can monitor overall usage. | 7 | 5 | - | - | - |
 | RC-046 | As an admin, I want role-based access control (admin/manager/employee) so that sensitive features are restricted. | 10 | 8 | N | - | - |
-| RC-047 | As a Developer, I want to ensure the site still uses Amazon's color scheme as we continue to work. | 3 | 2 | N | - | Edgar |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
