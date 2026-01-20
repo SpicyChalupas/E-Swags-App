@@ -33,10 +33,13 @@ Product Backlog SP Total: 40
 | RC-052 | As a team, we want to update our group picture for this semester | 4 | 1 | Y | Everyone | Ready |
 | RC-053 | As a customer, I want a logo for e-swag | 5 | 3 | Y | - | Ready |
 | RC-054 | as a developer, I want to move the credit page from the header to the footer | 4 | 2 | Y | Edgar | Ready |
-| RC-0## | As a developer, I want to make sure the page works on all devices: PC. Phone, and Tablet | 4 | 2 | N | Glaycon | Ready |
+| RC-055 | As a developer, I want to make sure the page works on all devices: PC. Phone, and Tablet | 4 | 2 | N | Glaycon | Ready |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
-
+| RC-0## | - | - | - | - | - | - |
+| RC-0## | - | - | - | - | - | - |
+| RC-0## | - | - | - | - | - | - |
+| RC-0## | - | - | - | - | - | - |
 
 
  
