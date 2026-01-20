@@ -26,8 +26,10 @@ Product Backlog SP Total: 40
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
 | RC-047 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 1) | 8 | 2 | Y | done | Glaycon |
 | RC-048 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 1) | 8 | 2 | Y | Done | Andrew |
-| RC-049 | As a Costomer, I want the website server to get up and running for this semester | 10 | 1 | N | Andrew | Done |
+| RC-049 | As a customer, I want the website server to get up and running for this semester | 10 | 1 | N | Andrew | Done |
 | RC-050 | As a New member to SpicyChalupas, I want to get integrated with all the discord and github collaboration groups | 8 | 2 | Y | Diego | Done |
+| RC-007 | As a customer, I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
+| RC-051 | As a customer, I want to see a introduction page on the  developer thats working on this product (about page) - Diego | 10 | 2 | N | Ready | Diego |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
