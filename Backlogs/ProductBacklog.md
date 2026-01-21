@@ -36,8 +36,8 @@ Product Backlog SP Total: 40
 | RC-055 | As a developer, I want to make sure the page works on all devices: PC. Phone, and Tablet | 4 | 2 | N | Glaycon | Ready |
 | RC-056 | As a developer, I want to make a navbar | 6 | 4 | N| Tom| Ready |
 | RC-057 | As a developer, I want to make a drop menu | 5 | 2 | N | Tom | Ready|
-| RC-058 | As a customer, I want a logo for Spicy Chalupas| 6 | 3 | N| - | Ready |
-| RC-059 | As a developer, I want to merge news and and home page |  7| 3 | N | - | Ready |
+| RC-058 | As a customer, I want a logo for Spicy Chalupas| 6 | 3 | Y | - | Ready |
+| RC-059 | As a developer, I want to merge news and and home page | 7 | 3 | N | - | Ready |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 
