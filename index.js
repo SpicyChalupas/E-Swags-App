@@ -14,7 +14,7 @@ async function startServer() {
       process.exit(1);
     }
     console.log('Server is listening on port 3000');
-  });
-}
+  };
+
 
 startServer();
