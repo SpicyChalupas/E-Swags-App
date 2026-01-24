@@ -43,10 +43,3 @@ Product Backlog SP Total: 40
 | RC-062 | As a user, I want to only see the login page when I open the website and not the whole nav bar | 8 | 3 | Y | Ready | Tom |
 | RC-063 | As a developer I will review the AWS tutorials sent in E-Swag redo discord as well as personal review | 5 | 4 | N | Ready | Diego |
 | RC-064 | As a customer I would like the items on the merch page to also have links to the product on Amazon | 8 | 2 | Y | Ready | Edgar |
-| RC-0## | - | - | - | - | - | - |
-| RC-0## | - | - | - | - | - | - |
-
-
- 
-
-8 points per person, 40 capacity
