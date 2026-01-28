@@ -3,14 +3,44 @@
 }
 
 .info-box {
-    border: 1px solid #000000;
-    padding: 13px;
-    margin: 10px 0;
-    border-radius: 25px;
-    background: #cec6c6a9;
+  border: 1px solid #000000;
+  padding: 13px;
+  margin: 10px 0;
+  border-radius: 25px;
+  background: #cec6c6a9;
 }
 
 .profile-box {
   padding: 30px;
   max-width: 650px;
+}
+
+.admin-tools {
+  margin-top: 24px;
+}
+
+.tool-box {
+  border: 1px solid #000000;
+  padding: 13px;
+  margin: 10px 0;
+  border-radius: 25px;
+  background: #ffffff;
+}
+
+.tool-link {
+  display: inline-block;
+  padding: 10px 14px;
+  background-color: #FF9900;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tool-link:hover {
+  background-color: #e68a00;
+}
+
+.tool-desc {
+  margin-top: 10px;
 }
