@@ -21,13 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Show all admin sections
   showAdminSections();
-
-  // Load users + summary
   loadUsersAndSummary();
 
-  // Hook forms
   const singleForm = document.getElementById("single-adjust-form");
   if (singleForm) singleForm.addEventListener("submit", onSingleAdjust);
 
@@ -43,7 +39,6 @@ function showAdminSections() {
     });
 }
 
-// Load users, fill table + dropdown + totals
 async function loadUsersAndSummary() {
   const tbody = document.getElementById("users-body");
   if (tbody) {
@@ -55,16 +50,13 @@ async function loadUsersAndSummary() {
     adminUsers = Array.isArray(users) ? users : [];
 
     if (!adminUsers.length) {
-      if (tbody) {
-        tbody.innerHTML = "<tr><td colspan='4'>No users found.</td></tr>";
-      }
+      if (tbody) tbody.innerHTML = "<tr><td colspan='4'>No users found.</td></tr>";
       setSummary(0, 0);
       populateSingleUserSelect(adminUsers);
       return;
     }
 
     let totalTokens = 0;
-
     if (tbody) {
       tbody.innerHTML = "";
       adminUsers.forEach(u => {
@@ -95,7 +87,6 @@ async function loadUsersAndSummary() {
 
     setSummary(adminUsers.length, totalTokens);
     populateSingleUserSelect(adminUsers);
-
   } catch (err) {
     console.error("[Deposit] Error loading users:", err);
     if (tbody) {
@@ -137,7 +128,7 @@ async function onSingleAdjust(e) {
   if (!username || !amountInput || !opEl) return;
 
   const amount = parseInt(amountInput.value, 10);
-  const op = opEl.value; // "add" or "remove"
+  const op = opEl.value; // "add" or "remove" (Set)
 
   if (!Number.isFinite(amount) || amount <= 0) {
     if (statusEl) {
@@ -147,21 +138,20 @@ async function onSingleAdjust(e) {
     return;
   }
 
-  // Use positive for add, negative for remove
-  const delta = op === "add" ? amount : -amount;
-
   if (statusEl) {
     statusEl.textContent = "Applying change...";
     statusEl.style.color = "black";
   }
 
   try {
-    // Backend treats credits as a delta via assignCredits
-    await window.Auth.assignCredits(username, delta, "add");
+    await window.Auth.assignCredits(username, amount, op);
 
     if (statusEl) {
-      statusEl.textContent =
-        `${op === "add" ? "Added" : "Removed"} ${amount} credits for ${username}.`;
+      if (op === "add") {
+        statusEl.textContent = `Added ${amount} credits for ${username}.`;
+      } else {
+        statusEl.textContent = `Set ${username}'s credits to ${amount}.`;
+      }
       statusEl.style.color = "green";
     }
 
@@ -186,7 +176,7 @@ async function onAllAdjust(e) {
   if (!amountInput || !opEl) return;
 
   const amount = parseInt(amountInput.value, 10);
-  const op = opEl.value; // "add" or "remove"
+  const op = opEl.value; // "add" or "remove" (Set)
 
   if (!Number.isFinite(amount) || amount <= 0) {
     if (statusEl) {
@@ -196,11 +186,9 @@ async function onAllAdjust(e) {
     return;
   }
 
-  const delta = op === "add" ? amount : -amount;
-
   if (statusEl) {
     statusEl.textContent =
-      `${op === "add" ? "Depositing" : "Removing"} credits for all users...`;
+      `${op === "add" ? "Applying" : "Setting"} credits for all users...`;
     statusEl.style.color = "black";
   }
 
@@ -210,12 +198,17 @@ async function onAllAdjust(e) {
     }
 
     for (const u of adminUsers) {
-      await window.Auth.assignCredits(u.username, delta, "add");
+      await window.Auth.assignCredits(u.username, amount, op);
     }
 
     if (statusEl) {
-      statusEl.textContent =
-        `${op === "add" ? "Deposited" : "Removed"} ${amount} credits for ${adminUsers.length} users.`;
+      if (op === "add") {
+        statusEl.textContent =
+          `Added ${amount} credits for ${adminUsers.length} users.`;
+      } else {
+        statusEl.textContent =
+          `Set credits to ${amount} for ${adminUsers.length} users.`;
+      }
       statusEl.style.color = "green";
     }
 

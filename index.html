@@ -8,36 +8,50 @@
 </head>
 <body>
   <header>
-    <div class="topnav">
+    <nav class="topnav">
       <div class="topnav-left">
         <a class="active" href="/index.html">Home</a>
         <a href="/News Page/News.html">News</a>
         <a href="/Deposit Page/Deposit.html">Deposit</a>
-        <a href="/Merch Page/Merch.html">Merch</a>
+
+        
+        <div class="dropdown">
+          <a href="/Merch Page/Merch.html" class="dropbtn">Merch &#9662;</a>
+          <div class="dropdown-content">
+            <a href="/Merch Page/Tshirts.html">T-Shirts</a>
+            <a href="/Merch Page/Hoodies.html">Hoodies</a>
+            <a href="/Merch Page/Accessories.html">Accessories</a>
+          </div>
+        </div>
+
         <a href="/Contact Page/Contact.html">Contact</a>
         <a href="/About Page/About.html">About</a>
       </div>
 
-      <!-- Right side: login status -->
       <div class="topnav-right">
         <a href="/Cart Page/Cart.html" class="cart">
           <img src="/Cart Page/shoppingcart.png" alt="Shopping Cart">
         </a>
-        <a href="/Profile Page/Employee.html" class="pfp">
+        <a href="/Profile Page/Profile.html" class="pfp">
           <img src="/Profile Page/pfp.jpg" alt="Profile Picture">
         </a>
         <span id="nav-user"></span>
         <a href="/Authentication Page/Authentication.html" id="nav-login">Login</a>
         <a href="#" id="nav-logout" style="display:none;">Logout</a>
       </div>
-    </div>
+    </nav>
   </header>
-    <div style="padding-left:16px">
-      <h2>E-Swag</h2>
-      <p>Welcome,</p>
-    </div>
 
-    <script src="index.js"></script>
-    <script src="/auth.js"></script>
+  <main class="main-content">
+    <div class="welcome-text">
+      <h1>Welcome to E-Swag</h1>
+      <p>Your one-stop shop for all merch!</p>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+   <script src="/auth.js"></script>
+  
+  
 </body>
 </html>
