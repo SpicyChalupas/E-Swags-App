@@ -24,12 +24,12 @@ Product Backlog SP Total: 40
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-
 | RC-065 | As a developer, I want to  interview Amazon managers to see how the current E-swag app performs.| 7 | 8 | Y | Ready | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
+| RC-0## | - | - | - | - | - | - | 
 
  
 
