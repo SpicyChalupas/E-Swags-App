@@ -31,12 +31,12 @@ Product Backlog SP Total: 40
 | RC-007 | As a customer, I want to see a introduction page on the  developer thats working on this product (about page) - Tom | 10 | 2 | N | Ready | Tom |
 | RC-051 | As a customer, I want to see a introduction page on the  developer thats working on this product (about page) - Diego | 10 | 2 | N | Done | Diego |
 | RC-052 | As a team, we want to update our group picture for this semester | 4 | 1 | Y | Ready | Everyone |
-| RC-053 | As a customer, I want a logo for e-swag | 5 | 3 | Y | Ready | Andrew |
+| RC-053 | As a customer, I want a logo for e-swag | 5 | 3 | Y | Done | Andrew |
 | RC-054 | as a developer, I want to move the credit page from the header to the footer | 4 | 2 | Y | Ready | Edgar |
 | RC-055 | As a developer, I want to make sure the page works on all devices: PC. Phone, and Tablet | 4 | 2 | N | Ready | Glaycon |
 | RC-056 | As a developer, I want to make a collapsable navbar | 6 | 3 | N| Ready | Tom |
 | RC-057 | As a developer, I want to make a drop menu | 5 | 2 | N | Ready | Tom |
-| RC-058 | As a customer, I want a logo for Spicy Chalupas| 6 | 3 | Y | Ready | Andrew |
+| RC-058 | As a customer, I want a logo for Spicy Chalupas| 6 | 3 | Y | Done | Andrew |
 | RC-059 | As a developer, I want to merge news and and home page | 7 | 3 | N | Ready | Edgar |
 | RC-060 | As a admin, I want to see the deposit page only after going to my account information | 7 | 2 | N | Ready | Glaycon |
 | RC-061 | As a customer I dont want to see the deposit page unless I am a admin | 7 | 2 | Y | done | Glaycon |
