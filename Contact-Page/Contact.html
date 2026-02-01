@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Swag Contact</title>
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="../main.css">
     <style>
         .team-photo {
             width: 80%;
@@ -42,37 +42,49 @@
         #contact-content section {
             margin-top: 40px;
         }
+
+        .spicychalupas-logo {
+            display: block;
+            max-width: 320px;
+            width: 80%;
+            margin: 10px auto 20px;
+            height: auto;
+        }
     </style>
 </head>
 <body>   
     <header>
         <div class="topnav">
             <div class="topnav-left">
-                <a href="/index.html">Home</a>
-                <a href="/News Page/News.html">News</a>
-                <a href="/Deposit Page/Deposit.html">Deposit</a>
-                <a href="/Merch Page/Merch.html">Merch</a>
-                <a class="active" href="/Contact Page/Contact.html">Contact</a>
-                <a href="/About Page/About.html">About</a>
+                <a href="../index.html">Home</a>
+                <a href="../News-Page/News.html">News</a>
+                <a href="../Deposit-Page/Deposit.html">Deposit</a>
+                <a href="../Merch-Page/Merch.html">Merch</a>
+                <a class="active" href="Contact.html">Contact</a>
+                <a href="../About-Page/About.html">About</a>
+            </div>
+
+            <div class="topnav-center">
+                <img class="nav-logo" src="../eswag_logo.png" alt="E-Swag Logo">
             </div>
 
         <!-- Right side: login status -->
             <div class="topnav-right">
-                <a href="/Cart Page/Cart.html" class="cart">
-                    <img src="/Cart Page/shoppingcart.png" alt="Shopping Cart">
+                <a href="../Cart-Page/Cart.html" class="cart">
+                    <img src="../Cart-Page/shoppingcart.png" alt="Shopping Cart">
                 </a>
-                <a href="/Profile Page/Profile.html" class="pfp">
-                    <img src="/Profile Page/pfp.jpg" alt="Profile Picture">
+                <a href="../Profile-Page/Profile.html" class="pfp">
+                    <img src="../Profile-Page/pfp.jpg" alt="Profile Picture">
                 </a>
                 <span id="nav-user"></span>
-                <a href="/Authentication Page/Authentication.html" id="nav-login">Login</a>
+                <a href="../Authentication-Page/Authentication.html" id="nav-login">Login</a>
                 <a href="#" id="nav-logout" style="display:none;">Logout</a>
             </div>
         </div>
     </header>
     <div id="contact-content">
         <h1>Welcome to Our Team!</h1>
-        <h2>SpicyChalupas</h2>
+        <img src="../spicychalupas_logo.png" alt="SpicyChalupas" class="spicychalupas-logo">
         
         <h2>Meet the Team</h2>
         <img src="https://main.d93zj6diaenv2.amplifyapp.com/TeamPhoto.png" alt="Team Photo" class="team-photo">
@@ -92,6 +104,6 @@
         <p>SpicyChalupas GitHub Repository: <a href="https://github.com/SpicyChalupas" target="_blank">Our GitHub 👾</a></p>
     </div>
     <script src="Contact.js"></script>
-    <script src="/auth.js"></script>
+    <script src="../auth.js"></script>
 </body>
 </html>

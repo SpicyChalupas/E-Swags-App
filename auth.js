@@ -3,10 +3,39 @@
 
 // === CONFIG ===
 
-const LOGIN_PATH = "/Authentication%20Page/Authentication.html";  
+// Use decoded path to work with both local and production
+const LOGIN_PATH = "Authentication-Page/Authentication.html";  
 
 // Default to deployed App Runner URL; still allow overriding via `window.API_BASE`
 const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com"; // Override with window.API_BASE if needed
+
+const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const LOCAL_USERS_KEY = "eswag.localUsers";
+const LOCAL_DEMO_USERS = [
+  { username: "admin", displayName: "Admin User", role: "admin", credits: 1000, password: "admin123" },
+  { username: "employee", displayName: "Employee User", role: "employee", credits: 500, password: "employee123" },
+];
+
+function loadLocalUsers() {
+  try {
+    const raw = localStorage.getItem(LOCAL_USERS_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+function saveLocalUsers(users) {
+  localStorage.setItem(LOCAL_USERS_KEY, JSON.stringify(users));
+}
+
+function ensureLocalUsers() {
+  const existing = loadLocalUsers();
+  if (existing && Array.isArray(existing) && existing.length) return existing;
+  saveLocalUsers(LOCAL_DEMO_USERS);
+  return LOCAL_DEMO_USERS;
+}
 
 
 const SESSION_KEY = "eswag.session";
@@ -76,6 +105,15 @@ function hasAnyRole(...roles) {
 // === API Calls ===
 
 async function loginWithBackend(username, password) {
+  if (IS_LOCAL) {
+    const users = ensureLocalUsers();
+    const user = users.find(u => u.username.toLowerCase() === username.trim().toLowerCase());
+    if (!user || user.password !== password.trim()) {
+      throw new Error("Invalid username or password");
+    }
+    saveSession(user, "local-token");
+    return user;
+  }
   try {
     const res = await fetch(`${API_BASE}/auth/login`, {
       method: "POST",
@@ -103,6 +141,9 @@ async function loginWithBackend(username, password) {
 
 // Get current user from backend (refresh session)
 async function refreshUser() {
+  if (IS_LOCAL) {
+    return getCurrentUser();
+  }
   const token = getToken();
   if (!token) return null;
 
@@ -130,6 +171,10 @@ async function refreshUser() {
 
 // Get user credits from backend
 async function getUserCredits() {
+  if (IS_LOCAL) {
+    const user = getCurrentUser();
+    return user ? user.credits : null;
+  }
   const token = getToken();
   if (!token) return null;
 
@@ -150,6 +195,18 @@ async function getUserCredits() {
 
 // Make a purchase (deduct credits)
 async function makePurchase(itemId, itemName, cost) {
+  if (IS_LOCAL) {
+    const user = getCurrentUser();
+    if (!user) throw new Error("Not authenticated");
+    if (user.credits < cost) throw new Error("Insufficient credits");
+    const updated = { ...user, credits: user.credits - cost };
+    saveSession(updated, "local-token");
+    const users = ensureLocalUsers().map(u =>
+      u.username.toLowerCase() === updated.username.toLowerCase() ? { ...u, credits: updated.credits } : u
+    );
+    saveLocalUsers(users);
+    return { ok: true, remainingCredits: updated.credits, itemId, itemName };
+  }
   const token = getToken();
   if (!token) throw new Error("Not authenticated");
 
@@ -180,6 +237,9 @@ async function makePurchase(itemId, itemName, cost) {
 
 // Get all users (admin only)
 async function getAdminUsers() {
+  if (IS_LOCAL) {
+    return ensureLocalUsers().map(({ password, ...rest }) => rest);
+  }
   const token = getToken();
   if (!token) throw new Error("Not authenticated");
 
@@ -203,6 +263,20 @@ async function getAdminUsers() {
 
 // Assign credits to user (admin only)
 async function assignCredits(username, credits, operation = "add") {
+  if (IS_LOCAL) {
+    const users = ensureLocalUsers();
+    const updated = users.map(u => {
+      if (u.username.toLowerCase() !== username.toLowerCase()) return u;
+      const nextCredits = operation === "remove" ? credits : u.credits + credits;
+      return { ...u, credits: nextCredits };
+    });
+    saveLocalUsers(updated);
+    const current = getCurrentUser();
+    if (current && current.username.toLowerCase() === username.toLowerCase()) {
+      saveSession({ ...current, credits: updated.find(u => u.username.toLowerCase() === username.toLowerCase()).credits }, "local-token");
+    }
+    return { ok: true };
+  }
   const token = getToken();
   if (!token) throw new Error("Not authenticated");
 
@@ -232,9 +306,8 @@ async function assignCredits(username, credits, operation = "add") {
 // === Global login gate ===
 
 function isLoginPage(pathname) {
-  const cleanPath = decodeURIComponent(pathname.replace(/\/+$/, ""));
-  const cleanLogin = decodeURIComponent(LOGIN_PATH.replace(/\/+$/, ""));
-  return cleanPath === cleanLogin;
+  // Check if the pathname ends with Authentication.html (works locally and in production)
+  return pathname.includes("Authentication.html") || pathname.includes("Authentication-Page");
 }
 
 function enforceGlobalLogin() {
@@ -250,7 +323,10 @@ function enforceGlobalLogin() {
     console.log("[auth] not logged in, redirecting to login");
     const target = path + window.location.search + window.location.hash;
     localStorage.setItem(POST_LOGIN_KEY, target || "/index.html");
-    window.location.href = LOGIN_PATH;
+    // Construct absolute path to authentication page
+    const baseUrl = window.location.origin;
+    const pathBefore = window.location.pathname.includes("/E-Swags-App/") ? "/E-Swags-App/" : "/";
+    window.location.href = baseUrl + pathBefore + "Authentication-Page/Authentication.html";
   } else {
     console.log("[auth] already logged in");
   }

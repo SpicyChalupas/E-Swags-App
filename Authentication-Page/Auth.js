@@ -1,8 +1,8 @@
 // Simple front-end "Midway" login gate for the whole site.
 
 // === CONFIG ===
-// IMPORTANT: use the path with the space, exactly like the folder name.
-const LOGIN_PATH = "/Authentication%20Page/Authentication.html";
+// IMPORTANT: use the path with hyphens to match the renamed folder
+const LOGIN_PATH = "Authentication-Page/Authentication.html";
 
 const SESSION_KEY    = "eswag.session";
 const POST_LOGIN_KEY = "eswag.postLoginRedirect";
