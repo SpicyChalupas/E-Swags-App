@@ -38,7 +38,7 @@ Product Backlog SP Total:
 | RC-076 | As a dev, I want to remove duplictate links from the top nav and the footer | 3 | 2 | N | Ready | - | 
 | RC-077 | As a dev, I want to change the redeem button to be renamed to view on amazon button | 4 | 5 | Y | Ready | - | 
 | RC-078 | as a dev, I want to add a add to cart button. | 5 | 3 | n | Ready | - | 
-| RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | - | - | - | - | - | 
+| RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | Ready | - | 
 | RC-080 | As a dev, I want to add a description to the about page. | 3 | 2 | Y | Ready | Diego | 
 | RC-0## | - | - | - | - | - | - | 
 | RC-0## | - | - | - | - | - | - | 
