@@ -24,9 +24,11 @@ Product Backlog SP Total: 40
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-065 | As a developer, I want to  interview Amazon managers to see how the current E-swag app performs.| 7 | 8 | Y | Ready | - |
-| RC-066 | As a costumer, I want to see my history of credits earned | 8 | 4 | N | Ready | - |
-| RC-067 | As a costumer, I want to see who is giving me my credits earned and a discription of why i earned them| 8 | 5 | N | Ready | - |
+| RC-065 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 2) | 8 | 2 | Y | done | Glaycon |
+| RC-066 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 2) | 8 | 2 | Y | Done | Andrew |     
+| RC-067 | As a developer, I want to  interview Amazon managers to see how the current E-swag app performs.| 7 | 8 | Y | Ready | - |
+| RC-068 | As a costumer, I want to see my history of credits earned | 8 | 4 | N | Ready | - |
+| RC-069 | As a costumer, I want to see who is giving me my credits earned and a discription of why i earned them| 8 | 5 | N | Ready | - |
 | RC-068 | As a dev, I want to add an admin account to allow the creation of other users | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - | 
