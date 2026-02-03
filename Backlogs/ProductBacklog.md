@@ -29,8 +29,10 @@ Product Backlog SP Total: 40
 | RC-067 | As a developer, I want to  interview Amazon managers to see how the current E-swag app performs.| 7 | 8 | Y | Ready | - |
 | RC-068 | As a costumer, I want to see my history of credits earned | 8 | 4 | N | Ready | - |
 | RC-069 | As a costumer, I want to see who is giving me my credits earned and a discription of why i earned them| 8 | 5 | N | Ready | - |
-| RC-068 | As a dev, I want to add an admin account to allow the creation of other users | - | - | - | - | - |
+| RC-070 | As a dev, I want to add an admin account to allow the creation of other users manualy | 10 | 6 | N | Ready | - |
+| RC-071 | As a admin, I want to be able to upload excel sheets to allow autmatic creation of users.  | 10 | 8 | N | Ready | - |
 | RC-0## | - | - | - | - | - | - |
+| RC-0## | - | - | - | - | - | - | 
 | RC-0## | - | - | - | - | - | - | 
 
  
