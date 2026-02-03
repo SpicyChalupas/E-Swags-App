@@ -14,13 +14,13 @@ Scrum Master: Andrew
 
 Product Owner: Glaycon Cezarotto
 
-Sprint 6 Planning Date/Time: 2/03 - 2/15
+Sprint 2 Planning Date/Time: 2/03 - 2/15
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Diego 
 
-Product Backlog SP Total: 40
+Product Backlog SP Total: 
 
-8 points for each person.
+12 points for each person.
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
