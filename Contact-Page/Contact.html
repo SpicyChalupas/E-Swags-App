@@ -5,62 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Swag Contact</title>
     <link rel="stylesheet" href="../main.css">
-    <style>
-        .team-photo {
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            display: block;
-            border: 3px solid #000000;
-            border-radius: 25px;
-        }
-
-        #contact-content {
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        #contact-content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #contact-content li {
-            margin: 10px 0;
-        }
-
-        #contact-content a {
-            color: #0077cc;
-            text-decoration: none;
-        }
-
-        #contact-content a:hover {
-            text-decoration: underline;
-        }
-
-        #contact-content section {
-            margin-top: 40px;
-        }
-
-        .spicychalupas-logo {
-            display: block;
-            max-width: 320px;
-            width: 80%;
-            margin: 10px auto 20px;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="Contact.css">
 </head>
 <body>   
     <header>
         <div class="topnav">
             <div class="topnav-left">
                 <a href="../index.html">Home</a>
-                <a href="../News-Page/News.html">News</a>
+                <div class="dropdown">
+                    <a href="Merch-Page/Merch.html" class="dropbtn">Merch &#9662;</a>
+                    <div class="dropdown-content">
+                    <a href="Merch-Page/Tshirts.html">T-Shirts</a>
+                    <a href="Merch-Page/Hoodies.html">Hoodies</a>
+                    <a href="Merch-Page/Accessories.html">Accessories</a>
+                </div>
+            </div>
 
-                <a href="../Merch-Page/Merch.html">Merch</a>
-                <a class="active" href="Contact.html">Contact</a>
                 <a href="../About-Page/About.html">About</a>
             </div>
 
@@ -103,6 +63,16 @@
         
         <p>SpicyChalupas GitHub Repository: <a href="https://github.com/SpicyChalupas" target="_blank">Our GitHub 👾</a></p>
     </div>
+    <footer class="footer">
+        <div class="footerlinks">
+        <a href="/index.html">Home</a>
+        <a href="/News-Page/News.html">News</a>
+        <a href="/Merch-Page/Merch.html">Merch</a>
+        <a href="/Contact-Page/Contact.html">Contact</a>
+        <a href="/About-Page/About.html">About</a>
+        </div>
+        <p class="footertext">© 2026 E-Swag and Amazon. </p>
+    </footer>
     <script src="Contact.js"></script>
     <script src="../auth.js"></script>
 </body>

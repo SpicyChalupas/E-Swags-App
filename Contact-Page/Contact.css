@@ -1,0 +1,44 @@
+    .team-photo {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+        display: block;
+        border: 3px solid #000000;
+        border-radius: 25px;
+    }
+
+    #contact-content {
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    #contact-content ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #contact-content li {
+        margin: 10px 0;
+    }
+
+    #contact-content a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    #contact-content a:hover {
+        text-decoration: underline;
+    }
+
+    #contact-content section {
+        margin-top: 40px;
+    }
+
+    .spicychalupas-logo {
+        display: block;
+        max-width: 320px;
+        width: 80%;
+        margin: 10px auto 20px;
+        height: auto;
+    }

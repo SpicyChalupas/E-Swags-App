@@ -117,6 +117,33 @@ body {
   margin-left: 10px;
 }
 
+.footer {
+  background-color: #232F3E;
+  padding: 22px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footerlinks {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 12px;
+}
+
+.footerlinks a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  text-decoration: underline;
+}
+
+.footertext {
+  color: #aaa;
+  font-size: 14px;
+}
 
 @media screen and (max-width: 900px) {
   .topnav {
