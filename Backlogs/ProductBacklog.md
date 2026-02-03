@@ -36,6 +36,11 @@ Product Backlog SP Total:
 | RC-074 | as a dev, I want to add a featured items or deals to the blank spot on the homepage. | 5 | 5 | N | ready | - | 
 | RC-075 | As a dev, I want to upload the new group photo to the site | 2 | 1 | Y | ready | Tom | 
 | RC-076 | As a dev, I want to remove duplictate links from the top nav and the footer | 3 | 2 | N | Ready | - | 
+| RC-077 | As a dev, I want to change the redeem button to be renamed to view on amazon button | 4 | 5 | Y | Ready | - | 
+| RC-078 | as a dev, I want to add a add to cart button. | 5 | 3 | n | Ready | - | 
+| RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | - | - | - | - | - | 
+| RC-0 | - | - | - | - | - | - | 
+| RC-0## | - | - | - | - | - | - | 
 | RC-0## | - | - | - | - | - | - | 
 
  
