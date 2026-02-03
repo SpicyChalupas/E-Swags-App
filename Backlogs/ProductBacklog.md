@@ -26,7 +26,7 @@ Product Backlog SP Total:
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
 | RC-065 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 2) | 8 | 2 | Y | done | Glaycon |
 | RC-066 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 2) | 8 | 2 | Y | Done | Andrew |     
-| RC-067 | As a developer, I want to  interview Amazon managers to see how the current E-swag app performs.| 7 | 8 | Y | Ready | - |
+| RC-067 | As a developer, We want to meet with out sponsor and communicate weekly if possible.| 7 | 6 | Y | Ready | full team |
 | RC-068 | As a costumer, I want to see my history of credits earned | 8 | 4 | N | Ready | - |
 | RC-069 | As a costumer, I want to see who is giving me my credits earned and a discription of why i earned them | 8 | 5 | N | Ready | - |
 | RC-070 | As a dev, I want to add a discription of why im giving credits to a user | 8 | 3 | N | Ready | - | 
