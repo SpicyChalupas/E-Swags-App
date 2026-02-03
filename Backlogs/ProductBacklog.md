@@ -30,7 +30,7 @@ Product Backlog SP Total:
 | RC-068 | As a costumer, I want to see my history of credits earned | 8 | 4 | N | Ready | - |
 | RC-069 | As a costumer, I want to see who is giving me my credits earned and a discription of why i earned them | 8 | 5 | N | Ready | - |
 | RC-070 | As a dev, I want to add a discription of why im giving credits to a user | 8 | 3 | N | Ready | - | 
-| RC-071 | As a dev, I want to add an admin account to allow the creation of other users manualy | 10 | 6 | N | Ready | - |
+| RC-071 | As a dev, I want to add an manager account to allow the creation of other users manualy | 10 | 6 | N | Ready | Andrew |
 | RC-072 | As a admin, I want to be able to upload excel sheets to allow automatic creation of users.  | 10 | 8 | N | Ready | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - | 
