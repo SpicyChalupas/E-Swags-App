@@ -40,9 +40,9 @@ Product Backlog SP Total:
 | RC-078 | as a dev, I want to add an "add to cart" button. | 5 | 6 | n | Ready | Diego | 
 | RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | done | - | 
 | RC-080 | As a dev, I want to add a description to the about page. | 3 | 2 | Y | Ready | Diego | 
+| RC-081 | As a team memeber, prepare for and fully participate in your mid-term Product Review on Tuesday, April 14 at 2 pm CT | 9 | 1 | N | Ready | Everyone | 
 | RC-0## | - | - | - | - | - | - | 
 | RC-0## | - | - | - | - | - | - | 
-
  
 
 12 points per person, 60 capacity
