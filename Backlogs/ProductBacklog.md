@@ -45,4 +45,4 @@ Product Backlog SP Total:
 
  
 
-8 points per person, 40 capacity
+12 points per person, 60 capacity
