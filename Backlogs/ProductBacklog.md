@@ -32,7 +32,7 @@ Product Backlog SP Total:
 | RC-070 | As a dev, I want to add a discription of why im giving credits to a user | 8 | 3 | N | Ready | - | 
 | RC-071 | As a dev, I want to add an manager account to allow the creation of other users manualy | 10 | 6 | N | Ready | Andrew |
 | RC-072 | As a manager, I want to be able to upload excel sheets to allow automatic creation of users.  | 10 | 8 | N | Next Sprint | - |
-| RC-073 | As a dev, I want to add a search bar to the merch page  | 6 | 6 | N | ready | - |
+| RC-073 | As a dev, I want to add a search bar to the merch page  | 6 | 6 | N | ready | tom|
 | RC-074 | as a dev, I want to add a featured items or deals to the blank spot on the homepage. | 5 | 6 | N | ready | - | 
 | RC-075 | As a dev, I want to upload the new group photo to the site | 2 | 2 | Y | ready | Tom | 
 | RC-076 | As a dev, I want to remove duplictate links from the top nav and the footer | 3 | 2 | N | Ready | Edgar | 
