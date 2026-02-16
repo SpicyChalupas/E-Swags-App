@@ -30,7 +30,7 @@ Product Backlog SP Total: 60
 | RC-066 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 2) | 8 | 2 | Y | Done | Andrew |   
 | RC-068 | As a costumer, I want to see my history of credits earned | 8 | 6 | N | Ready | Diego |
 | RC-069 | As a costumer, I want to see who is giving me my credits earned and a discription of why i earned them | 8 | 5 | N | done | glaycon |
-| RC-067 | As a developer, We want to meet with out sponsor and communicate weekly/bi-weekly if possible.| 7 | 6 | Y | Done | full team |
+| RC-067 | As a developer, We want to meet with out sponsor and communicate weekly/bi-weekly if possible.| 7 | 6 | Y | ready | full team |
 | RC-073 | As a dev, I want to add a search bar to the merch page  | 6 | 6 | N | ready | tom|
 | RC-078 | as a dev, I want to add an "add to cart" button. | 5 | 6 | n | Ready | Diego | 
 | RC-077 | As a dev, I want to change the redeem button to be renamed to view on amazon button | 4 | 3 | Y | Done | Edgar | 
