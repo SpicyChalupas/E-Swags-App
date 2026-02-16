@@ -47,7 +47,20 @@
     // Show admin tools only to admins and managers
     const adminTools = byId("admin-tools");
     const canSeeAdminTools = window.Auth.hasAnyRole("admin", "manager");
-    if (adminTools) adminTools.style.display = canSeeAdminTools ? "block" : "none";
+    if (adminTools) {
+      adminTools.style.display = canSeeAdminTools ? "block" : "none";
+      
+      // Add link to admin account creation if not already present
+      if (canSeeAdminTools && adminTools.querySelector(".admin-create-link") === null) {
+        const createLink = document.createElement("div");
+        createLink.className = "tool-box";
+        createLink.innerHTML = `
+          <a class="tool-link admin-create-link" href="Admin.html">Create New Account</a>
+          <p class="tool-desc">Add new employee or admin accounts to the system.</p>
+        `;
+        adminTools.appendChild(createLink);
+      }
+    }
 
     updateNavUserText(user);
 
