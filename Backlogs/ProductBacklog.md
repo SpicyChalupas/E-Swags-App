@@ -14,23 +14,22 @@ Scrum Master: Andrew
 
 Product Owner: Glaycon Cezarotto
 
-Sprint 6 Planning Date/Time: 1/20 - 2/01
+Sprint 2 Planning Date/Time: 2/03 - 2/15
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Diego 
 
-Product Backlog SP Total: 40
+Product Backlog SP Total: 60
 
-8 points for each person.
+12 points for each person.
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-065 | As a developer, I want to  interview Amazon managers to see how the current E-swag app performs.| 7 | 8 | Y | Ready | - |
-| RC-0## | - | - | - | - | - | - |
-| RC-0## | - | - | - | - | - | - |
-| RC-0## | - | - | - | - | - | - |
-| RC-0## | - | - | - | - | - | - |
+| RC-070 | As a dev, I want to add a discription of why im giving credits to a user | 8 | 3 | N | Ready | - | 
+| RC-072 | As a manager, I want to be able to upload excel sheets to allow automatic creation of users.  | 10 | 8 | N | Next Sprint | - |
+| RC-074 | as a dev, I want to add a featured items or deals to the blank spot on the homepage. | 5 | 6 | N | ready | - | 
+| RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | done | - |  
 | RC-0## | - | - | - | - | - | - | 
-
+| RC-0## | - | - | - | - | - | - | 
  
 
-8 points per person, 40 capacity
+12 points per person, 60 capacity

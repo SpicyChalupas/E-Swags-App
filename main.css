@@ -18,7 +18,8 @@ body {
   align-items: center;
   padding: 0 20px;
   flex-wrap: wrap;
-  height: 70px;
+  min-height: 70px;
+  height: auto;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -116,19 +117,84 @@ body {
   margin-left: 10px;
 }
 
+.footer {
+  background-color: #232F3E;
+  padding: 22px;
+  text-align: center;
+  margin-top: 40px;
+}
 
-@media screen and (max-width: 768px) {
+.footerlinks {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 12px;
+}
+
+.footerlinks a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  text-decoration: underline;
+}
+
+.footertext {
+  color: #aaa;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  .topnav {
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  /* Let the left and right wrap instead of squishing */
   .topnav-left, .topnav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* Stop the logo from sitting on top of everything */
+  .topnav-center {
+    position: static;
+    transform: none;
     flex-basis: 100%;
     justify-content: center;
-    margin: 5px 0;
+    margin: 6px 0;
+    pointer-events: auto;
   }
-  .topnav-left a, .topnav-right a {
-    padding: 10px;
+
+  .topnav-center .nav-logo {
+    height: 48px;
+  }
+
+  /* Make the user text go to its own line so it does not crush links */
+  #nav-user {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0 0;
+  }
+
+  .topnav a {
+    padding: 10px 10px;
     font-size: 14px;
   }
-  .dropdown-content {
-    position: static;
+}
+
+@media screen and (max-width: 480px) {
+  .topnav a {
+    padding: 8px 8px;
+    font-size: 13px;
+  }
+
+  .topnav img {
+    height: 38px;
+    width: 38px;
+    margin: 0 6px;
   }
 }
 

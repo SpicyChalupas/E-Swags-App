@@ -86,9 +86,57 @@ h2{
     background-color: #00A8E1;
     padding-top: 60px;
     
-    
-    
-    
-
-    
 }
+
+/* Make merch rows wrap like a grid */
+tbody tr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Each merch card */
+tbody td {
+  width: 240px;
+  padding-bottom: 25px;
+}
+
+/* Make images responsive even if HTML has width and height attributes */
+td img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+  tbody td {
+    width: 200px;
+  }
+}
+
+/* Phone */
+@media screen and (max-width: 600px) {
+  table {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  tbody td {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  td img {
+    width: 100%;
+  }
+
+  h2 {
+    padding-top: 30px;
+    font-size: 1.6rem;
+  }
+}
+
