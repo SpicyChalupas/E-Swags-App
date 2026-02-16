@@ -36,4 +36,4 @@ Product Backlog SP Total: 60
 | RC-077 | As a dev, I want to change the redeem button to be renamed to view on amazon button | 4 | 3 | Y | Ready | Edgar | 
 | RC-080 | As a dev, I want to add a description to the about page. | 3 | 2 | Y | Ready | Diego | 
 | RC-076 | As a dev, I want to remove duplictate links from the top nav and the footer | 3 | 2 | N | Ready | Edgar | 
-| RC-075 | As a dev, I want to upload the new group photo to the site | 2 | 2 | Y | ready | Tom | 
+| RC-075 | As a dev, I want to upload the new group photo to the site | 2 | 2 | Y | Done| Tom | 
