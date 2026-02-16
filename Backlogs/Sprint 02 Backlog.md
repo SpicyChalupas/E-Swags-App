@@ -24,7 +24,7 @@ Product Backlog SP Total: 60
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-071 | As a dev, I want to add an manager account to allow the creation of other users manualy | 10 | 6 | N | Ready | Andrew |
+| RC-071 | As a dev, I want to add an manager account to allow the creation of other users manualy | 10 | 6 | N | Done | Andrew |
 | RC-081 | As a team memeber, prepare for and fully participate in your mid-term Product Review on Tuesday, April 14 at 2 pm CT | 9 | 1 | N | Ready | Everyone | 
 | RC-065 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 2) | 8 | 2 | Y | done | Glaycon |
 | RC-066 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 2) | 8 | 2 | Y | Done | Andrew |   
