@@ -8,4 +8,4 @@ Diego Velasco - Developer
 
 Tom Saji - Developer
 
-New developers to be added depending on product direction-tbd
+New developers to be added depending on product direction - tbd
