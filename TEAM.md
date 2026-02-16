@@ -7,3 +7,5 @@ Edgar Torres- Developer
 Diego Velasco - Developer
 
 Tom Saji - Developer
+
+New developers to be added depending on product direction-tbd
