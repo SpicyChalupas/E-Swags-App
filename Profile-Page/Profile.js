@@ -1,6 +1,5 @@
-// Profile page controller
-// Shows account info for all users
-// Shows admin tools (like Deposit link) for admins and managers only
+// Profile.js
+// Shows account info and a quick preview of who granted credits and why
 
 (function () {
   function byId(id) {
@@ -18,13 +17,54 @@
     navUser.textContent = `${user.displayName} (${user.role}) | ${user.credits} credits`;
   }
 
+  function fmtAmount(delta) {
+    const n = Number(delta) || 0;
+    const sign = n >= 0 ? "+" : "";
+    return `${sign}${n}`;
+  }
+
+  function fmtDate(iso) {
+    try {
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return String(iso || "");
+      return d.toLocaleString();
+    } catch {
+      return String(iso || "");
+    }
+  }
+
+  function renderHistory(txns) {
+    const box = byId("profile-history");
+    if (!box) return;
+
+    if (!Array.isArray(txns) || txns.length === 0) {
+      box.textContent = "No credit awards yet.";
+      return;
+    }
+
+    const rows = txns.slice(0, 5).map((t) => {
+      const giver = t.givenBy || t.grantedBy || "";
+      const desc = t.description || t.reason || "";
+      return `
+        <div style="padding:8px 0; border-bottom:1px solid rgba(0,0,0,0.08);">
+          <div style="font-size:12px; opacity:0.8;">${fmtDate(t.createdAt)}</div>
+          <div><strong>${fmtAmount(t.delta)}</strong> credits</div>
+          <div style="opacity:0.9;"><strong>Given by:</strong> ${giver || "Unknown"}</div>
+          <div style="opacity:0.9;"><strong>Why:</strong> ${desc || "No description provided"}</div>
+        </div>
+      `;
+    }).join("");
+
+    box.innerHTML = rows;
+  }
+
   async function loadProfile() {
     if (!window.Auth) {
       console.warn("Auth helper not found. Make sure auth.js is loaded before Profile.js");
       return;
     }
 
-    // Refresh from backend so credits and role stay current
+    // Refresh so credits stay current
     let user = null;
     try {
       user = await window.Auth.refreshUser();
@@ -41,15 +81,19 @@
     setText("profile-role", user.role || "");
     setText("profile-credits", String(user.credits ?? ""));
 
-    // Track that the user visited their account info
-    localStorage.setItem("eswag.lastProfileVisit", String(Date.now()));
-
-    // Show admin tools only to admins and managers
     const adminTools = byId("admin-tools");
     const canSeeAdminTools = window.Auth.hasAnyRole("admin", "manager");
     if (adminTools) adminTools.style.display = canSeeAdminTools ? "block" : "none";
 
     updateNavUserText(user);
+
+    // Load last credit awards (who and why)
+    const txns = await window.Auth.getMyTransactions(50);
+    const creditOnly = Array.isArray(txns)
+      ? txns.filter(t => (t.type || "").startsWith("credit"))
+      : [];
+
+    renderHistory(creditOnly);
 
     if (window.location.hash === "#admin-tools" && adminTools) {
       adminTools.scrollIntoView({ behavior: "smooth" });
