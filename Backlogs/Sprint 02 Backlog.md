@@ -4,7 +4,7 @@ title: Product Backlog
 permalink: /backlogs/product-backlog/
 ---
 
-# 📋 Sprint 1 – *E-Swag App*
+# 📋 Sprint 2 – *E-Swag App*
 
 Definition of Done: The Requrment is testable, able to be demonstrated, and demoable in production.
 
