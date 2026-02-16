@@ -303,6 +303,50 @@ async function assignCredits(username, credits, operation = "add") {
   }
 }
 
+// Create new user account (admin only)
+async function createUser(username, displayName, password, role = "employee", credits = 0) {
+  if (IS_LOCAL) {
+    const users = ensureLocalUsers();
+    const exists = users.find(u => u.username.toLowerCase() === username.toLowerCase());
+    if (exists) throw new Error("User already exists");
+    
+    const newUser = {
+      username,
+      displayName,
+      role,
+      credits,
+      password,
+    };
+    users.push(newUser);
+    saveLocalUsers(users);
+    return { ok: true, user: { username, displayName, role, credits } };
+  }
+  const token = getToken();
+  if (!token) throw new Error("Not authenticated");
+
+  try {
+    const res = await fetch(`${API_BASE}/admin/users`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, displayName, password, role, credits }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Failed to create user");
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error("Create user error:", err);
+    throw err;
+  }
+}
+
 // === Global login gate ===
 
 function isLoginPage(pathname) {
@@ -411,4 +455,5 @@ window.Auth = {
   makePurchase,
   getAdminUsers,
   assignCredits,
+  createUser,
 };
