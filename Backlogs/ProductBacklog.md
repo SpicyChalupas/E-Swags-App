@@ -29,7 +29,8 @@ Product Backlog SP Total: 60
 | RC-074 | as a dev, I want to add a featured items or deals to the blank spot on the homepage. | 5 | 6 | N | ready | - | 
 | RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | done | - |  
 | RC-0## | As a dev, I want to code the backend to allow discription for credits | - | - | - | - | - | 
-| RC-0## | - | - | - | - | - | - | 
+| RC-0## | As a admin, I want to add a remove account feature on the frontend | - | - | - | - | - | 
+| RC-0## | As a admin, I want to add a remove account feature on the backend | - | - | - | - | - | 
  
 
 12 points per person, 60 capacity
