@@ -4,7 +4,7 @@
 // === CONFIG ===
 
 // Use decoded path to work with both local and production
-const LOGIN_PATH = "Authentication-Page/Authentication.html";  
+const LOGIN_PATH = "Authentication-Page/Authentication.html";
 
 // Default to deployed App Runner URL; still allow overriding via `window.API_BASE`
 const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com"; // Override with window.API_BASE if needed
@@ -37,6 +37,43 @@ function ensureLocalUsers() {
   return LOCAL_DEMO_USERS;
 }
 
+// === Transaction storage (LOCAL MODE) ===
+const TXNS_KEY = "eswag.transactions";
+const MAX_TXNS = 2000;
+
+function loadTransactions() {
+  try {
+    const raw = localStorage.getItem(TXNS_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveTransactions(txns) {
+  const safe = Array.isArray(txns) ? txns.slice(-MAX_TXNS) : [];
+  localStorage.setItem(TXNS_KEY, JSON.stringify(safe));
+}
+
+function makeTxnId() {
+  return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
+function nowIso() {
+  try {
+    return new Date().toISOString();
+  } catch {
+    return String(Date.now());
+  }
+}
+
+function addTransaction(txn) {
+  const txns = loadTransactions();
+  txns.push(txn);
+  saveTransactions(txns);
+}
 
 const SESSION_KEY = "eswag.session";
 const TOKEN_KEY = "eswag.token";
@@ -193,20 +230,67 @@ async function getUserCredits() {
   }
 }
 
+// Get my transactions (history)
+async function getMyTransactions(limit = 50) {
+  const user = getCurrentUser();
+  if (!user) return [];
+
+  if (IS_LOCAL) {
+    const txns = loadTransactions()
+      .filter(t => t && t.username && t.username.toLowerCase() === user.username.toLowerCase())
+      .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+    return txns.slice(0, Math.max(1, Number(limit) || 50));
+  }
+
+  const token = getToken();
+  if (!token) return [];
+
+  try {
+    const res = await fetch(`${API_BASE}/users/me/transactions?limit=${encodeURIComponent(limit)}`, {
+      headers: { "Authorization": `Bearer ${token}` },
+    });
+
+    // If server is not implemented yet, do not break UI
+    if (!res.ok) return [];
+
+    const data = await res.json().catch(() => ({}));
+    return Array.isArray(data.transactions) ? data.transactions : [];
+  } catch (err) {
+    console.error("Get transactions error:", err);
+    return [];
+  }
+}
+
 // Make a purchase (deduct credits)
 async function makePurchase(itemId, itemName, cost) {
   if (IS_LOCAL) {
     const user = getCurrentUser();
     if (!user) throw new Error("Not authenticated");
     if (user.credits < cost) throw new Error("Insufficient credits");
+
     const updated = { ...user, credits: user.credits - cost };
     saveSession(updated, "local-token");
+
     const users = ensureLocalUsers().map(u =>
       u.username.toLowerCase() === updated.username.toLowerCase() ? { ...u, credits: updated.credits } : u
     );
     saveLocalUsers(users);
+
+    // Log purchase transaction
+    addTransaction({
+      id: makeTxnId(),
+      username: updated.username,
+      delta: -Math.abs(Number(cost) || 0),
+      balanceAfter: updated.credits,
+      givenBy: "E Swag Store",
+      description: `Redeemed ${itemName}`,
+      type: "purchase",
+      createdAt: nowIso(),
+    });
+
     return { ok: true, remainingCredits: updated.credits, itemId, itemName };
   }
+
   const token = getToken();
   if (!token) throw new Error("Not authenticated");
 
@@ -262,32 +346,70 @@ async function getAdminUsers() {
 }
 
 // Assign credits to user (admin only)
-async function assignCredits(username, credits, operation = "add") {
+async function assignCredits(username, credits, operation = "add", meta = {}) {
+  const op = String(operation || "add").toLowerCase();
+
   if (IS_LOCAL) {
     const users = ensureLocalUsers();
-    const updated = users.map(u => {
-      if (u.username.toLowerCase() !== username.toLowerCase()) return u;
-      const nextCredits = operation === "remove" ? credits : u.credits + credits;
-      return { ...u, credits: nextCredits };
-    });
-    saveLocalUsers(updated);
     const current = getCurrentUser();
-    if (current && current.username.toLowerCase() === username.toLowerCase()) {
-      saveSession({ ...current, credits: updated.find(u => u.username.toLowerCase() === username.toLowerCase()).credits }, "local-token");
+
+    let updatedUser = null;
+
+    const updated = users.map(u => {
+      if (u.username.toLowerCase() !== String(username).toLowerCase()) return u;
+
+      const oldCredits = Number(u.credits) || 0;
+      const amount = Number(credits) || 0;
+
+      // Keep compatibility with your existing UI: "remove" means Set
+      const isSetOp = (op === "remove" || op === "set");
+      const nextCredits = isSetOp ? amount : (oldCredits + amount);
+      const delta = nextCredits - oldCredits;
+
+      updatedUser = { ...u, credits: nextCredits };
+
+      addTransaction({
+        id: makeTxnId(),
+        username: u.username,
+        delta,
+        balanceAfter: nextCredits,
+        givenBy: meta.givenBy || current?.username || "admin",
+        description: meta.description || "",
+        type: isSetOp ? "credit_set" : "credit_add",
+        createdAt: nowIso(),
+      });
+
+      return updatedUser;
+    });
+
+    saveLocalUsers(updated);
+
+    // Update current session credits if the admin changed themselves
+    if (current && current.username.toLowerCase() === String(username).toLowerCase() && updatedUser) {
+      saveSession({ ...current, credits: updatedUser.credits }, "local-token");
     }
+
     return { ok: true };
   }
+
   const token = getToken();
   if (!token) throw new Error("Not authenticated");
 
   try {
-    const res = await fetch(`${API_BASE}/admin/users/${username}/credits`, {
+    const body = { credits, operation };
+
+    // Only send meta if provided
+    if (meta && (meta.givenBy || meta.description)) {
+      body.meta = meta;
+    }
+
+    const res = await fetch(`${API_BASE}/admin/users/${encodeURIComponent(username)}/credits`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ credits, operation }),
+      body: JSON.stringify(body),
     });
 
     if (!res.ok) {
@@ -299,50 +421,6 @@ async function assignCredits(username, credits, operation = "add") {
     return data;
   } catch (err) {
     console.error("Assign credits error:", err);
-    throw err;
-  }
-}
-
-// Create new user account (admin only)
-async function createUser(username, displayName, password, role = "employee", credits = 0) {
-  if (IS_LOCAL) {
-    const users = ensureLocalUsers();
-    const exists = users.find(u => u.username.toLowerCase() === username.toLowerCase());
-    if (exists) throw new Error("User already exists");
-    
-    const newUser = {
-      username,
-      displayName,
-      role,
-      credits,
-      password,
-    };
-    users.push(newUser);
-    saveLocalUsers(users);
-    return { ok: true, user: { username, displayName, role, credits } };
-  }
-  const token = getToken();
-  if (!token) throw new Error("Not authenticated");
-
-  try {
-    const res = await fetch(`${API_BASE}/admin/users`, {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, displayName, password, role, credits }),
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error || "Failed to create user");
-    }
-
-    const data = await res.json();
-    return data;
-  } catch (err) {
-    console.error("Create user error:", err);
     throw err;
   }
 }
@@ -367,7 +445,7 @@ function enforceGlobalLogin() {
     console.log("[auth] not logged in, redirecting to login");
     const target = path + window.location.search + window.location.hash;
     localStorage.setItem(POST_LOGIN_KEY, target || "/index.html");
-    // Construct absolute path to authentication page
+
     const baseUrl = window.location.origin;
     const pathBefore = window.location.pathname.includes("/E-Swags-App/") ? "/E-Swags-App/" : "/";
     window.location.href = baseUrl + pathBefore + "Authentication-Page/Authentication.html";
@@ -452,8 +530,8 @@ window.Auth = {
   loginWithBackend,
   refreshUser,
   getUserCredits,
+  getMyTransactions, // new
   makePurchase,
   getAdminUsers,
   assignCredits,
-  createUser,
 };
