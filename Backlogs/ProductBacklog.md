@@ -31,7 +31,7 @@ Product Backlog SP Total: 60
 | RC-081 | As a dev, I want to code the backend to allow discription for credits | - | - | N | ready | - | 
 | RC-082 | As a admin, I want to add a remove account feature on the frontend | - | - | N | ready | - | 
 | RC-083 | As a admin, I want to add a remove account feature on the backend | - | - | N | ready | - | 
-| RC-084 | As a dev team, we want to prepare the minimum viable product by sprint 5 and meet as a team together | 10 | 5 | N | ready | - |
+| RC-084 | As a dev team, we want to prepare the minimum viable product by sprint 5 and meet as a team together | 10 | 10 | N | ready |  |
 | RC-085 | as a dev, I want to make a marketable poster for our product | - | - | Y | ready | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
