@@ -1,7 +1,5 @@
-// Profile page controller
-// Shows account info for all users
-// Shows admin tools (like Deposit link) for admins and managers only
-// Also shows a short credit history
+// Profile.js
+// Shows account info, admin tools links, and a quick preview of who granted credits and why
 
 (function () {
   function byId(id) {
@@ -35,34 +33,59 @@
     }
   }
 
+  function ensureAdminLinks(adminTools) {
+    if (!adminTools) return;
+
+    const canSeeAdminTools = window.Auth && window.Auth.hasAnyRole && window.Auth.hasAnyRole("admin", "manager");
+    adminTools.style.display = canSeeAdminTools ? "block" : "none";
+    if (!canSeeAdminTools) return;
+
+    // Deposit link 
+    if (adminTools.querySelector(".admin-deposit-link") === null) {
+      const depositLink = document.createElement("div");
+      depositLink.className = "tool-box";
+      depositLink.innerHTML = `
+        <a class="tool-link admin-deposit-link" href="../Deposit-Page/Deposit.html">Open deposit dashboard</a>
+        <p class="tool-desc">View token totals and adjust credits.</p>
+      `;
+      adminTools.appendChild(depositLink);
+    }
+
+    // Create Account link 
+    if (adminTools.querySelector(".admin-create-link") === null) {
+      const createLink = document.createElement("div");
+      createLink.className = "tool-box";
+      createLink.innerHTML = `
+        <a class="tool-link admin-create-link" href="Admin.html">Create New Account</a>
+        <p class="tool-desc">Add new employee or admin accounts to the system.</p>
+      `;
+      adminTools.appendChild(createLink);
+    }
+  }
+
   function renderHistory(txns) {
     const box = byId("profile-history");
     if (!box) return;
 
-    if (!window.Auth || typeof window.Auth.getMyTransactions !== "function") {
-      box.textContent = "History is not enabled yet (getMyTransactions missing).";
-      return;
-    }
-
     if (!Array.isArray(txns) || txns.length === 0) {
-      box.textContent = "No credit history yet.";
+      box.textContent = "No credit awards yet.";
       return;
     }
 
-    const html = txns.slice(0, 5).map((t) => {
-      const giver = t.givenBy || t.grantedBy || "Unknown";
-      const desc = t.description || t.reason || "No description provided";
+    const rows = txns.slice(0, 5).map((t) => {
+      const giver = t.givenBy || t.grantedBy || "";
+      const desc = t.description || t.reason || "";
       return `
         <div style="padding:8px 0; border-bottom:1px solid rgba(0,0,0,0.08);">
           <div style="font-size:12px; opacity:0.8;">${fmtDate(t.createdAt)}</div>
           <div><strong>${fmtAmount(t.delta)}</strong> credits</div>
-          <div><strong>Given by:</strong> ${giver}</div>
-          <div><strong>Why:</strong> ${desc}</div>
+          <div style="opacity:0.9;"><strong>Given by:</strong> ${giver || "Unknown"}</div>
+          <div style="opacity:0.9;"><strong>Why:</strong> ${desc || "No description provided"}</div>
         </div>
       `;
     }).join("");
 
-    box.innerHTML = html;
+    box.innerHTML = rows;
   }
 
   async function loadProfile() {
@@ -71,6 +94,7 @@
       return;
     }
 
+    // Refresh so credits stay current
     let user = null;
     try {
       user = await window.Auth.refreshUser();
@@ -87,29 +111,29 @@
     setText("profile-role", user.role || "");
     setText("profile-credits", String(user.credits ?? ""));
 
-    localStorage.setItem("eswag.lastProfileVisit", String(Date.now()));
-
-    const adminTools = byId("admin-tools");
-    const canSeeAdminTools = window.Auth.hasAnyRole("admin", "manager");
-    if (adminTools) adminTools.style.display = canSeeAdminTools ? "block" : "none";
-
     updateNavUserText(user);
 
-    // Load credit history
+    // Admin tools links
+    const adminTools = byId("admin-tools");
+    ensureAdminLinks(adminTools);
+
+    // Credit history preview
     const historyBox = byId("profile-history");
     if (historyBox) historyBox.textContent = "Loading...";
 
     if (typeof window.Auth.getMyTransactions === "function") {
-      const txns = await window.Auth.getMyTransactions(200);
+      const txns = await window.Auth.getMyTransactions(50);
+
       const creditOnly = Array.isArray(txns)
         ? txns
             .slice()
             .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)))
             .filter(t => (t.type || "").startsWith("credit"))
         : [];
+
       renderHistory(creditOnly);
     } else {
-      renderHistory([]);
+      if (historyBox) historyBox.textContent = "History is not enabled yet.";
     }
 
     if (window.location.hash === "#admin-tools" && adminTools) {

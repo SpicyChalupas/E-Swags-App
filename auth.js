@@ -37,7 +37,9 @@ function ensureLocalUsers() {
   return LOCAL_DEMO_USERS;
 }
 
-// === Transaction storage (LOCAL MODE) ===
+// === LOCAL transaction storage ===
+// This is what powers Profile history + History page in local mode.
+// In production you will only see history if your backend implements /users/me/transactions.
 const TXNS_KEY = "eswag.transactions";
 const MAX_TXNS = 2000;
 
@@ -250,7 +252,7 @@ async function getMyTransactions(limit = 50) {
       headers: { "Authorization": `Bearer ${token}` },
     });
 
-    // If server is not implemented yet, do not break UI
+    // If not implemented yet, just return empty
     if (!res.ok) return [];
 
     const data = await res.json().catch(() => ({}));
@@ -276,7 +278,7 @@ async function makePurchase(itemId, itemName, cost) {
     );
     saveLocalUsers(users);
 
-    // Log purchase transaction
+    // Log purchase
     addTransaction({
       id: makeTxnId(),
       username: updated.username,
@@ -346,47 +348,55 @@ async function getAdminUsers() {
 }
 
 // Assign credits to user (admin only)
-async function assignCredits(username, credits, operation = "add", meta = {}) {
+// Backward compatible:
+//  - assignCredits(user, credits, "add")
+//  - assignCredits(user, credits, "remove")
+//  - assignCredits(user, credits, "add", { givenBy, description })
+async function assignCredits(username, credits, operation = "add", meta = null) {
+  // If someone accidentally passes meta as the 3rd argument:
+  if (typeof operation === "object" && operation !== null) {
+    meta = operation;
+    operation = "add";
+  }
+
   const op = String(operation || "add").toLowerCase();
+  const safeMeta = meta && typeof meta === "object" ? meta : {};
+  const current = getCurrentUser();
 
   if (IS_LOCAL) {
     const users = ensureLocalUsers();
-    const current = getCurrentUser();
-
-    let updatedUser = null;
-
     const updated = users.map(u => {
       if (u.username.toLowerCase() !== String(username).toLowerCase()) return u;
 
       const oldCredits = Number(u.credits) || 0;
       const amount = Number(credits) || 0;
 
-      // Keep compatibility with your existing UI: "remove" means Set
-      const isSetOp = (op === "remove" || op === "set");
-      const nextCredits = isSetOp ? amount : (oldCredits + amount);
+      // Your UI uses "remove" to mean Set
+      const isSet = (op === "remove" || op === "set");
+      const nextCredits = isSet ? amount : (oldCredits + amount);
       const delta = nextCredits - oldCredits;
 
-      updatedUser = { ...u, credits: nextCredits };
-
+      // Log credit transaction with who + why
       addTransaction({
         id: makeTxnId(),
         username: u.username,
         delta,
         balanceAfter: nextCredits,
-        givenBy: meta.givenBy || current?.username || "admin",
-        description: meta.description || "",
-        type: isSetOp ? "credit_set" : "credit_add",
+        givenBy: safeMeta.givenBy || current?.username || "admin",
+        description: safeMeta.description || "",
+        type: isSet ? "credit_set" : "credit_add",
         createdAt: nowIso(),
       });
 
-      return updatedUser;
+      return { ...u, credits: nextCredits };
     });
 
     saveLocalUsers(updated);
 
-    // Update current session credits if the admin changed themselves
-    if (current && current.username.toLowerCase() === String(username).toLowerCase() && updatedUser) {
-      saveSession({ ...current, credits: updatedUser.credits }, "local-token");
+    const me = getCurrentUser();
+    if (me && me.username.toLowerCase() === String(username).toLowerCase()) {
+      const found = updated.find(u => u.username.toLowerCase() === String(username).toLowerCase());
+      if (found) saveSession({ ...me, credits: found.credits }, "local-token");
     }
 
     return { ok: true };
@@ -396,12 +406,8 @@ async function assignCredits(username, credits, operation = "add", meta = {}) {
   if (!token) throw new Error("Not authenticated");
 
   try {
-    const body = { credits, operation };
-
-    // Only send meta if provided
-    if (meta && (meta.givenBy || meta.description)) {
-      body.meta = meta;
-    }
+    const payload = { credits, operation: op };
+    if (safeMeta.givenBy || safeMeta.description) payload.meta = safeMeta;
 
     const res = await fetch(`${API_BASE}/admin/users/${encodeURIComponent(username)}/credits`, {
       method: "POST",
@@ -409,7 +415,7 @@ async function assignCredits(username, credits, operation = "add", meta = {}) {
         "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify(payload),
     });
 
     if (!res.ok) {
@@ -421,6 +427,50 @@ async function assignCredits(username, credits, operation = "add", meta = {}) {
     return data;
   } catch (err) {
     console.error("Assign credits error:", err);
+    throw err;
+  }
+}
+
+// Create new user account (admin only)
+async function createUser(username, displayName, password, role = "employee", credits = 0) {
+  if (IS_LOCAL) {
+    const users = ensureLocalUsers();
+    const exists = users.find(u => u.username.toLowerCase() === username.toLowerCase());
+    if (exists) throw new Error("User already exists");
+
+    const newUser = {
+      username,
+      displayName,
+      role,
+      credits,
+      password,
+    };
+    users.push(newUser);
+    saveLocalUsers(users);
+    return { ok: true, user: { username, displayName, role, credits } };
+  }
+  const token = getToken();
+  if (!token) throw new Error("Not authenticated");
+
+  try {
+    const res = await fetch(`${API_BASE}/admin/users`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, displayName, password, role, credits }),
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Failed to create user");
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error("Create user error:", err);
     throw err;
   }
 }
@@ -533,5 +583,6 @@ window.Auth = {
   getMyTransactions, // new
   makePurchase,
   getAdminUsers,
-  assignCredits,
+  assignCredits,     // Updated
+  createUser,        
 };
