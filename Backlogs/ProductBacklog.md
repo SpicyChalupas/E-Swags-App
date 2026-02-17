@@ -28,7 +28,7 @@ Product Backlog SP Total: 60
 | RC-072 | As a manager, I want to be able to upload excel sheets to allow automatic creation of users.  | 10 | 8 | N | Next Sprint | - |
 | RC-074 | as a dev, I want to add a featured items or deals to the blank spot on the homepage. | 5 | 6 | N | ready | - | 
 | RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | done | - |  
-| RC-0## | - | - | - | - | - | - | 
+| RC-0## | As a dev, I want to code the backend to allow discription for credits | - | - | - | - | - | 
 | RC-0## | - | - | - | - | - | - | 
  
 
