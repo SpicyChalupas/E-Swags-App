@@ -31,6 +31,8 @@ Product Backlog SP Total: 60
 | RC-0## | As a dev, I want to code the backend to allow discription for credits | - | - | - | ready | - | 
 | RC-0## | As a admin, I want to add a remove account feature on the frontend | - | - | - | ready | - | 
 | RC-0## | As a admin, I want to add a remove account feature on the backend | - | - | - | ready | - | 
- 
+| RC-0## | As a dev team, we want to prepare the minimum viable product by sprint 5 | - | - | - | ready | - |
+| RC-0## | - | - | - | - | - | - |
+| RC-0## | - | - | - | - | - | - |
 
 12 points per person, 60 capacity
