@@ -36,6 +36,8 @@ Product Backlog SP Total: 60
 | RC-086 | As a customer I want to have my email included in account credentials | 7 | 3 | N | ready | - |
 | RC-087 | As a customer I want a way to submit for help if I forgot my account password or login | 8 | 4 | N | ready | - |
 | RC-088 | As a dev I want spend time as a team to discuss the projects new direction | 10 | 2 | Y | ready | everyone |
+| RC-089 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 1) | 8 | 2 | Y | done | Glaycon |
+| RC-090 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 1) | 8 | 2 | Y | Done | Andrew |     
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
