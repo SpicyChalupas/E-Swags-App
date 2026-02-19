@@ -28,11 +28,11 @@ Product Backlog SP Total: 60
 | RC-072 | As a manager, I want to be able to upload excel sheets to allow automatic creation of users.  | 10 | 8 | N | ready | - |
 | RC-074 | as a dev, I want to add a featured items or deals to the blank spot on the homepage. | 5 | 6 | N | ready | - | 
 | RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | ready | - |  
-| RC-081 | As a dev, I want to code the backend to allow discription for credits | - | - | N | ready | - | 
-| RC-082 | As a admin, I want to add a remove account feature on the frontend | - | - | N | ready | - | 
-| RC-083 | As a admin, I want to add a remove account feature on the backend | - | - | N | ready | - | 
+| RC-081 | As a dev, I want to code the backend to allow discription for credits | 6 | 3 | N | ready | - | 
+| RC-082 | As a admin, I want to add a remove account feature on the frontend | 6 | 4 | N | ready | - | 
+| RC-083 | As a admin, I want to add a remove account feature on the backend | 6 | 5 | N | ready | - | 
 | RC-084 | As a dev team, we want to prepare the minimum viable product by sprint 5 and meet as a team together | 10 | 10 | N | ready |  |
-| RC-085 | as a dev, I want to make a marketable poster for our product | - | - | Y | ready | - |
+| RC-085 | as a dev, I want to make a marketable poster for our product | 8 | 3 | Y | ready | - |
 | RC-086 | As a customer I want to have my email included in account credentials | 7 | 3 | N | ready | - |
 | RC-087 | As a customer I want a way to submit for help if I forgot my account password or login | 8 | 4 | N | ready | - |
 | RC-088 | As a dev I want spend time as a team to discuss the projects new direction | 10 | 2 | Y | ready | everyone |
