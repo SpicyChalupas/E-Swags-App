@@ -10,11 +10,11 @@ Definition of Done: The Requrment is testable, able to be demonstrated, and demo
 
 Definition of Spikes: Things done to make it easier for the team but isnt necessary for the customer. 
 
-Scrum Master: Andrew
+Scrum Master: Andrew Neil
 
 Product Owner: Glaycon Cezarotto
 
-Sprint 2 Planning Date/Time: 2/03 - 2/15
+Sprint 3 Planning Date/Time: 2/16 - 3/1
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Diego 
 
