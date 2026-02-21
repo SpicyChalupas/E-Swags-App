@@ -38,6 +38,6 @@ Product Backlog SP Total: 60
 | RC-093 | As a Customer, I want to see a description of the product on the About page | 3 | 4 | Y | Ready | Andrew |
 | RC-092 | As a Dev, I want to update Admin tools - Create New Account Page CSS and HTML | 3 | 3 | Y | Ready | Edgar |
 | RC-094 | As a Dev, I want to update the employee credit history page CSS and HTML | 3 | 3 | Y | Ready | Diego |
-| RC-096 | As a Scrum Member, I want to review the product page and code to correct any errors, and see what can be improved | 3 | 3 | 2 | N | Tom |
+| RC-096 | As a Scrum Member, I want to review the product page and code to correct any errors, and see what can be improved | 3 | 2 | N | Ready | Tom |
 | RC-0## |- | - | - | - | - | - |
 12 points per person, 60 capacity
