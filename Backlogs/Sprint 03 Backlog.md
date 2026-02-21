@@ -30,5 +30,9 @@ Product Backlog SP Total: 60
 | RC-090 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 1) | 8 | 2 | Y | Done | Andrew | 
 | RC-091 | As a Scrum Member, Present to the Software Engineering class on Tuesday, April 7 at 2 pm CT | 8 | 2 | N | Ready | Everyone |
 | RC-081 | As a dev, I want to code the backend to allow discription for credits | 6 | 3 | N | ready | Glaycon | 
+| RC-095 | As a dev, I want to add an "Put in Cart" button under "View on Amazon" | 4 | 2 | Y | Ready | Tom |
+| RC-093 | As a customer, I want to see a description of the product on the About page | 3 | 4 | Y | Ready | Andrew |
+| RC-092 | As a dev, I want to update Admin tools - Create New Account Page CSS and HTML | 3 | 3 | Y | Ready | Edgar |
+| RC-094 | As a dev, I want to update the employee credit history page CSS and HTML | 3 | 3 | Y | Ready | Diego |
 | RC-0## |- | - | - | - | - | - |
 
