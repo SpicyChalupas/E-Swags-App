@@ -33,10 +33,6 @@ Product Backlog SP Total: 60
 | RC-085 | as a dev, I want to make a marketable poster for our product | 8 | 3 | Y | ready | - |
 | RC-086 | As a customer I want to have my email included in account credentials | 7 | 3 | N | ready | - |
 | RC-087 | As a customer I want a way to submit for help if I forgot my account password or login | 8 | 4 | N | ready | - |    
-| RC-092 | As a dev, I want to update Admin tools - Create New Account Page CSS and HTML | 3 | 3 | Y | Ready | - |
-| RC-093 | As a customer, I want to see a description of the product on the About page | 3 | 4 | Y | Ready | - |
-| RC-094 | As a dev, I want to update the employee credit history page CSS and HTML | 3 | 3 | Y | Ready | - |
-| RC-095 | As a dev, I want to add an "Put in Cart" button under "View on Amazon" | 4 | 2 | Y | Ready | - |
 | RC-096 | As a customer, I want to be able to add merch to cart | 6 | 6 | Y | Ready | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
