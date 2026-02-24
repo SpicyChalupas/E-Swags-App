@@ -25,11 +25,9 @@ Product Backlog SP Total: 60
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
 | RC-072 | As a manager, I want to be able to upload excel sheets to allow automatic creation of users.  | 10 | 8 | N | Ready | - |
-| RC-079 | As a costumer, I want to see individual item pages for when clicking on the picture of the item | 6 | 4 | n | Ready | - |  
 | RC-082 | As a admin, I want to add a remove account feature on the frontend | 6 | 4 | N | Ready | - | 
 | RC-083 | As a admin, I want to add a remove account feature on the backend | 6 | 5 | N | Ready | - | 
-| RC-084 | As a dev team, we want to prepare the minimum viable product by sprint 5 and meet as a team together | 10 | 10 | N | Ready |  |
-| RC-096 | As a customer, I want to be able to add merch to cart | 6 | 6 | Y | Ready | - |
+| RC-084 | As a dev team, we want to prepare the minimum viable product by sprint 5 and meet as a team together | 10 | 10 | N | Ready | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
 | RC-0## | - | - | - | - | - | - |
