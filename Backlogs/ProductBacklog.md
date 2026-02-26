@@ -8,7 +8,7 @@ permalink: /backlogs/product-backlog/
 
 Definition of Done: The Requrment is testable, able to be demonstrated, and demoable in production.
 
-Definition of Spikes: Things done to make it easier for the team but isnt necessary for the customer. 
+Definition of Spikes: Things done to make it easier for the development team but isn't necessary for the customer experience. 
 
 Scrum Master: Andrew Neil
 
@@ -35,7 +35,7 @@ Product Backlog SP Total: 60
 | RC-089 | As a user, I want the spacing of the "Home" webpage to be fixed and the "welcome" text changed to say "Welcome to LU-Bucks; Your one-stop spot for LewisU raffles!" | - | - | Y/N | Ready | - |
 | RC-090 | As a developer, I want to remove the placeholder accounts "Employee" and "Admin". They are no longer needed, since users with admin privileges exist. | - | - | Y/N | Ready | - |
 | RC-091 | As a developer, I want to create a starter google form for users to submit feedback. | - | - | Y/N | Ready | - |
-| RC-092 | As a developer, I want the google form submissions to be on its  | - | - | Y/N | Ready | - |
+| RC-092 | As a developer, I want the google form submissions to be documented on a Google Sheet. | - | - | Y/N | Ready | - |
 | RC-093 | - | - | - | Y/N | Ready | - |
 | RC-094 | - | - | - | Y/N | Ready | - |
 | RC-095 | - | - | - | Y/N | Ready | - |
