@@ -33,7 +33,7 @@ Product Backlog SP Total: 60
 | RC-091 | As a Scrum Member, Present to the Software Engineering class on Tuesday, April 7 at 2 pm CT | 8 | 2 | N | Done | Everyone |
 | RC-086 | As a Customer, I want to have my email includeded in account credentials | 7 | 3 | N | Done| Tom |
 | RC-081 | As a Dev, I want to code the backend to allow discription for credits | 6 | 3 | N | Ready | Glaycon | 
-| RC-074 | As a Dev, I want to add a featured items or deals to the blank spot on the homepage | 5 | 2 | N | Ready | Andrew |
+| RC-074 | As a Dev, I want to add a featured items or deals to the blank spot on the homepage | 5 | 2 | N | Done | Andrew |
 | RC-095 | As a Dev, I want to add an "Put in Cart" button under "View on Amazon" | 4 | 3 | Y | Done| Tom |
 | RC-093 | As a Customer, I want to see a description of the product on the About page | 3 | 4 | Y | Done | Andrew |
 | RC-092 | As a Dev, I want to update Admin tools - Create New Account Page CSS and HTML | 3 | 3 | Y | Done | Edgar |
