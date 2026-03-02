@@ -31,13 +31,13 @@ Product Backlog SP Total: 60
 | RC-089 | As a Product Owner, I want to manage the backlogs and focus on the Minimum Viable Product (MVP) and prioritize stories so that I can deliver value to users by the end of the sprint. (Sprint 1) | 8 | 2 | Y | Done | Glaycon |
 | RC-090 | As a Scrum Master, I want to facilitate Sprint Planning and story commitment so that I can help the team work with focus and alignment. (Sprint 1) | 8 | 2 | Y | Done | Andrew | 
 | RC-091 | As a Scrum Member, Present to the Software Engineering class on Tuesday, April 7 at 2 pm CT | 8 | 2 | N | Done | Everyone |
-| RC-086 | As a Customer, I want to have my email includeded in account credentials | 7 | 3 | N | Ready | Tom |
+| RC-086 | As a Customer, I want to have my email includeded in account credentials | 7 | 3 | N | Done| Tom |
 | RC-081 | As a Dev, I want to code the backend to allow discription for credits | 6 | 3 | N | Ready | Glaycon | 
 | RC-074 | As a Dev, I want to add a featured items or deals to the blank spot on the homepage | 5 | 2 | N | Ready | Andrew |
-| RC-095 | As a Dev, I want to add an "Put in Cart" button under "View on Amazon" | 4 | 3 | Y | Ready | Tom |
+| RC-095 | As a Dev, I want to add an "Put in Cart" button under "View on Amazon" | 4 | 3 | Y | Done| Tom |
 | RC-093 | As a Customer, I want to see a description of the product on the About page | 3 | 4 | Y | Ready | Andrew |
 | RC-092 | As a Dev, I want to update Admin tools - Create New Account Page CSS and HTML | 3 | 3 | Y | Done | Edgar |
 | RC-094 | As a Dev, I want to update the employee credit history page CSS and HTML | 3 | 3 | Y | Ready | Diego |
-| RC-096 | As a Scrum Member, I want to review the product page and code to correct any errors, and see what can be improved | 3 | 2 | N | Ready | Tom |
+| RC-096 | As a Scrum Member, I want to review the product page and code to correct any errors, and see what can be improved | 3 | 2 | N | Done | Tom |
 | RC-0## |- | - | - | - | - | - |
 12 points per person, 60 capacity
