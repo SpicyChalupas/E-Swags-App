@@ -35,7 +35,7 @@ Product Backlog SP Total: 60
 | RC-081 | As a Dev, I want to code the backend to allow discription for credits | 6 | 3 | N | Ready | Glaycon | 
 | RC-074 | As a Dev, I want to add a featured items or deals to the blank spot on the homepage | 5 | 2 | N | Ready | Andrew |
 | RC-095 | As a Dev, I want to add an "Put in Cart" button under "View on Amazon" | 4 | 3 | Y | Done| Tom |
-| RC-093 | As a Customer, I want to see a description of the product on the About page | 3 | 4 | Y | Ready | Andrew |
+| RC-093 | As a Customer, I want to see a description of the product on the About page | 3 | 4 | Y | Done | Andrew |
 | RC-092 | As a Dev, I want to update Admin tools - Create New Account Page CSS and HTML | 3 | 3 | Y | Done | Edgar |
 | RC-094 | As a Dev, I want to update the employee credit history page CSS and HTML | 3 | 3 | Y | Ready | Diego |
 | RC-096 | As a Scrum Member, I want to review the product page and code to correct any errors, and see what can be improved | 3 | 2 | N | Done | Tom |
