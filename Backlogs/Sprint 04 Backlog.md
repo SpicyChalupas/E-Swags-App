@@ -27,7 +27,7 @@ Product Backlog SP Total: 90 points total
 | RC-080 | As a user, I want the mention of E-Swag to be replaced with LU-Bucks. Go through every file and replace the name. | 7 | 7 | N | Ready | Diego |
 | RC-081 | As a user, I want the "Merch" page to be replaced with the "Raffle" page. | 6 | 5 | N | Ready | Glaycon |
 | RC-089 | As a developer, I want to get rid of any files associated with the dropdown menu. This means removing the dropdown function, along with removing ALL of the "t-shirts, hoodies, and accessories" files.| 6 | 10 | n | Ready | Edgar |
-| RC-082 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 5 | 5 | N | Ready | Tom |
+| RC-082 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 5 | 7 | N | Ready | Tom |
 | RC-083 | As a user, I want a new logo to replace the old "E-Swag" logo. | 7 | 6 | N | Ready | Glaycon |
 | RC-084 | As a user, I want to see the previous winners of past raffles. | 6 | 6 | N | Ready | - |
 | RC-085 | As a developer, I want the "Cart" page to be replaced with the "Previous Raffle Winners" page.  | 6 | 6 | Y | Ready | Edgar |
