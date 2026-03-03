@@ -24,26 +24,26 @@ Product Backlog SP Total: 90 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-080 | As a user, I want the mention of E-Swag to be replaced with LU-Bucks. Go through every file and replace the name. | 7 | 7 | N | Ready | - |
-| RC-081 | As a user, I want the "Merch" page to be replaced with the "Raffle" page. | 6 | 5 | N | Ready | - |
-| RC-089 | As a developer, I want to get rid of any files associated with the dropdown menu. This means removing the dropdown function, along with removing ALL of the "t-shirts, hoodies, and accessories" files.| 6 | 4 | n | Ready | - |
-| RC-082 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 5 | 5 | N | Ready | - |
-| RC-083 | As a user, I want a new logo to replace the old "E-Swag" logo. | 7 | 8 | N | Ready | - |
+| RC-080 | As a user, I want the mention of E-Swag to be replaced with LU-Bucks. Go through every file and replace the name. | 7 | 7 | N | Ready | Diego |
+| RC-081 | As a user, I want the "Merch" page to be replaced with the "Raffle" page. | 6 | 5 | N | Ready | Glaycon |
+| RC-089 | As a developer, I want to get rid of any files associated with the dropdown menu. This means removing the dropdown function, along with removing ALL of the "t-shirts, hoodies, and accessories" files.| 6 | 10 | n | Ready | Edgar |
+| RC-082 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 5 | 5 | N | Ready | Tom |
+| RC-083 | As a user, I want a new logo to replace the old "E-Swag" logo. | 7 | 6 | N | Ready | Glaycon |
 | RC-084 | As a user, I want to see the previous winners of past raffles. | 6 | 6 | N | Ready | - |
-| RC-085 | As a developer, I want the "Cart" page to be replaced with the "Previous Raffle Winners" page.  | 6 | 6 | Y | Ready | - |
-| RC-087 | As a developer, I will setup the database to be able to take Email inputs with @lewisu.edu as a required field for account creation | 8 | 8 | Y | Ready | - |
-| RC-086 | As a developer, I want the nav bar to be reorganized in the top right. The "username / total credits" should be on the left side, then the "Cart" button, "Profile" button, and "Logout" button should be lined up next to each other. | 4 | 6 | Y | Ready | - |
-| RC-088 | As a user, I want the footer to stay on the bottom of the page so that there is no white space below. | 6 | 6 | n | Ready | - |
-| RC-089 | As a user, I want the SpicyChalupas logo to be resized to fit the space on the webpage. | 6 | 4 | n | Ready | - |
+| RC-085 | As a developer, I want the "Cart" page to be replaced with the "Previous Raffle Winners" page.  | 6 | 6 | Y | Ready | Edgar |
+| RC-087 | As a developer, I will setup the database to be able to take Email inputs with @lewisu.edu as a required field for account creation | 8 | 8 | Y | Ready | Andrew |
+| RC-086 | As a developer, I want the nav bar to be reorganized in the top right. The "username / total credits" should be on the left side, then the "Cart" button, "Profile" button, and "Logout" button should be lined up next to each other. | 4 | 6 | Y | Ready | Andrew |
+| RC-088 | As a user, I want the footer to stay on the bottom of the page so that there is no white space below. | 6 | 6 | n | Ready | Tom |
+| RC-089 | As a user, I want the SpicyChalupas logo to be resized to fit the space on the webpage. | 6 | 4 | n | Ready |  |
 | RC-090 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Diego |
 | RC-091 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Edgar |
 | RC-092 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Glaycon |
 | RC-093 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Andrew |
 | RC-094 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Tom |
-| RC-095 | As a developer, I want to get rid of the merch pictures and replace them with raffle prize pictures. | 4 | 4 | Y | Ready | - |
+| RC-095 | As a developer, I want to get rid of the merch pictures and replace them with raffle prize pictures. | 4 | 4 | Y | Ready | Glaycon |
 | RC-091 | As a developer, I want the "News" page to be replaced with the "Feedback" page. | 7 | 5 | N | Ready | - |
 | RC-087 | As a user, I want the "News" button to be moved from the footer to the nav bar on top. | 6 | 4 | N | Ready | - |
-| RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
+| RC-087 | As a developer, I want to reformat the "Contact" page, to allow for paragraphs to be on the right side and the team photo to be on the left. | 3 | 6 | N | Ready | Diego |
 | RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
 | RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
 | RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
