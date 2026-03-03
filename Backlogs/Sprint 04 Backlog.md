@@ -14,7 +14,7 @@ Scrum Master: Andrew
 
 Product Owner: Edgar
 
-Sprint 3 Planning Date/Time: 3/2 - 3/29
+Sprint 4 Planning Date/Time: 3/2 - 3/29
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Diego 
 
@@ -24,6 +24,9 @@ Product Backlog SP Total: 90 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
+| RC-080 | As a user, I want the mention of E-Swag to be replaced with LU-Bucks. | 7 | 4 | N | Ready | - |
+| RC-080 | As a user, I want the "Merch" page to be replaced with the "Raffle" page. | 7 | 4 | N | Ready | - |
+| RC-080 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 7 | 4 | N | Ready | - |
 | RC-0## |- | - | - | - | - | - |
 
 18 points per person, 90 capacity
