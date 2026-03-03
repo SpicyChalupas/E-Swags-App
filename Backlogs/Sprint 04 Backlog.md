@@ -40,9 +40,9 @@ Product Backlog SP Total: 90 points total
 | RC-092 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Glaycon |
 | RC-093 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Andrew |
 | RC-094 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Tom |
-| RC-095 | As a developer, I want to get rid of the merch pictures and replace them with raffle prize pictures | 4 | 4 | Y | Ready | - |
-| RC-091 | As a user, I want  | 6 | 4 | n | Ready | - |
-| RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
+| RC-095 | As a developer, I want to get rid of the merch pictures and replace them with raffle prize pictures. | 4 | 4 | Y | Ready | - |
+| RC-091 | As a developer, I want the "News" page to be replaced with the "Feedback" page. | 7 | 5 | N | Ready | - |
+| RC-087 | As a user, I want the "News" button to be moved from the footer to the nav bar on top. | 6 | 4 | N | Ready | - |
 | RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
 | RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
 | RC-087 | As a user, I want  | 6 | 4 | n | Ready | - |
