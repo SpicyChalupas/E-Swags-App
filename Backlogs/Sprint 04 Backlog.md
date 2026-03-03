@@ -24,7 +24,6 @@ Product Backlog SP Total: 90 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-
 | RC-0## |- | - | - | - | - | - |
 
 18 points per person, 90 capacity
