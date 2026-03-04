@@ -40,5 +40,6 @@ Product Backlog SP Total: 90 points total
 | RC-094 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Tom |
 | RC-095 | As a developer, I want to get rid of the merch pictures and replace them with raffle prize pictures. | 4 | 4 | Y | Ready | Glaycon |
 | RC-096 | As a developer, I want to reformat the "Contact" page, to allow for paragraphs to be on the right side and the team photo to be on the left. | 3 | 6 | N | Ready | Diego |
+| RC-097 | As the Product Owner, I want to coach Software Engineering team in-person on Thursday, April 9 at 9:30 AM CT | 4 | 4 | N | Ready | Diego |
 
 18 points per person, 90 capacity
