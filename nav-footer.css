@@ -133,9 +133,14 @@ main {
 .footer {
   background-color: #232F3E;
   padding: 22px;
-  text-align: center;
   margin-top: 40px;
+
+  /* Fixes the position of the footer to the bottom of the screen. */
+  position: fixed;
+  text-align: center;
   width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .footerlinks {
