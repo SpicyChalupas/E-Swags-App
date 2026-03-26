@@ -136,7 +136,7 @@ main {
   margin-top: 40px;
 
   /* Fixes the position of the footer to the bottom of the screen. */
-  position: fixed;
+  position: relative;
   text-align: center;
   width: 100%;
   left: 0;
