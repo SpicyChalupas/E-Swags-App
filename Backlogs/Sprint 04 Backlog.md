@@ -24,7 +24,7 @@ Product Backlog SP Total: 90 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-080 | As a user, I want the mention of E-Swag to be replaced with LU-Bucks. Go through every file and replace the name. | 7 | 7 | N | Ready | Diego |
+| RC-080 | As a user, I want the mention of E-Swag to be replaced with LU-Bucks. Go through every file and replace the name. | 7 | 7 | N | Done | Diego |
 | RC-081 | As a user, I want the "Merch" page to be replaced with the "Raffle" page. | 6 | 5 | N | Ready | Glaycon |
 | RC-089 | As a developer, I want to get rid of any files associated with the dropdown menu. This means removing the dropdown function, along with removing ALL of the "t-shirts, hoodies, and accessories" files.| 6 | 10 | n | Ready | Edgar |
 | RC-082 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 5 | 7 | N | Ready | Tom |
