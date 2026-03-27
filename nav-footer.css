@@ -23,8 +23,15 @@ main {
   z-index: 1000;
 }
 
-.topnav-left, .topnav-right {
+.topnav-left {
   display: flex;
+  float: left;
+  align-items: center;
+}
+
+.topnav-right {
+  display: flex;
+  float: right;
   align-items: center;
 }
 
@@ -134,7 +141,6 @@ main {
 .footer {
   background-color: #232F3E;
   padding: 22px;
-  margin-top: 40px;
 
   /* Fixes the position of the footer to the bottom of the screen. */
   position: relative;
