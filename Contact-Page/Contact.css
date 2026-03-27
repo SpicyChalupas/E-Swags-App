@@ -1,7 +1,6 @@
     .team-photo {
-        width: 80%;
-        max-width: 600px;
-        margin: 20px auto;
+        width: 90%;
+        margin: auto;
         display: block;
         border: 3px solid #000000;
         border-radius: 25px;

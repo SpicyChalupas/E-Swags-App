@@ -53,7 +53,8 @@ main {
 }
 
 .topnav a:hover {
-  background-color: #FF9900; 
+  background-color: #FF9900;
+  border-radius: 4px;
   color: #fff;
 }
 

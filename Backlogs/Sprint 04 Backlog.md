@@ -33,13 +33,13 @@ Product Backlog SP Total: 90 points total
 | RC-087 | As a developer, I will setup the database to be able to take Email inputs with @lewisu.edu as a required field for account creation | 8 | 8 | Y | Ready | Andrew |
 | RC-086 | As a developer, I want the nav bar to be reorganized in the top right. The "username / total credits" should be on the left side, then the "Cart" button, "Profile" button, and "Logout" button should be lined up next to each other. | 4 | 6 | Y | Ready | Andrew |
 | RC-088 | As a user, I want the footer to stay on the bottom of the page so that there is no white space below. | 6 | 6 | n | Ready | Tom |
-| RC-090 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Diego |
+| RC-090 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Done | Diego |
 | RC-091 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Edgar |
 | RC-092 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Glaycon |
 | RC-093 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Andrew |
 | RC-094 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Ready | Tom |
 | RC-095 | As a developer, I want to get rid of the merch pictures and replace them with raffle prize pictures. | 4 | 4 | Y | Ready | Glaycon |
-| RC-096 | As a developer, I want to reformat the "Contact" page, to allow for paragraphs to be on the right side and the team photo to be on the left. | 3 | 6 | N | Ready | Diego |
-| RC-097 | As the Product Owner, I want to coach Software Engineering team in-person on Thursday, April 9 at 9:30 AM CT | 4 | 4 | N | Ready | Diego |
+| RC-096 | As a developer, I want to reformat the "Contact" page, to allow for paragraphs to be on the right side and the team photo to be on the left. | 3 | 6 | N | Done | Diego |
+| RC-097 | As the Product Owner, I want to coach Software Engineering team in-person on Thursday, April 9 at 9:30 AM CT | 4 | 4 | N | Done | Diego |
 
 18 points per person, 90 capacity
