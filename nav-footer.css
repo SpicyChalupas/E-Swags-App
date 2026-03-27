@@ -140,7 +140,6 @@ main {
 
 .footer {
   background-color: #232F3E;
-  padding: 2%;
   margin: auto;
 
   /* Fixes the position of the footer to the bottom of the screen. */
@@ -155,6 +154,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 3%;
+  padding: 2% 0 0 0; /* top right bottom left */
 }
 
 .footerlinks a {
@@ -169,4 +169,5 @@ main {
 .footertext {
   color: #aaa;
   font-size: 14px;
+  padding: 2%;
 }
