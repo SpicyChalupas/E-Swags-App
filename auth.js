@@ -432,14 +432,21 @@ async function assignCredits(username, credits, operation = "add", meta = null) 
 }
 
 // Create new user account (admin only)
-async function createUser(username, displayName, password, role = "employee", credits = 0) {
+async function createUser(username, email, displayName, password, role = "employee", credits = 0) {
   if (IS_LOCAL) {
     const users = ensureLocalUsers();
     const exists = users.find(u => u.username.toLowerCase() === username.toLowerCase());
     if (exists) throw new Error("User already exists");
 
+    const normalizedEmail = String(email || "").trim().toLowerCase();
+    const lewisuEmailPattern = /^[a-z0-9._%+-]+@lewisu\.edu$/i;
+    if (!lewisuEmailPattern.test(normalizedEmail)) {
+      throw new Error("Email must be a valid @lewisu.edu address");
+    }
+
     const newUser = {
       username,
+      email: normalizedEmail,
       displayName,
       role,
       credits,
@@ -447,19 +454,20 @@ async function createUser(username, displayName, password, role = "employee", cr
     };
     users.push(newUser);
     saveLocalUsers(users);
-    return { ok: true, user: { username, displayName, role, credits } };
+    return { ok: true, user: { username, email: normalizedEmail, displayName, role, credits } };
   }
   const token = getToken();
   if (!token) throw new Error("Not authenticated");
 
   try {
+    const normalizedEmail = String(email || "").trim().toLowerCase();
     const res = await fetch(`${API_BASE}/admin/users`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, displayName, password, role, credits }),
+      body: JSON.stringify({ username, email: normalizedEmail, displayName, password, role, credits }),
     });
 
     if (!res.ok) {

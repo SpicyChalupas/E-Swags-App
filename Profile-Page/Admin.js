@@ -35,13 +35,20 @@
     // Get form values
     const username = byId("username").value.trim();
     const displayName = byId("displayName").value.trim();
+    const email = byId("email").value.trim().toLowerCase();
     const password = byId("password").value.trim();
     const role = byId("role").value.trim();
     const credits = Number(byId("credits").value) || 0;
 
     // Validate inputs
-    if (!username || !displayName || !password) {
+    if (!username || !displayName || !email || !password) {
       showMessage("Please fill in all required fields", "error");
+      return;
+    }
+
+    const lewisuEmailPattern = /^[a-z0-9._%+-]+@lewisu\.edu$/i;
+    if (!lewisuEmailPattern.test(email)) {
+      showMessage("Email must be a valid @lewisu.edu address", "error");
       return;
     }
 
@@ -62,11 +69,11 @@
 
     try {
       // Call the createUser function from auth.js
-      const result = await window.Auth.createUser(username, displayName, password, role, credits);
+      const result = await window.Auth.createUser(username, email, displayName, password, role, credits);
 
       if (result.ok) {
         showMessage(
-          `✓ Account created successfully! | Username: ${username} | Role: ${role} | Credits: ${credits}`,
+          `✓ Account created successfully! | Username: ${username} | Email: ${email} | Role: ${role} | Credits: ${credits}`,
           "success"
         );
         clearForm();
