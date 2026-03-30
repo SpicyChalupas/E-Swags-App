@@ -1,221 +1,173 @@
-// Merch page script - handles purchases and credit management
+// Raffle page script
 
-document.addEventListener("DOMContentLoaded", async () => {
-  console.log("[Merch] Initializing...");
+const RAFFLE_VOTES_KEY = "luBucks.raffleVotes";
+const RAFFLE_BALLOTS_KEY = "luBucks.raffleBallots";
 
-  // Get current user and display credits
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("[Raffle] Initializing...");
+
   const user = window.Auth?.getCurrentUser();
   if (user) {
     displayUserInfo(user);
   }
 
-  // Attach purchase handlers to all buy buttons
-  const buyButtons = document.querySelectorAll(".buy-btn");
-  buyButtons.forEach((btn, index) => {
-    btn.addEventListener("click", (e) => handlePurchase(e, index));
-  });
-
-  // Set up admin panel if user is admin
-  if (window.Auth?.hasRole("admin")) {
-    setupAdminPanel();
-  }
+  setupVoteButtons();
+  renderVoteCounts();
+  renderMyVotes();
 });
 
-// Display user info in a dedicated section
 function displayUserInfo(user) {
   let infoSection = document.getElementById("user-info-section");
+
   if (!infoSection) {
     infoSection = document.createElement("div");
     infoSection.id = "user-info-section";
     infoSection.className = "user-info-banner";
-    document.body.insertBefore(infoSection, document.querySelector("h2"));
+
+    const heading = document.querySelector("h2");
+    if (heading) {
+      heading.insertAdjacentElement("afterend", infoSection);
+    }
   }
 
   infoSection.innerHTML = `
-    <div style="background: #f0f0f0; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <div class="user-info-box">
       <p><strong>${user.displayName}</strong> (${user.role})</p>
-      <p>Available Credits: <strong id="credits-display">${user.credits}</strong></p>
-      <button id="refresh-credits-btn" style="margin-top: 5px; padding: 5px 10px;">Refresh Credits</button>
+      <p>Cast your votes for the next giveaway prizes.</p>
     </div>
   `;
-
-  document.getElementById("refresh-credits-btn").addEventListener("click", refreshUserCredits);
 }
 
-// Refresh user credits from backend
-async function refreshUserCredits() {
+function loadVotes() {
   try {
-    const credits = await window.Auth.getUserCredits();
-    if (credits !== null) {
-      document.getElementById("credits-display").textContent = credits;
-      const user = window.Auth.getCurrentUser();
-      user.credits = credits;
-      console.log("[Merch] Credits refreshed:", credits);
-    }
-  } catch (err) {
-    console.error("[Merch] Failed to refresh credits:", err);
+    const raw = localStorage.getItem(RAFFLE_VOTES_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
   }
 }
 
-// Handle purchase button click
-async function handlePurchase(e, buttonIndex) {
-  e.preventDefault();
+function saveVotes(votes) {
+  localStorage.setItem(RAFFLE_VOTES_KEY, JSON.stringify(votes));
+}
 
+function loadBallots() {
+  try {
+    const raw = localStorage.getItem(RAFFLE_BALLOTS_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveBallots(ballots) {
+  localStorage.setItem(RAFFLE_BALLOTS_KEY, JSON.stringify(ballots));
+}
+
+function setupVoteButtons() {
+  const buttons = document.querySelectorAll(".vote-btn");
+
+  const votes = loadVotes();
+
+  buttons.forEach((btn) => {
+    const item = btn.dataset.item;
+    if (typeof votes[item] !== "number") {
+      votes[item] = 0;
+    }
+
+    btn.addEventListener("click", () => handleVote(btn));
+  });
+
+  saveVotes(votes);
+}
+
+function renderVoteCounts() {
+  const votes = loadVotes();
+  const counters = document.querySelectorAll("[data-count-for]");
+
+  counters.forEach((counter) => {
+    const item = counter.dataset.countFor;
+    const total = votes[item] || 0;
+    counter.textContent = `${total} vote${total === 1 ? "" : "s"}`;
+  });
+}
+
+function renderMyVotes() {
   const user = window.Auth?.getCurrentUser();
+  const buttons = document.querySelectorAll(".vote-btn");
+
+  buttons.forEach((btn) => {
+    btn.classList.remove("selected-vote");
+    btn.textContent = "Vote";
+  });
+
+  if (!user) return;
+
+  const ballots = loadBallots();
+  const userKey = user.username.toLowerCase();
+  const myVotes = ballots[userKey] || {};
+
+  buttons.forEach((btn) => {
+    const group = btn.dataset.group;
+    const item = btn.dataset.item;
+
+    if (myVotes[group] === item) {
+      btn.classList.add("selected-vote");
+      btn.textContent = "Selected";
+    } else if (myVotes[group]) {
+      btn.textContent = "Change Vote";
+    }
+  });
+}
+
+function handleVote(button) {
+  const user = window.Auth?.getCurrentUser();
+
   if (!user) {
-    alert("Please log in to make a purchase.");
+    alert("Please log in before voting.");
     return;
   }
 
-  // Get item info from the button's parent cell
-  const cell = e.target.closest("td");
-  const priceLabel = cell?.querySelector(".price-label")?.textContent || "Unknown";
-  const costMatch = priceLabel.match(/(\d+)\s+swagbucks/);
-  const cost = costMatch ? parseInt(costMatch[1]) : 0;
+  const group = button.dataset.group;
+  const item = button.dataset.item;
+  const userKey = user.username.toLowerCase();
 
-  if (cost <= 0) {
-    alert("Invalid item price.");
+  const votes = loadVotes();
+  const ballots = loadBallots();
+
+  if (!ballots[userKey]) {
+    ballots[userKey] = {};
+  }
+
+  const currentVote = ballots[userKey][group];
+
+  if (currentVote === item) {
+    alert("You already selected this option.");
     return;
   }
 
-  // Check if user has enough credits
-  if (user.credits < cost) {
-    alert(`Insufficient credits! You have ${user.credits} credits but this item costs ${cost}.`);
-    return;
-  }
+  const changingVote = !!currentVote;
 
-  // Confirm purchase
   const confirmed = window.confirm(
-    `Purchase this item for ${cost} credits?\n\nYou will have ${user.credits - cost} credits remaining.`
+    changingVote
+      ? "You already voted in this section. Do you want to change your vote?"
+      : "Submit your vote for this giveaway prize?"
   );
+
   if (!confirmed) return;
 
-  // Make the purchase via backend
-  try {
-    const itemName = cell?.querySelector("img")?.alt || `Item ${buttonIndex + 1}`;
-    const result = await window.Auth.makePurchase(`item-${buttonIndex}`, itemName, cost);
-
-    alert(
-      `Purchase successful!\n\nItem: ${result.itemName}\nCost: ${result.cost} credits\nRemaining: ${result.creditsRemaining} credits`
-    );
-
-    // Update local credits display
-    const user = window.Auth.getCurrentUser();
-    user.credits = result.creditsRemaining;
-    displayUserInfo(user);
-  } catch (err) {
-    alert(`Purchase failed: ${err.message}`);
-  }
-}
-
-// Setup admin panel for credit management
-function setupAdminPanel() {
-  let adminPanel = document.getElementById("admin-panel");
-  if (!adminPanel) {
-    adminPanel = document.createElement("div");
-    adminPanel.id = "admin-panel";
-    adminPanel.className = "admin-panel";
-    document.querySelector("h2").insertAdjacentElement("afterend", adminPanel);
+  if (changingVote && votes[currentVote] > 0) {
+    votes[currentVote] -= 1;
   }
 
-  adminPanel.innerHTML = `
-    <div style="background: #fff3cd; padding: 15px; margin: 10px 0; border-radius: 5px; border: 2px solid #ffc107;">
-      <h3 style="margin-top: 0;">Admin Panel - Manage User Credits</h3>
-      <div style="margin: 10px 0;">
-        <button id="list-users-btn" style="padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer;">
-          List All Users
-        </button>
-      </div>
-      <div id="admin-users-list" style="margin-top: 15px;"></div>
-      <div id="credit-assignment-form" style="display: none; margin-top: 15px; padding: 10px; background: white; border: 1px solid #ccc; border-radius: 3px;">
-        <h4>Assign Credits</h4>
-        <label>
-          Username: <input type="text" id="target-username" required placeholder="username">
-        </label>
-        <label>
-          Credits: <input type="number" id="credit-amount" required placeholder="100" min="0">
-        </label>
-        <label>
-          <input type="radio" name="operation" value="add" checked> Add Credits
-          <input type="radio" name="operation" value="set"> Set Credits
-        </label>
-        <button id="assign-btn" style="padding: 5px 10px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer;">
-          Assign
-        </button>
-        <button id="cancel-assign-btn" style="padding: 5px 10px; background: #6c757d; color: white; border: none; border-radius: 3px; cursor: pointer; margin-left: 5px;">
-          Cancel
-        </button>
-      </div>
-    </div>
-  `;
+  votes[item] = (votes[item] || 0) + 1;
+  ballots[userKey][group] = item;
 
-  document.getElementById("list-users-btn").addEventListener("click", listAdminUsers);
-  document.getElementById("assign-btn").addEventListener("click", submitCreditAssignment);
-  document.getElementById("cancel-assign-btn").addEventListener("click", cancelAssignment);
-}
+  saveVotes(votes);
+  saveBallots(ballots);
 
-// List all users (admin)
-async function listAdminUsers() {
-  const listDiv = document.getElementById("admin-users-list");
-  listDiv.innerHTML = "<p>Loading users...</p>";
+  renderVoteCounts();
+  renderMyVotes();
 
-  try {
-    const users = await window.Auth.getAdminUsers();
-    let html = "<table border='1' cellpadding='10' style='width:100%; margin-top:10px;'>";
-    html += "<thead><tr><th>Username</th><th>Display Name</th><th>Role</th><th>Credits</th><th>Action</th></tr></thead>";
-    html += "<tbody>";
-
-    users.forEach((user) => {
-      html += `<tr>
-        <td>${user.username}</td>
-        <td>${user.displayName}</td>
-        <td>${user.role}</td>
-        <td>${user.credits}</td>
-        <td><button onclick="showCreditForm('${user.username}')" style="padding:5px 10px; background:#007bff; color:white; border:none; border-radius:3px; cursor:pointer;">
-          Manage
-        </button></td>
-      </tr>`;
-    });
-
-    html += "</tbody></table>";
-    listDiv.innerHTML = html;
-  } catch (err) {
-    listDiv.innerHTML = `<p style="color:red;">Error loading users: ${err.message}</p>`;
-  }
-}
-
-// Show credit assignment form
-function showCreditForm(username) {
-  document.getElementById("target-username").value = username;
-  document.getElementById("credit-assignment-form").style.display = "block";
-  document.getElementById("credit-amount").focus();
-}
-
-// Cancel credit assignment
-function cancelAssignment() {
-  document.getElementById("credit-assignment-form").style.display = "none";
-  document.getElementById("admin-users-list").innerHTML = "";
-  document.getElementById("list-users-btn").click();
-}
-
-// Submit credit assignment
-async function submitCreditAssignment() {
-  const username = document.getElementById("target-username").value.trim();
-  const credits = parseInt(document.getElementById("credit-amount").value);
-  const operation = document.querySelector('input[name="operation"]:checked').value;
-
-  if (!username || !Number.isFinite(credits) || credits < 0) {
-    alert("Please fill in all fields correctly.");
-    return;
-  }
-
-  try {
-    const result = await window.Auth.assignCredits(username, credits, operation);
-    alert(
-      `Credits ${operation === "add" ? "added" : "set"} successfully!\n${username} now has ${result.user.credits} credits.`
-    );
-    cancelAssignment();
-  } catch (err) {
-    alert(`Error: ${err.message}`);
-  }
+  alert("Your vote has been saved.");
 }
