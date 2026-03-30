@@ -30,8 +30,8 @@ Product Backlog SP Total: 90 points total
 | RC-082 | As a user, I want the colors of the website to be changed. It should match with the LewisU red and black colors. | 5 | 7 | N | Ready | Tom |
 | RC-083 | As a user, I want a new logo to replace the old "E-Swag" logo. | 7 | 6 | N | done | Glaycon |
 | RC-085 | As a developer, I want the "Cart" page to be replaced with the "Previous Raffle Winners" page.  | 6 | 6 | Y | Done | Edgar |
-| RC-087 | As a developer, I will setup the database to be able to take Email inputs with @lewisu.edu as a required field for account creation | 8 | 8 | Y | Ready | Andrew |
-| RC-086 | As a developer, I want the nav bar to be reorganized in the top right. The "username / total credits" should be on the left side, then the "Cart" button, "Profile" button, and "Logout" button should be lined up next to each other. | 4 | 6 | Y | Ready | Andrew |
+| RC-087 | As a developer, I will setup the database to be able to take Email inputs with @lewisu.edu as a required field for account creation | 8 | 8 | Y | Done | Andrew |
+| RC-086 | As a developer, I want the nav bar to be reorganized in the top right. The "username / total credits" should be on the left side, then the "Cart" button, "Profile" button, and "Logout" button should be lined up next to each other. | 4 | 6 | Y | Done | Andrew |
 | RC-088 | As a user, I want the footer to stay on the bottom of the page so that there is no white space below. | 6 | 6 | n | Ready | Tom |
 | RC-090 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Done | Diego |
 | RC-091 | As a developer, I want to include my own paragraph about me, on the Contact Page. | 4 | 5 | N | Done | Edgar |
