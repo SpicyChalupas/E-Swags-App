@@ -24,12 +24,6 @@ Product Backlog SP Total: 60 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| RC-### | As a user, I want  | # | # | N | Ready | - |
 
-| RC-098 | As a user, I want the background color for every webpage to be a lighter pink instead of dark red. | # | # | N | Ready | - |
-| RC-098 | As a user, I want the color of the nav-buttons when hovered over to change from transparent -> white. | # | # | N | Ready | - |
-| RC-099 | As a user, I want the color of the nav-buttons TEXT when hovered over to change from white -> red. | # | # | N | Ready | - |
-| RC-100 | As a user, I want the  | # | # | N | Ready | - |
-| RC-101 | As a user, I don't want to be prompted to login right when I open the webpage, so I can view the "About" and "Home/Index" pages unlogged in. | 8 | 6 | N | Ready | Andrew |
 
 12 points per person, 60 capacity
