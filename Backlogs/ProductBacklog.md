@@ -36,7 +36,7 @@ Product Backlog SP Total: 60 points total
 | PTG-104 | As a user, I want the "prev-winners" page to properly show I am logged in, instead of logged out. | 7 | 4 | N | Done | Edgar |
 | PTG-105 | As a developer, I want to create a new webpage titled "Feedback Surveys". | 6 | 3 | N | Ready | - |
 | PTG-106 | As a developer, I want to add "Feedback Surveys" to the top-nav bar on all pages. | # | # | N | Ready | - |
-| PTG-107 | As a developer, I want the top-nav and footer to be consistent across all pages. The top-nav should be ordered: 'Home' 'About' 'Feedback Surveys' 'Raffle' 'Previous Winners' and the footer should be ordered: 'Home' 'About' 'Contact' | 7 | 6 | N | Ready | - |
+| PTG-107 | As a developer, I want the top-nav and footer to be consistent across all pages. The top-nav should be ordered: 'Home' 'About' 'Feedback Surveys' 'Raffle' 'Previous Winners' and the footer should be ordered: 'Home' 'About' 'Contact' | 7 | 6 | N | Ready | Glaycon |
 | PTG-108 | As a developer, I want to create and add an icon to the website, ensuring it is on all pages. | 4 | 4 | N | Ready | - |
 
 
