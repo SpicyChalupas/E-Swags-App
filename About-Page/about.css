@@ -13,7 +13,7 @@
 }
 
 .about-kicker {
-  color: #FF9900;
+  color: #d80f0f;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -21,13 +21,13 @@
 }
 
 .about-hero h1 {
-  color: #232F3E;
+  color: #000000;
   font-size: 2rem;
   margin-bottom: 14px;
 }
 
 .about-hero p {
-  color: #444;
+  color: #0b0000;
   font-size: 1.05rem;
   line-height: 1.65;
 }
@@ -97,18 +97,18 @@
 }
 
 .about-cta h2 {
-  color: #232F3E;
+  color: #00050a;
   margin-bottom: 8px;
 }
 
 .about-cta p {
-  color: #555;
+  color: #010000;
   margin-bottom: 16px;
 }
 
 .about-cta-link {
   display: inline-block;
-  background: #FF9900;
+  background: #ff1500;
   color: #fff;
   text-decoration: none;
   padding: 10px 18px;
@@ -117,7 +117,7 @@
 }
 
 .about-cta-link:hover {
-  background: #e68a00;
+  background: #9d0101;
 }
 
 @media screen and (max-width: 900px) {

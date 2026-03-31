@@ -10,7 +10,7 @@ main {
 }   
 
 .topnav {
-  background-color: #232F3E;
+  background-color: #000205;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +52,7 @@ main {
 }
 
 .topnav a {
-  color: white;
+  color: rgb(232, 19, 19);
   text-decoration: none;
   padding: 20px 15px;
   font-size: 16px;
@@ -62,12 +62,12 @@ main {
 .topnav a:hover {
   background-color: #FF9900;
   border-radius: 4px;
-  color: #fff;
+  color: #e11111;
 }
 
 .topnav a.active {
   background-color: #FF9900;
-  color: white;
+  color: rgb(202, 21, 21);
   border-radius: 4px;
 }
 
@@ -139,7 +139,7 @@ main {
 }
 
 .footer {
-  background-color: #232F3E;
+  background-color: #000306;
   margin: auto;
 
   /* Fixes the position of the footer to the bottom of the screen. */
@@ -158,7 +158,7 @@ main {
 }
 
 .footerlinks a {
-  color: #fff;
+  color: #d50b0b;
   text-decoration: none;
 }
 
@@ -167,7 +167,7 @@ main {
 }
 
 .footertext {
-  color: #aaa;
+  color: #d41212;
   font-size: 14px;
   padding: 2%;
 }
