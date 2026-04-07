@@ -36,7 +36,7 @@ Product Backlog SP Total: 60 points total
 | PTG-105 | As a developer, I want to create a new webpage titled "Feedback Surveys". | 6 | 4 | N | Ready | Diego |
 | PTG-106 | As a developer, I want to add "Feedback Surveys" to the top-nav bar on all pages. | 6 | 4 | N | Ready | Diego |
 | PTG-107 | As a developer, I want the top-nav and footer to be consistent across all pages. The top-nav should be ordered: 'Home' 'About' 'Feedback Surveys' 'Raffle' 'Previous Winners' and the footer should be ordered: 'Home' 'About' 'Contact' | 7 | 6 | N | Ready | Glaycon |
-| PTG-108 | As a developer, I want to create and add an icon to the website, ensuring it is on all pages. | 4 | 4 | N | Ready | Diego |
+| PTG-108 | As a developer, I want to create and add an icon to the website, ensuring it is on all pages. | 4 | 4 | N | Done | Diego |
 | PTG-110 | As a developer, I want to ensure CSS styling is consistent across all files. | 4 | 4 | N | Ready | Tom |
 | PTG-111 | As a developer, I want to rename the "Merch-Page" directory to "Raffle-Page". | 3 | 3 | N | Ready | Edgar |
 
