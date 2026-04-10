@@ -8,8 +8,10 @@
 
 #contact-content {
     text-align: center;
-    background-color: #f4f4f4;
+    /* white card with subtle border to fit white/red/black theme */
+    background-color: var(--bg);
     padding: 20px;
+    border: 1px solid var(--border);
 }
 
 #contact-content ul {
@@ -22,7 +24,7 @@
 }
 
 #contact-content a {
-    color: #9d0606;
+    color: var(--accent);
     text-decoration: none;
 }
 

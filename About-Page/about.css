@@ -13,7 +13,8 @@
 }
 
 .about-kicker {
-  color: #d80f0f;
+  /* kicker uses lighter pink-red */
+  color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -63,8 +64,9 @@
 }
 
 .about-highlight {
+  /* muted dark highlight with white text for contrast */
   background: #232F3E;
-  color: #fff;
+  color: var(--cta-text);
   border-radius: 12px;
   padding: 28px;
   margin-bottom: 24px;
@@ -108,8 +110,8 @@
 
 .about-cta-link {
   display: inline-block;
-  background: #ff1500;
-  color: #fff;
+  background: var(--accent); /* lighter pink-red CTA */
+  color: var(--cta-text);
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 6px;
@@ -117,7 +119,7 @@
 }
 
 .about-cta-link:hover {
-  background: #9d0101;
+  background: var(--accent-dark);
 }
 
 @media screen and (max-width: 900px) {

@@ -10,7 +10,8 @@ main {
 }   
 
 .topnav {
-  background-color: #000205;
+  /* black navigation for strong contrast */
+  background-color: var(--nav-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +53,8 @@ main {
 }
 
 .topnav a {
-  color: rgb(232, 19, 19);
+  /* lighter red-pink for links */
+  color: var(--accent);
   text-decoration: none;
   padding: 20px 15px;
   font-size: 16px;
@@ -60,14 +62,14 @@ main {
 }
 
 .topnav a:hover {
-  background-color: #FF9900;
+  background-color: var(--accent-light);
   border-radius: 4px;
-  color: #e11111;
+  color: #000000;
 }
 
 .topnav a.active {
-  background-color: #FF9900;
-  color: rgb(202, 21, 21);
+  background-color: var(--accent); /* filled lighter pink-red for active */
+  color: #ffffff;
   border-radius: 4px;
 }
 
@@ -80,7 +82,7 @@ main {
 }
 
 #nav-user {
-  color: white;
+  color: #ffffff;
   font-size: 0.9rem;
   margin-left: 10px;
 }
@@ -139,7 +141,8 @@ main {
 }
 
 .footer {
-  background-color: #000306;
+  /* white footer with black text */
+  background-color: #ffffff;
   margin: auto;
   margin-bottom: 0;
 
@@ -160,7 +163,7 @@ main {
 }
 
 .footerlinks a {
-  color: #d50b0b;
+  color: #c10909;
   text-decoration: none;
 }
 
@@ -169,7 +172,7 @@ main {
 }
 
 .footertext {
-  color: #d41212;
+  color: #000000;
   font-size: 14px;
   padding: 2%;
 }

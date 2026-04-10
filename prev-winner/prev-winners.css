@@ -1,5 +1,6 @@
 .topnav a.active-cart{
-  background-color: orange;
+  background-color: var(--accent);
+  color: var(--cta-text);
 }
 
 .cart-box {
@@ -10,7 +11,7 @@
 }
 
 .cart-list {
-  background: lightgray;
+  background: var(--muted);
   border-radius: 8px;
   padding: 20px;
 }
@@ -25,7 +26,7 @@
 
 .item-price {
   font-weight: bold;
-  color: rgb(215, 142, 6);
+  color: var(--accent);
 }
 
 .cart-total {
@@ -36,5 +37,5 @@
   font-weight: bold;
   padding: 13px;
   border-radius: 8px;
-  border: 3px solid orange;
+  border: 3px solid var(--accent);
 }

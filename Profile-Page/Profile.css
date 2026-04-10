@@ -1,13 +1,14 @@
 .topnav a.active-pfp{
-  background-color: orange;
+  background-color: var(--accent);
+  color: var(--cta-text);
 }
 
 .info-box {
-  border: 1px solid #000000;
+  border: 1px solid var(--border);
   padding: 13px;
   margin: 10px 0;
   border-radius: 25px;
-  background: #e2dcdc;
+  background: #f7f5f5;
 }
 
 .profile-box {
@@ -30,15 +31,15 @@
 .tool-link {
   display: inline-block;
   padding: 10px 14px;
-  background-color: #FF9900;
-  color: #ffffff;
+  background-color: var(--accent);
+  color: var(--cta-text);
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .tool-link:hover {
-  background-color: #e68a00;
+  background-color: var(--accent-dark);
 }
 
 .tool-desc {
