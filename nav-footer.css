@@ -163,12 +163,22 @@ main {
 }
 
 .footerlinks a {
-  color: #c10909;
+  color: var(--accent);
   text-decoration: none;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background-color 0.22s ease, color 0.22s ease, transform 0.18s ease, opacity 0.22s ease;
+  will-change: transform, opacity;
 }
 
-.footerlinks a:hover {
-  text-decoration: underline;
+.footerlinks a:hover,
+.footerlinks a:focus {
+  background-color: var(--accent-light);
+  color: #000000;
+  transform: translateY(-3px);
+  opacity: 0.95;
+  text-decoration: none;
 }
 
 .footertext {
