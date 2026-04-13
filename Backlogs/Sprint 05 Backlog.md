@@ -29,9 +29,9 @@ Product Backlog SP Total: 60 points total
 | PTG-099 | As a developer, I want the color of the top-nav buttons when hovered over to fade from black -> white. | 6 | 3 | N | Ready | Glaycon |
 | PTG-100 | As a developer, I want the color of the top-nav buttons TEXT when hovered over to fade from white -> red. | 6 | 3 | N | Ready | Glaycon |
 | PTG-109 | As a developer, I want the "hovered over button" fade effect to be applied to the footer buttons as well. | 7 | 4 | N | Done | Tom |
-| PTG-101 | As a user, I don't want to be prompted to login right when I open the webpage, so I can view the "About" and "Home/Index" pages unlogged in. | 8 | 6 | N | Ready | Andrew |
-| PTG-102 | As a developer, I want everyone to have user accounts for AWS IAM for access to backend tools. | 5 | 3 | Y | Ready | Andrew |
-| PTG-103 | As a developer, I want all IAM users to have correct permissions to view and edit DynamoDB table items. | 6 | 3 | Y | Ready | Andrew |
+| PTG-101 | As a user, I don't want to be prompted to login right when I open the webpage, so I can view the "About" and "Home/Index" pages unlogged in. | 8 | 6 | N | Done | Andrew |
+| PTG-102 | As a developer, I want everyone to have user accounts for AWS IAM for access to backend tools. | 5 | 3 | Y | Done | Andrew |
+| PTG-103 | As a developer, I want all IAM users to have correct permissions to view and edit DynamoDB table items. | 6 | 3 | Y | Done | Andrew |
 | PTG-104 | As a user, I want the "prev-winners" page to properly show I am logged in, instead of logged out. | 7 | 3 | N | Done | Edgar |
 | PTG-105 | As a developer, I want to create a new webpage titled "Feedback Surveys". | 6 | 4 | N | Done | Diego |
 | PTG-106 | As a developer, I want to add "Feedback Surveys" to the top-nav bar on all pages. | 6 | 4 | N | Done | Diego |
