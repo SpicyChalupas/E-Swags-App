@@ -490,12 +490,28 @@ function isLoginPage(pathname) {
   return pathname.includes("Authentication.html") || pathname.includes("Authentication-Page");
 }
 
+function isPublicPage(pathname) {
+  const lower = String(pathname || "").toLowerCase();
+  return (
+    lower.includes("/about-page/about.html") ||
+    lower.includes("/contact-page/contact.html") ||
+    lower.endsWith("/index.html") ||
+    lower.endsWith("/e-swags-app/") ||
+    lower === "/"
+  );
+}
+
 function enforceGlobalLogin() {
   const path = window.location.pathname;
   console.log("[auth] current path:", path);
 
   if (isLoginPage(path)) {
     console.log("[auth] on login page, no redirect");
+    return;
+  }
+
+  if (isPublicPage(path)) {
+    console.log("[auth] on public page, no redirect");
     return;
   }
 
