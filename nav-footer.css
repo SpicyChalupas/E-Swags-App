@@ -1,4 +1,4 @@
-Body {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -7,10 +7,9 @@ Body {
 
 main {
   flex: 1;
-}   
+}
 
 .topnav {
-  /* black navigation for strong contrast */
   background-color: var(--nav-bg);
   display: flex;
   justify-content: space-between;
@@ -52,25 +51,49 @@ main {
   margin: 0;
 }
 
-.topnav a {
-  /* lighter red-pink for links */
-  color: var(--accent);
+/* Regular nav buttons */
+.topnav-left a,
+.topnav-right #nav-login,
+.topnav-right #nav-logout {
+  color: #ffffff;
   text-decoration: none;
   padding: 20px 15px;
   font-size: 16px;
-  transition: background 0.3s, color 0.3s;
+  background-color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.topnav a:hover {
-  background-color: var(--accent-light);
+/* Hover effect: black -> white background, white -> red text */
+.topnav-left a:hover,
+.topnav-right #nav-login:hover,
+.topnav-right #nav-logout:hover,
+.topnav-left a:focus,
+.topnav-right #nav-login:focus,
+.topnav-right #nav-logout:focus {
+  background-color: #ffffff;
+  color: #cc0000;
   border-radius: 4px;
-  color: #000000;
 }
 
-.topnav a.active {
-  background-color: var(--accent); /* filled lighter pink-red for active */
-  color: #ffffff;
+/* Active page */
+.topnav-left a.active,
+.topnav-right #nav-login.active,
+.topnav-right #nav-logout.active {
+  background-color: #ffffff;
+  color: #cc0000;
   border-radius: 4px;
+}
+
+/* Profile picture link should not look like a button */
+.topnav-right .pfp {
+  text-decoration: none;
+  padding: 0;
+  background: none;
+}
+
+.topnav-right .pfp:hover,
+.topnav-right .pfp:focus {
+  background: none;
 }
 
 .topnav img {
@@ -93,14 +116,13 @@ main {
     padding: 8px 12px;
   }
 
-  /* Let the left and right wrap instead of squishing */
-  .topnav-left, .topnav-right {
+  .topnav-left,
+  .topnav-right {
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
   }
 
-  /* Stop the logo from sitting on top of everything */
   .topnav-center {
     position: static;
     transform: none;
@@ -114,21 +136,24 @@ main {
     height: 48px;
   }
 
-  /* Make the user text go to its own line so it does not crush links */
   #nav-user {
     width: 100%;
     text-align: center;
     margin: 6px 0 0;
   }
 
-  .topnav a {
+  .topnav-left a,
+  .topnav-right #nav-login,
+  .topnav-right #nav-logout {
     padding: 10px 10px;
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .topnav a {
+  .topnav-left a,
+  .topnav-right #nav-login,
+  .topnav-right #nav-logout {
     padding: 8px 8px;
     font-size: 13px;
   }
@@ -141,25 +166,22 @@ main {
 }
 
 .footer {
-  /* white footer with black text */
   background-color: #ffffff;
   margin: auto;
   margin-bottom: 0;
-
-  /* Fixes the position of the footer to the bottom of the screen. */
   position: relative;
   text-align: center;
   width: 100%;
   left: 0;
   bottom: 0;
-  
 }
 
 .footerlinks {
   display: flex;
   justify-content: center;
   gap: 3%;
-  padding: 2% 0 0 0; /* top right bottom left */
+  padding: 2% 0 0 0;
+  flex-wrap: wrap;
 }
 
 .footerlinks a {
