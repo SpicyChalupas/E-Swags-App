@@ -14,13 +14,13 @@ Scrum Master: Andrew
 
 Product Owner: Diego
 
-Sprint 5 Planning Date/Time: 3/30 - 4/12
+Sprint 5 Planning Date/Time: 4/13 - 4/26
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Diego 
 
-Product Backlog SP Total: 60 points total
+Product Backlog SP Total: 70 points total
 
-12 story points for each person.
+14 story points for each person.
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
@@ -28,4 +28,4 @@ Product Backlog SP Total: 60 points total
 
 
 
-12 points per person, 60 capacity
+14 points per person, 70 capacity
