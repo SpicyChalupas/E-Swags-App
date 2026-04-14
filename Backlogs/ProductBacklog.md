@@ -24,7 +24,16 @@ Product Backlog SP Total: 70 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| PTG-### | As a user, I want  | # | # | N | Ready | - |
+| PTG-112 | As a developer, I want to create a survey entry container and display it on the feedback webpage. | # | # | N | Ready | - |
+| PTG-113 | As a developer, I want to create a Google Form "practice survey" to test the functionality of the form. Provide a link to the Form inside the container on the webpage. | # | # | N | Ready | - |
+| PTG-114 | As a developer, I want to connect an Google Sheet to the Google Form for answer collection. | # | # | N | Ready | - |
+| PTG-118 | As a developer, I want to create a new webpage, called "Account Creation". It will include an account creation form similar to "Admin.html" | # | # | N | Ready | - |
+| PTG-115 | As a developer, I want the "Get Started" button on the About webpage to redirect to the Account Creation webpage. | # | # | N | Ready | - |
+| PTG-116 | As a developer, I want to reorganize the account creation form. I want to keep the Username, Display Name, Email (lewisu.edu only), and Password. The Role and Initial Credits should be set to "Student" and "0 credits" respectively by default. | # | # | N | Ready | - |
+| PTG-117 | As a developer, I want the email in the Account Creation to be validated properly, with "@lewisu.edu" domains only. | # | # | N | Ready | - |
+| PTG-119 | As a user, I want to be able to click on the LU-Bucks logo and redirect me to the Home webpage. | # | # | N | Ready | - |
+| PTG-120 | As a developer, . | # | # | N | Ready | - |
+
 
 
 
