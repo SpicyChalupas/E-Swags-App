@@ -41,12 +41,6 @@ Product Backlog SP Total: 70 points total
 | PTG-128 | As a developer, I want the "Raffle Page" header on the raffle webpage to be deleted. The "NAME HERE (role here) Cast your votes for the next giveaway prizes" container should be at the top instead. | 7 | 4 | N | Ready | - |
 | PTG-122 | As a developer, I want the raffle webpage to switch from local storage to backend database storage so users can see total votes from other users, not just their own vote. | 10 | 8 | N | Ready | - |
 | PTG-124 | As a user, I want the homepage to be more visually appealing with the information inside of a container, and the background to be a gradient with the lewis red color. Be sure to share your designs with the rest of the team for opinions. | 4 | 5 | N | Ready | - |
-
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
-
-
-
-
-
 
 14 points per person, 70 capacity
