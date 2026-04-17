@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Product Backlog
-permalink: /backlogs/product-backlog/
+permalink: /Backlogs/ProductBacklog.md/
 ---
 
 # 📋 Product Backlog – *LU-Bucks App*

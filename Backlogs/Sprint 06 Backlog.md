@@ -43,9 +43,3 @@ Product Backlog SP Total: 70 points total
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
 
 14 points per person, 70 capacity
-
-Diego: 5 5 2 3 3 = 18
-Andrew: 5 4 4 4 = 17
-Glaycon: 8 8 = 16
-Edgar: 5 8 4 = 17
-Tom: 4 8 2 = 14
