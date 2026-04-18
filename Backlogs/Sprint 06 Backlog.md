@@ -30,7 +30,7 @@ Product Backlog SP Total: 70 points total
 | PTG-116 | As a developer, I want to create a new blank webpage called "Account Creation". The webpage will include an account creation form just like "Admin.html". | 8 | 4 | N | Ready | Tom |
 | PTG-118 | Continuing PTG-116: As a developer, I want to make the account creation form by copying over the code from "Admin.html". I want to keep the Username, Display Name, Email (@lewisu.edu only), and Password. The Role and Initial Credits should be set to "Student" and "0 credits" respectively by default and cannot be changed. | 8 | 8 | N | Ready | Tom |
 | PTG-126 | As a developer, I want the contents of the About webpage to be moved to the middle of the Home webpage. It should be positioned under the three merch photos and above the "News" section. | 6 | 5 | N | Ready | Diego |
-| PTG-127 | Continuing PTG-126: As a developer, I want the contents of the About webpage CSS styling to be moved to the Home webpage. | 6 | 5 | N | Ready | Diego |
+| PTG-127 | Continuing PTG-126: As a developer, I want the contents of the About webpage CSS styling to be moved to the Home webpage. | 6 | 4 | N | Ready | Diego |
 | PTG-115 | Continuing PTG-126: As a developer, I want the "Get Started" button on the Home webpage to redirect to the Account Creation webpage. | 6 | 3 | N | Ready | Diego |
 | PTG-125 | Continuing PTG-126: As a developer, I want the "Get Started" button on the Home webpage to be bigger relative to its container. It must catch the eye, easy to see off the bat, and not be as small as it is currently. | 6 | 2 | N | Ready | Tom |
 | PTG-117 | Continuing PTG-126: As a developer, I want the email in the Account Creation to be validated properly, with "@lewisu.edu" domains only. | 6 | 3 | N | Ready | Diego |
@@ -39,7 +39,9 @@ Product Backlog SP Total: 70 points total
 | PTG-121 | As a developer, I want the bar and footer to be the same size width and height. | 4 | 4 | N | Ready | Andrew |
 | PTG-123 | Continuing PTG-121: As a developer, I want the bar and footer to be the same red font color. The footer has a pink font color, it should be red like the header. | 4 | 2 | N | Ready | Diego |
 | PTG-128 | As a developer, I want the "Raffle Page" header on the raffle webpage to be deleted. The "NAME HERE (role here) Cast your votes for the next giveaway prizes" container should be at the top instead. | 7 | 4 | N | Ready | Andrew |
-| PTG-124 | As a user, I want the homepage to be more visually appealing with the information inside of a container, and the background to be a gradient with the lewis red color. Be sure to share your designs with the rest of the team for opinions. | 4 | 5 | N | Ready | Andrew |
+| PTG-124 | As a user, I want the homepage to be more visually appealing with the information inside of a container, and the background to be a gradient with the lewis red color. Be sure to share your designs with the rest of the team for opinions. | 4 | 4 | N | Ready | Andrew |
+| PTG-129 | As a developer, I want to coordinate Product Backlog grooming and Sprint Planning across product teams| 5 | 1 | N | Ready | Diego |
+| PTG-130 | As a developer, I want to coordinate all team’s participation in Spring 2026 Celebration of Scholarship Lite on Tuesday, April 21 at 2 pm CT| 5 | 1 | N | Ready | Andrew |
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
 
 14 points per person, 70 capacity
