@@ -166,22 +166,19 @@ main {
 }
 
 .footer {
-  background-color: #ffffff;
+  background-color: #000000;
   margin: auto;
   margin-bottom: 0;
-  position: relative;
   text-align: center;
   width: 100%;
-  left: 0;
-  bottom: 0;
+  padding: 20px 0;
 }
 
 .footerlinks {
   display: flex;
   justify-content: center;
-  gap: 3%;
-  padding: 2% 0 0 0;
-  flex-wrap: wrap;
+  gap: 20 px;
+  padding: 10px
 }
 
 .footerlinks a {
@@ -190,8 +187,7 @@ main {
   display: inline-block;
   padding: 8px 10px;
   border-radius: 6px;
-  transition: background-color 0.22s ease, color 0.22s ease, transform 0.18s ease, opacity 0.22s ease;
-  will-change: transform, opacity;
+  transition: all 0.2s ease;
 }
 
 .footerlinks a:hover,
@@ -199,12 +195,10 @@ main {
   background-color: var(--accent-light);
   color: #000000;
   transform: translateY(-3px);
-  opacity: 0.95;
-  text-decoration: none;
 }
 
 .footertext {
-  color: #000000;
-  font-size: 14px;
-  padding: 2%;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 1 rem;
 }
