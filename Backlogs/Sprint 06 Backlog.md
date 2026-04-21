@@ -42,6 +42,6 @@ Product Backlog SP Total: 70 points total
 | PTG-124 | As a user, I want the homepage to be more visually appealing with the information inside of a container, and the background to be a gradient with the lewis red color. Be sure to share your designs with the rest of the team for opinions. | 4 | 4 | N | Ready | Andrew |
 | PTG-129 | As a developer, I want to coordinate Product Backlog grooming and Sprint Planning across product teams| 5 | 1 | N | Ready | Diego |
 | PTG-130 | As a developer, I want to coordinate all team’s participation in Spring 2026 Celebration of Scholarship Lite on Tuesday, April 21 at 2 pm CT| 5 | 1 | N | Ready | Andrew |
-| PTG-### | As a developer, I want the to add a phone text. boss. | 6| 4| N | done | tom|
+| PTG-131| As a developer, I want the to add a phone text. | 6| 4| N | done | tom|
 
 14 points per person, 70 capacity
