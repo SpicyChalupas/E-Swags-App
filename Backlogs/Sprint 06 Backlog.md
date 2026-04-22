@@ -24,9 +24,9 @@ Product Backlog SP Total: 70 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| PTG-112 | As a developer, I want to create a survey container and display it on the feedback webpage. | 10 | 5 | N | Ready | Edgar |
-| PTG-113 | Continuing PTG-112: As a developer, I want to create a Google Form "practice survey" to test the functionality of the form. Provide a link to the Form inside the container on the webpage. | 10 | 8 | N | Ready | Edgar |
-| PTG-114 | Continuing PTG-112: As a developer, I want to connect a Google Sheet to the Google Form for answer collection. | 10 | 4 | N | Ready | Edgar |
+| PTG-112 | As a developer, I want to create a survey container and display it on the feedback webpage. | 10 | 5 | N | Done | Edgar |
+| PTG-113 | Continuing PTG-112: As a developer, I want to create a Google Form "practice survey" to test the functionality of the form. Provide a link to the Form inside the container on the webpage. | 10 | 8 | N | Done | Edgar |
+| PTG-114 | Continuing PTG-112: As a developer, I want to connect a Google Sheet to the Google Form for answer collection. | 10 | 4 | N | Done | Edgar |
 | PTG-116 | As a developer, I want to create a new blank webpage called "Account Creation". The webpage will include an account creation form just like "Admin.html". | 8 | 4 | N | Ready | Tom |
 | PTG-118 | Continuing PTG-116: As a developer, I want to make the account creation form by copying over the code from "Admin.html". I want to keep the Username, Display Name, Email (@lewisu.edu only), and Password. The Role and Initial Credits should be set to "Student" and "0 credits" respectively by default and cannot be changed. | 8 | 8 | N | Ready | Tom |
 | PTG-126 | As a developer, I want the contents of the About webpage to be moved to the middle of the Home webpage. It should be positioned under the three merch photos and above the "News" section. | 6 | 5 | N | Ready | Diego |
