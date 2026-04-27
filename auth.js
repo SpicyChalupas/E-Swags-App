@@ -13,7 +13,7 @@ const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const LOCAL_USERS_KEY = "eswag.localUsers";
 const LOCAL_DEMO_USERS = [
   { username: "admin", displayName: "Admin User", role: "admin", credits: 1000, password: "admin123" },
-  { username: "employee", displayName: "Employee User", role: "employee", credits: 500, password: "employee123" },
+  { username: "student", displayName: "Student User", role: "student", credits: 500, password: "student123" },
 ];
 
 function loadLocalUsers() {
@@ -432,7 +432,7 @@ async function assignCredits(username, credits, operation = "add", meta = null) 
 }
 
 // Create new user account (admin only)
-async function createUser(username, email, displayName, password, role = "employee", credits = 0) {
+async function createUser(username, email, displayName, password, role = "student", credits = 0) {
   if (IS_LOCAL) {
     const users = ensureLocalUsers();
     const exists = users.find(u => u.username.toLowerCase() === username.toLowerCase());

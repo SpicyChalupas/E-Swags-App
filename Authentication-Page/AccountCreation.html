@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrator - LU-Bucks</title>
+    <title>Account Creation - LU-Bucks</title>
     <link rel="icon" href="/assets/LuBucksIcon.png" />
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="Profile.css">
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="../Profile-Page/Profile.css">
+    <link rel="stylesheet" href="../Profile-Page/Admin.css">
     <link rel="stylesheet" href="/nav-footer.css">
 </head>
 <body>
     <header>
       <div class="topnav">
-        <!-- Left Side: main pages -->
         <div class="topnav-left">
           <a href="/index.html">Home</a>
           <a href="/Feedback/Feedback.html">Feedback Surveys</a>
@@ -21,14 +20,12 @@
           <a href="/prev-winner/prev-winners.html">Previous Winners</a>
         </div>
 
-        <!-- Center logo image in the top navigation bar -->
         <div class="topnav-center">
             <a href="/index.html" aria-label="Home">
               <img class="nav-logo" src="../assets/LuBucksLogo.png" alt="LU-Bucks Logo"> 
             </a>
         </div>
 
-        <!-- Right side: login status -->
         <div class="topnav-right">
           <a href="/Profile-Page/Profile.html" class="pfp">
             <img src="/Profile-Page/pfp.jpg" alt="Profile Picture">
@@ -41,10 +38,10 @@
     </header>
 
     <div class="admin-container">
-      <h1>Administrator Tools</h1>
+      <h1>Create Your Account</h1>
 
       <section class="admin-section">
-        <h2>Create New Account</h2>
+        <h2>Account Details</h2>
         <div class="form-box">
           <form id="create-account-form">
             <div class="form-group">
@@ -67,31 +64,24 @@
               <input type="password" id="password" name="password" required placeholder="Enter a strong password">
             </div>
 
+            <!-- Visible but non-editable fields for transparency + hidden inputs for submission -->
             <div class="form-group">
-              <label for="role">Role:</label>
-              <select id="role" name="role" required>
-                <option value="student">Student</option>
-                <option value="admin">Admin</option>
-              </select>
+              <label for="role-display">Role</label>
+              <input type="text" id="role-display" value="Student" disabled readonly>
             </div>
 
             <div class="form-group">
-              <label for="credits">Initial Credits:</label>
-              <input type="number" id="credits" name="credits" value="0" min="0" step="1">
+              <label for="credits-display">Initial Credits</label>
+              <input type="text" id="credits-display" value="0" disabled readonly>
             </div>
+
+            <!-- Hidden fixed fields per PTG-116 (submitted values) -->
+            <input type="hidden" id="role" name="role" value="student">
+            <input type="hidden" id="credits" name="credits" value="0">
 
             <button type="submit" class="btn-primary">Create Account</button>
             <span id="create-message" class="message"></span>
           </form>
-        </div>
-      </section>
-
-      <section class="admin-section">
-        <h2>Quick Links</h2>
-        <div class="links-box">
-          <a href="Profile.html" class="quick-link">Back to Profile</a>
-          <a href="../Deposit-Page/Deposit.html" class="quick-link">Deposit Dashboard</a>
-          <a href="../index.html" class="quick-link">Home</a>
         </div>
       </section>
     </div>
@@ -106,7 +96,5 @@
   
     <script src="../index.js"></script>
     <script src="../auth.js"></script>
-    <script src="Admin.js"></script>
   </body>
 </html>
-
