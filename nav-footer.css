@@ -5,6 +5,11 @@ body {
   margin: 0;
 }
 
+:root {
+  --header-height: 72px;
+  --footer-height: 96px;
+}
+
 main {
   flex: 1;
 }
@@ -15,9 +20,9 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  flex-wrap: wrap;
-  min-height: 70px;
-  height: auto;
+  flex-wrap: nowrap;
+  min-height: var(--header-height);
+  height: var(--header-height);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -27,12 +32,14 @@ main {
   display: flex;
   float: left;
   align-items: center;
+  height: 100%;
 }
 
 .topnav-right {
   display: flex;
   float: right;
   align-items: center;
+  height: 100%;
 }
 
 .topnav-center {
@@ -41,11 +48,18 @@ main {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  pointer-events: none;
+  pointer-events: auto;
+  height: 100%;
+}
+
+.topnav-center a {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .topnav-center .nav-logo {
-  height: 70px;
+  height: 56px;
   width: auto;
   border-radius: 0;
   margin: 0;
@@ -55,9 +69,12 @@ main {
 .topnav-left a,
 .topnav-right #nav-login,
 .topnav-right #nav-logout {
+  display: flex;
+  align-items: center;
+  height: 100%;
   color: #ffffff;
   text-decoration: none;
-  padding: 20px 15px;
+  padding: 0 15px;
   font-size: 16px;
   background-color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -96,7 +113,7 @@ main {
   background: none;
 }
 
-.topnav img {
+.topnav-right .pfp img {
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -118,6 +135,7 @@ main {
 
   .topnav-left,
   .topnav-right {
+    height: auto;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
@@ -145,6 +163,7 @@ main {
   .topnav-left a,
   .topnav-right #nav-login,
   .topnav-right #nav-logout {
+    height: auto;
     padding: 10px 10px;
     font-size: 14px;
   }
@@ -158,7 +177,7 @@ main {
     font-size: 13px;
   }
 
-  .topnav img {
+  .topnav-right .pfp img {
     height: 38px;
     width: 38px;
     margin: 0 6px;
@@ -167,18 +186,22 @@ main {
 
 .footer {
   background-color: #000000;
-  margin: auto;
+  margin-top: auto;
   margin-bottom: 0;
   text-align: center;
   width: 100%;
-  padding: 20px 0;
+  min-height: var(--footer-height);
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footerlinks {
   display: flex;
   justify-content: center;
-  gap: 20 px;
-  padding: 10px
+  gap: 20px;
+  padding: 0;
 }
 
 .footerlinks a {
@@ -200,5 +223,5 @@ main {
 .footertext {
   color: #ffffff;
   font-size: 15px;
-  padding: 1 rem;
+  margin-top: 8px;
 }
