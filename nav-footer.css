@@ -167,6 +167,7 @@ main {
 
 .footer {
   background-color: #000000;
+  color: #ffffff;
   margin: auto;
   margin-bottom: 0;
   text-align: center;
@@ -182,7 +183,7 @@ main {
 }
 
 .footerlinks a {
-  color: var(--accent);
+  color: var(--footer-text);
   text-decoration: none;
   display: inline-block;
   padding: 8px 10px;
@@ -193,7 +194,7 @@ main {
 .footerlinks a:hover,
 .footerlinks a:focus {
   background-color: var(--accent-light);
-  color: #000000;
+  color: #cc0000;
   transform: translateY(-3px);
 }
 
