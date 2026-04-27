@@ -28,7 +28,7 @@ The server will automatically seed these demo users on first startup:
 | Username | Password | Role |
 |----------|----------|------|
 | `admin` | `admin123` | Admin (can manage users & credits) |
-| `employee` | `employee123` | Employee (can purchase merch) |
+| `student` | `student123` | Student (can purchase merch) |
 
 ## 🧪 Testing the Backend
 
@@ -38,21 +38,21 @@ curl http://localhost:3000/api/health
 ```
 Expected: Should return 200 OK
 
-### 2. Login as Employee
+### 2. Login as Student
 ```bash
 curl -X POST http://localhost:3000/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"username":"employee","password":"employee123"}'
+  -d '{"username":"student","password":"student123"}'
 ```
 Expected Response:
 ```json
 {
   "token": "eyJhbGciOiJIUzI1NiIs...",
   "user": {
-    "username": "employee",
-    "role": "employee",
+    "username": "student",
+    "role": "student",
     "credits": 100,
-    "displayName": "Employee User"
+    "displayName": "Student User"
   }
 }
 ```
@@ -79,7 +79,7 @@ curl -X POST http://localhost:3000/purchase \
 
 ### 6. Assign Credits (Admin Only)
 ```bash
-curl -X POST http://localhost:3000/admin/users/employee/credits \
+curl -X POST http://localhost:3000/admin/users/student/credits \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ADMIN_TOKEN_HERE" \
   -d '{"creditAmount":50}'
@@ -101,8 +101,8 @@ Once the server is running, you can test the frontend:
 1. Open `E-Swags-App/index.html` in your browser (or use Live Server)
 2. Click **Login**
 3. Use credentials:
-   - Username: `employee`
-   - Password: `employee123`
+  - Username: `student`
+  - Password: `student123`
 4. You should see the merch page with your credits
 
 ## 🐛 Troubleshooting

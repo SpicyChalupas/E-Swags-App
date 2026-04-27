@@ -13,7 +13,7 @@ const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const LOCAL_USERS_KEY = "eswag.localUsers";
 const LOCAL_DEMO_USERS = [
   { username: "admin", displayName: "Admin User", role: "admin", credits: 1000, password: "admin123" },
-  { username: "employee", displayName: "Employee User", role: "employee", credits: 500, password: "employee123" },
+  { username: "student", displayName: "Student User", role: "student", credits: 500, password: "student123" },
 ];
 
 // Local transaction history (so the History page works without a backend)
