@@ -24,8 +24,8 @@ Product Backlog SP Total: 70 points total
 
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
-| PTG-122 | As a developer, I want the raffle webpage to switch from local storage to backend database storage so users can see total votes from other users, not just their own vote. | 10 | 8 | N | Ready | - |
-| PTG-### | As a user, I want the login page to be updated. It should not say "E-Swag Store" but "LU-Bucks System". Text size should be bigger so it's easier to read. The login container should be bigger to fit the screen more. | 8 | 6 | N | Ready | - |
+| PTG-132 | As a developer, I want the raffle webpage to switch from local storage to backend database storage so users can see total votes from other users, not just their own vote. | 10 | 8 | N | Ready | - |
+| PTG-133 | As a user, I want the login page to be updated. It should not say "E-Swag Store" but "LU-Bucks System". Text size should be bigger so it's easier to read. The login container should be bigger to fit the screen more. | 8 | 7 | N | Ready | - |
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
 
