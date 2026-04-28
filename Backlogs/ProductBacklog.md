@@ -29,4 +29,8 @@ Product Backlog SP Total: 70 points total
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
 | PTG-### | As a developer, I want the . | # | # | N | Ready | - |
 
+add stories to creating the project presentation
+
+add stories to documenting the project
+
 14 points per person, 70 capacity
