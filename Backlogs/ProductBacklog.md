@@ -28,7 +28,7 @@ Product Backlog SP Total: 70 points total
 | PTG-133 | As a user, I want the login page to be updated. It should not say "E-Swag Store" but "LU-Bucks System". Text size should be bigger so it's easier to read. The login container should be bigger to fit the screen more. | 8 | 7 | N | Ready | - |
 | PTG-### | As a developer, I want the header styling in "main.css". Fix the login and logout button to match the other nav buttons. | 3 | 2 | N | Ready | - |
 | PTG-### | As a developer, I want the Google Form feedback form to give credits to the user who submits the form. Their number of credits should update on their account profile. | 10 | 7 | N | Ready | - |
-| PTG-### | As a developer, I want the Google Form to  | 10 | 7 | N | Ready | - |
+| PTG-### | As a developer, I want the Google Form's Name and Email to be required instead of optional. This will help us track who does the form. | 10 | 2 | N | Ready | - |
 | PTG-### | As a developer, I want the  | 10 | 7 | N | Ready | - |
 | PTG-### | As a developer, I want the  | 10 | 7 | N | Ready | - |
 | PTG-### | As a developer, I want the  | 10 | 7 | N | Ready | - |
@@ -44,12 +44,3 @@ Product Backlog SP Total: 70 points total
 | PTG-### | As the Scrum Master, I want to video record and document every feature and functionality of the product as reference for future teams. I want to conceptualize the product as an easy-to-digest idea. | 7 | 5 | N | Ready | - |
 
 14 points per person, 70 capacity
-
-
-
-
-Diego: 
-Andrew: 
-Glaycon: 
-Edgar:
-Tom: 
