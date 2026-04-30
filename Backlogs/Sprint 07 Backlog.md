@@ -31,8 +31,8 @@ Product Backlog SP Total: 70 points total
 | PTG-### | As a developer, I want the Google Form's Name and Email to be required instead of optional. This will help us track who does the form. | 10 | 2 | N | Ready | - |
 | PTG-### | As a user, when not logged in, I want the other pages in the header, except the "Home" and "Login" buttons. | 4 | 7 | N | Ready | - |
 | PTG-### | As a user, I want the website to have a dark mode  | 3 | 6 | N | Ready | Tom |
-| PTG-### | As a developer, I want the As a developer, I want to populate the “Previous Winners” section with mock/demo data so that I can test layout, spacing, and UI behavior without relying on real user submissions. | 10 | 4 | N | Ready | tom |
-| PTG-### | As a developer, I want the  | 10 | 7 | N | Ready | - |
+| PTG-### | As a developer, I want to populate the Previous Winners section with mock/demo data so that I can test layout. | 5 | 4 | N | Ready | tom |
+| PTG-### | As a developer, I want to fix and improve the bottom section of the home page so that the layout is consistent, properly aligned, and visually clean across different screen sizes. | 10 | 4 | N | Ready | - |
 | PTG-### | As a team member, I want to create the google slides presentation, pick a theme, and share access with the rest of the team. | 8 | 4 | Y | Done | Glaycon |
 | PTG-### | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Tom |
 | PTG-### | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Diego |
