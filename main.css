@@ -18,6 +18,152 @@
   --cta-text: #ffffff;
 }
 
+/* Header / Navigation moved here to centralize site styling */
+.topnav {
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+  min-height: 72px;
+  height: 72px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topnav-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 6px;
+}
+
+.topnav-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 6px;
+}
+
+.topnav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+  height: 100%;
+}
+
+.topnav-center a { display:flex; align-items:center; height:100%; }
+.topnav-center .nav-logo { height:56px; width:auto; margin:0; }
+
+.topnav-left a,
+.topnav-right a:not(.pfp) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--footer-text);
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 16px;
+  background-color: transparent;
+  transition: background-color 0.22s ease, color 0.22s ease, transform 0.12s ease;
+}
+
+.topnav-left a:hover,
+.topnav-right a:not(.pfp):hover,
+.topnav-left a:focus,
+.topnav-right a:not(.pfp):focus {
+  background-color: #ffffff;
+  color: var(--accent);
+  border-radius: 6px;
+  transform: translateY(-2px);
+}
+
+.topnav-left a.active,
+.topnav-right a:not(.pfp).active {
+  background-color: #ffffff;
+  color: var(--accent);
+  border-radius: 6px;
+}
+
+.topnav-right .pfp { text-decoration:none; padding:0; background:none; }
+.topnav-right .pfp img { height:45px; width:45px; border-radius:50%; object-fit:cover; margin:0 10px; }
+
+@media screen and (max-width: 900px) {
+  .topnav { height: auto; padding: 8px 12px; }
+  .topnav-left, .topnav-right { height: auto; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .topnav-center { position: static; transform: none; flex-basis: 100%; justify-content: center; margin: 6px 0; }
+  .topnav-center .nav-logo { height:48px; }
+  #nav-user { width:100%; text-align:center; margin:6px 0 0; }
+  .topnav-left a, .topnav-right a:not(.pfp) { height:auto; padding:10px 10px; font-size:14px; }
+}
+
+@media screen and (max-width: 480px) {
+  .topnav-left a, .topnav-right a:not(.pfp) { padding:8px 8px; font-size:13px; }
+  .topnav-right .pfp img { height:38px; width:38px; margin:0 6px; }
+}
+
+/* ---- Updates / News and Merch update boxes ---- */
+.update-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: 18px auto;
+}
+.update-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+}
+
+@media screen and (max-width: 900px) {
+  .update-grid { grid-template-columns: 1fr; max-width: 700px; }
+}
+
+/* ---- Winners grid for previous winners page ---- */
+.winners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: 18px auto 36px;
+}
+.winner-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+}
+.winner-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin-left: 12px;
+}
+.winner-meta { font-size: 0.95rem; color: #444; }
+.winner-prize { font-weight: 700; color: var(--accent); margin-top: 6px; }
+
+@media screen and (max-width: 900px) {
+  .winners-grid { grid-template-columns: 1fr 1fr; }
+}
+@media screen and (max-width: 600px) {
+  .winners-grid { grid-template-columns: 1fr; }
+}
+
+/* Utility to hide elements (use instead of inline styles) */
+.hidden { display: none !important; }
+
 body {
   font-family: Arial, sans-serif;
  

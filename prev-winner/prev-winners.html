@@ -42,8 +42,16 @@
       <h1>Previous Winners</h1>
       <p>Check out our list of previous winners!</p>
     </div>
+    <!-- Winners grid populated with demo data -->
+    <section class="winners-grid" id="winners-grid" aria-label="Previous winners list">
+      <!-- JS will populate winner cards here -->
+    </section>
 
-   
+    <section class="about-cta" style="max-width:1100px;margin:18px auto;">
+      <h2>Want to be a winner?</h2>
+      <p>Participate in surveys and raffles to earn LU-Bucks and enter to win exclusive merch.</p>
+      <a class="about-cta-link" href="/Authentication-Page/AccountCreation.html">Create Account</a>
+    </section>
   </main>
 
   <footer class="footer">
@@ -57,5 +65,34 @@
 
   <script src="index.js"></script>
     <script src="../auth.js"></script>
+  <script>
+    // Demo data for previous winners — replace with real data when available
+    (function() {
+      const winners = [
+        { name: 'Alex Johnson', prize: 'Lewis Hoodie', date: '2026-04-28', avatar: '../assets/teamphoto.jpg' },
+        { name: 'Maria Gomez', prize: 'Lewis T-Shirt', date: '2026-04-21', avatar: '../assets/pencils.jpg' },
+        { name: 'Chris Lee', prize: 'Campus Mug', date: '2026-04-14', avatar: '../assets/lewis_hoodie.jpg' },
+        { name: 'Taylor Smith', prize: 'Sticker Pack', date: '2026-03-30', avatar: '../assets/lewis_tshirt.jpg' },
+        { name: 'Jordan Brown', prize: 'Backpack', date: '2026-03-15', avatar: '../assets/teamphoto.jpg' },
+        { name: 'Sam Patel', prize: 'Notebook', date: '2026-03-01', avatar: '../assets/pencils.jpg' }
+      ];
+
+      function renderWinner(w) {
+        const el = document.createElement('article');
+        el.className = 'winner-card';
+        el.innerHTML = `
+          <img class="winner-avatar" src="${w.avatar}" alt="${w.name}">
+          <div class="winner-meta"><strong>${w.name}</strong><div class="winner-prize">${w.prize}</div><div style="font-size:0.85rem;color:#666;margin-top:6px">${w.date}</div></div>
+        `;
+        return el;
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const grid = document.getElementById('winners-grid');
+        if (!grid) return;
+        winners.forEach(w => grid.appendChild(renderWinner(w)));
+      });
+    })();
+  </script>
 </body>
 </html>

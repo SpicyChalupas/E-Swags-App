@@ -1,188 +1,8 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
+/* nav-footer.css now contains only footer and basic layout helpers */
 
-:root {
-  --header-height: 72px;
-  --footer-height: 96px;
-}
+body { display:flex; flex-direction:column; min-height:100vh; margin:0; }
 
-main {
-  flex: 1;
-}
-
-.topnav {
-  background-color: var(--nav-bg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  flex-wrap: nowrap;
-  min-height: var(--header-height);
-  height: var(--header-height);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.topnav-left {
-  display: flex;
-  float: left;
-  align-items: center;
-  height: 100%;
-}
-
-.topnav-right {
-  display: flex;
-  float: right;
-  align-items: center;
-  height: 100%;
-}
-
-.topnav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  pointer-events: auto;
-  height: 100%;
-}
-
-.topnav-center a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.topnav-center .nav-logo {
-  height: 56px;
-  width: auto;
-  border-radius: 0;
-  margin: 0;
-}
-
-/* Regular nav buttons */
-.topnav-left a,
-.topnav-right #nav-login,
-.topnav-right #nav-logout {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0 15px;
-  font-size: 16px;
-  background-color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect: black -> white background, white -> red text */
-.topnav-left a:hover,
-.topnav-right #nav-login:hover,
-.topnav-right #nav-logout:hover,
-.topnav-left a:focus,
-.topnav-right #nav-login:focus,
-.topnav-right #nav-logout:focus {
-  background-color: #ffffff;
-  color: #cc0000;
-  border-radius: 4px;
-}
-
-/* Active page */
-.topnav-left a.active,
-.topnav-right #nav-login.active,
-.topnav-right #nav-logout.active {
-  background-color: #ffffff;
-  color: #cc0000;
-  border-radius: 4px;
-}
-
-/* Profile picture link should not look like a button */
-.topnav-right .pfp {
-  text-decoration: none;
-  padding: 0;
-  background: none;
-}
-
-.topnav-right .pfp:hover,
-.topnav-right .pfp:focus {
-  background: none;
-}
-
-.topnav-right .pfp img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 10px;
-}
-
-#nav-user {
-  color: #ffffff;
-  font-size: 0.9rem;
-  margin-left: 10px;
-}
-
-@media screen and (max-width: 900px) {
-  .topnav {
-    height: auto;
-    padding: 8px 12px;
-  }
-
-  .topnav-left,
-  .topnav-right {
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .topnav-center {
-    position: static;
-    transform: none;
-    flex-basis: 100%;
-    justify-content: center;
-    margin: 6px 0;
-    pointer-events: auto;
-  }
-
-  .topnav-center .nav-logo {
-    height: 48px;
-  }
-
-  #nav-user {
-    width: 100%;
-    text-align: center;
-    margin: 6px 0 0;
-  }
-
-  .topnav-left a,
-  .topnav-right #nav-login,
-  .topnav-right #nav-logout {
-    height: auto;
-    padding: 10px 10px;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .topnav-left a,
-  .topnav-right #nav-login,
-  .topnav-right #nav-logout {
-    padding: 8px 8px;
-    font-size: 13px;
-  }
-
-  .topnav-right .pfp img {
-    height: 38px;
-    width: 38px;
-    margin: 0 6px;
-  }
-}
+main { flex:1; }
 
 .footer {
   background-color: #000000;
@@ -192,38 +12,14 @@ main {
   margin-bottom: 0;
   text-align: center;
   width: 100%;
-  min-height: var(--footer-height);
+  min-height: 96px;
   padding: 12px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.footerlinks {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-}
-
-.footerlinks a {
-  color: var(--footer-text);
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 10px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.footerlinks a:hover,
-.footerlinks a:focus {
-  background-color: var(--accent-light);
-  color: #cc0000;
-  transform: translateY(-3px);
-}
-
-.footertext {
-  color: #ffffff;
-  font-size: 15px;
-  margin-top: 8px;
-}
+.footerlinks { display:flex; justify-content:center; gap:20px; padding:0; }
+.footerlinks a { color:var(--footer-text); text-decoration:none; display:inline-block; padding:8px 10px; border-radius:6px; transition:all 0.2s ease; }
+.footerlinks a:hover, .footerlinks a:focus { background-color: var(--accent-light); color: var(--accent); transform: translateY(-3px); }
+.footertext { color:#ffffff; font-size:15px; margin-top:8px; }

@@ -540,16 +540,16 @@ function initNav() {
 
   if (user) {
     navUser.textContent = `${user.displayName} (${user.role}) | ${user.credits} credits`;
-    navLogin.style.display = "none";
-    navLogout.style.display = "inline";
+    navLogin.classList.add('hidden');
+    navLogout.classList.remove('hidden');
     navLogout.onclick = (e) => {
       e.preventDefault();
       logout();
     };
   } else {
     navUser.textContent = "";
-    navLogin.style.display = "inline";
-    navLogout.style.display = "none";
+    navLogin.classList.remove('hidden');
+    navLogout.classList.add('hidden');
   }
 }
 
