@@ -1,7 +1,20 @@
 // Raffle page script
 
-const RAFFLE_VOTES_KEY = "luBucks.raffleVotes";
-const RAFFLE_BALLOTS_KEY = "luBucks.raffleBallots";
+const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com";
+
+let voteTotals = {
+  "weekly-1": 0,
+  "weekly-2": 0,
+  "weekly-3": 0,
+  "monthly-1": 0,
+  "monthly-2": 0,
+  "monthly-3": 0,
+};
+
+let myVotes = {
+  weekly: null,
+  monthly: null,
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("[Raffle] Initializing...");
@@ -12,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setupVoteButtons();
-  renderVoteCounts();
-  renderMyVotes();
+  loadVotesFromServer();
 });
 
 function displayUserInfo(user) {
@@ -38,56 +50,58 @@ function displayUserInfo(user) {
   `;
 }
 
-function loadVotes() {
-  try {
-    const raw = localStorage.getItem(RAFFLE_VOTES_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch {
-    return {};
+async function loadVotesFromServer() {
+  const token = window.Auth?.getToken?.();
+  if (!token) {
+    renderVoteCounts();
+    renderMyVotes();
+    return;
   }
-}
 
-function saveVotes(votes) {
-  localStorage.setItem(RAFFLE_VOTES_KEY, JSON.stringify(votes));
-}
-
-function loadBallots() {
   try {
-    const raw = localStorage.getItem(RAFFLE_BALLOTS_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch {
-    return {};
-  }
-}
+    const res = await fetch(`${API_BASE}/raffle/votes`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
-function saveBallots(ballots) {
-  localStorage.setItem(RAFFLE_BALLOTS_KEY, JSON.stringify(ballots));
+    if (!res.ok) {
+      throw new Error("Unable to load raffle votes");
+    }
+
+    const data = await res.json();
+    if (data?.ok) {
+      voteTotals = {
+        ...voteTotals,
+        ...(data.totals || {}),
+      };
+      myVotes = {
+        weekly: data?.myVotes?.weekly || null,
+        monthly: data?.myVotes?.monthly || null,
+      };
+    }
+  } catch (err) {
+    console.error("[Raffle] Failed to load votes:", err);
+  }
+
+  renderVoteCounts();
+  renderMyVotes();
 }
 
 function setupVoteButtons() {
   const buttons = document.querySelectorAll(".vote-btn");
 
-  const votes = loadVotes();
-
   buttons.forEach((btn) => {
-    const item = btn.dataset.item;
-    if (typeof votes[item] !== "number") {
-      votes[item] = 0;
-    }
-
     btn.addEventListener("click", () => handleVote(btn));
   });
-
-  saveVotes(votes);
 }
 
 function renderVoteCounts() {
-  const votes = loadVotes();
   const counters = document.querySelectorAll("[data-count-for]");
 
   counters.forEach((counter) => {
     const item = counter.dataset.countFor;
-    const total = votes[item] || 0;
+    const total = voteTotals[item] || 0;
     counter.textContent = `${total} vote${total === 1 ? "" : "s"}`;
   });
 }
@@ -103,10 +117,6 @@ function renderMyVotes() {
 
   if (!user) return;
 
-  const ballots = loadBallots();
-  const userKey = user.username.toLowerCase();
-  const myVotes = ballots[userKey] || {};
-
   buttons.forEach((btn) => {
     const group = btn.dataset.group;
     const item = btn.dataset.item;
@@ -120,26 +130,18 @@ function renderMyVotes() {
   });
 }
 
-function handleVote(button) {
+async function handleVote(button) {
   const user = window.Auth?.getCurrentUser();
+  const token = window.Auth?.getToken?.();
 
-  if (!user) {
+  if (!user || !token) {
     alert("Please log in before voting.");
     return;
   }
 
   const group = button.dataset.group;
   const item = button.dataset.item;
-  const userKey = user.username.toLowerCase();
-
-  const votes = loadVotes();
-  const ballots = loadBallots();
-
-  if (!ballots[userKey]) {
-    ballots[userKey] = {};
-  }
-
-  const currentVote = ballots[userKey][group];
+  const currentVote = myVotes[group];
 
   if (currentVote === item) {
     alert("You already selected this option.");
@@ -156,18 +158,36 @@ function handleVote(button) {
 
   if (!confirmed) return;
 
-  if (changingVote && votes[currentVote] > 0) {
-    votes[currentVote] -= 1;
+  try {
+    const res = await fetch(`${API_BASE}/raffle/vote`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ group, item }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data?.ok) {
+      throw new Error(data?.error || "Unable to save vote");
+    }
+
+    voteTotals = {
+      ...voteTotals,
+      ...(data.totals || {}),
+    };
+    myVotes = {
+      weekly: data?.myVotes?.weekly || null,
+      monthly: data?.myVotes?.monthly || null,
+    };
+
+    renderVoteCounts();
+    renderMyVotes();
+
+    alert("Your vote has been saved.");
+  } catch (err) {
+    console.error("[Raffle] Failed to save vote:", err);
+    alert(err.message || "Unable to save vote.");
   }
-
-  votes[item] = (votes[item] || 0) + 1;
-  ballots[userKey][group] = item;
-
-  saveVotes(votes);
-  saveBallots(ballots);
-
-  renderVoteCounts();
-  renderMyVotes();
-
-  alert("Your vote has been saved.");
 }
