@@ -20,6 +20,10 @@
       --lu-text: #111111;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body.auth-page {
       margin: 0;
       min-height: 100vh;
@@ -34,24 +38,26 @@
       background-color: var(--lu-black);
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       position: relative;
       padding: 0 28px;
-      box-sizing: border-box;
       overflow: visible;
     }
 
     .auth-page .topnav-center {
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 1;
     }
 
     .auth-page .topnav-center a {
-      padding: 0;
+      padding: 0 !important;
+      margin: 0;
       background: none;
       display: flex;
       align-items: center;
@@ -65,12 +71,17 @@
     }
 
     .auth-page .topnav-right {
+      position: absolute;
+      right: 28px;
+      top: 0;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 12px;
-      margin-left: auto;
       z-index: 2;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
 
     .auth-page .topnav a {
@@ -80,7 +91,9 @@
       padding: 14px 16px;
       border-radius: 8px;
       font-size: 16px;
+      line-height: 1;
       transition: background-color 0.2s ease, color 0.2s ease;
+      flex-shrink: 0;
     }
 
     .auth-page .topnav a:hover {
@@ -105,6 +118,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .auth-page .pfp img {
@@ -127,26 +141,25 @@
 
     .auth-page .auth-layout {
       min-height: calc(100vh - 72px);
-      max-width: 1380px;
       width: 100%;
+      max-width: 1380px;
       margin: 0 auto;
       padding: 34px 60px;
       display: grid;
-      grid-template-columns: minmax(600px, 1fr) 440px;
+      grid-template-columns: minmax(0, 620px) minmax(360px, 440px);
       gap: 60px;
       align-items: center;
-      box-sizing: border-box;
+      justify-content: center;
     }
 
     .auth-page .auth-text {
       width: 100%;
-      min-width: 600px;
+      max-width: 620px;
       background-color: rgba(255, 255, 255, 0.96);
       border: 1px solid var(--lu-border);
       border-radius: 22px;
       padding: 28px 34px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      box-sizing: border-box;
     }
 
     .auth-page .auth-badge {
@@ -165,7 +178,6 @@
       line-height: 1;
       margin: 0 0 10px;
       color: var(--lu-black);
-      white-space: nowrap;
     }
 
     .auth-page .auth-text h2 {
@@ -197,7 +209,6 @@
       border-radius: 14px;
       padding: 14px;
       min-width: 0;
-      box-sizing: border-box;
     }
 
     .auth-page .auth-highlight-card h3 {
@@ -220,6 +231,7 @@
       padding: 15px 18px;
       font-size: 15px;
       line-height: 1.5;
+      overflow-wrap: break-word;
     }
 
     .auth-page .demo-box strong {
@@ -233,17 +245,19 @@
       padding: 3px 6px;
       border-radius: 5px;
       font-size: 14px;
+      display: inline-block;
+      margin: 2px 0;
     }
 
     .auth-page .auth-card {
       width: 100%;
+      max-width: 440px;
       background-color: var(--lu-white);
       border: 1px solid var(--lu-border);
       border-top: 7px solid var(--lu-red);
       border-radius: 22px;
       padding: 34px;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
-      box-sizing: border-box;
     }
 
     .auth-page .auth-card h2 {
@@ -275,13 +289,13 @@
     }
 
     .auth-page #login-form input {
+      width: 100%;
       height: 48px;
       border: 1px solid #9c9c9c;
       border-radius: 8px;
       padding: 0 14px;
       font-size: 17px;
       background-color: #f9f9f9;
-      box-sizing: border-box;
     }
 
     .auth-page #login-form input:focus {
@@ -328,45 +342,91 @@
       font-weight: bold;
     }
 
-    @media (max-width: 1200px) {
-      .auth-page .auth-layout {
-        grid-template-columns: minmax(520px, 1fr) 420px;
-        gap: 40px;
-        padding: 30px 38px;
-      }
-
-      .auth-page .auth-text {
-        min-width: 520px;
-      }
-
-      .auth-page .auth-text h1 {
-        font-size: 42px;
-      }
-    }
-
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
       .auth-page .auth-layout {
         grid-template-columns: 1fr;
-        padding: 30px 24px;
+        max-width: 720px;
+        padding: 30px 28px;
+        gap: 32px;
+        align-items: start;
       }
 
-      .auth-page .auth-text {
-        min-width: 0;
-      }
-
+      .auth-page .auth-text,
       .auth-page .auth-card {
         max-width: none;
+        width: 100%;
       }
     }
 
-    @media (max-width: 750px) {
-      .auth-page .auth-highlights {
-        grid-template-columns: 1fr;
+    @media (max-width: 850px) {
+      .auth-page .topnav {
+        height: 72px;
+        padding: 0 16px;
+      }
+
+      .auth-page .topnav-right {
+        right: 16px;
+        height: 72px;
+        gap: 10px;
+      }
+
+      .auth-page .nav-logo {
+        height: 50px;
+      }
+
+      .auth-page .pfp {
+        width: 42px;
+        height: 42px;
+      }
+
+      .auth-page .topnav a {
+        font-size: 15px;
+        padding: 13px 14px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .auth-page .topnav {
+        height: 72px;
+        padding: 0 12px;
+      }
+
+      .auth-page .topnav-right {
+        right: 12px;
+        height: 72px;
+        gap: 8px;
+      }
+
+      .auth-page .nav-logo {
+        height: 44px;
+      }
+
+      .auth-page #nav-user {
+        display: none;
+      }
+
+      .auth-page .topnav a {
+        font-size: 14px;
+        padding: 12px 12px;
+      }
+
+      .auth-page .pfp {
+        width: 40px;
+        height: 40px;
+      }
+
+      .auth-page .auth-layout {
+        padding: 30px 16px;
+        gap: 28px;
+      }
+
+      .auth-page .auth-text,
+      .auth-page .auth-card {
+        padding: 24px;
       }
 
       .auth-page .auth-text h1 {
         font-size: 36px;
-        white-space: normal;
       }
 
       .auth-page .auth-text h2 {
@@ -376,34 +436,61 @@
       .auth-page .auth-text p {
         font-size: 17px;
       }
+
+      .auth-page .auth-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-page .auth-highlight-card {
+        padding: 14px 16px;
+      }
     }
 
-    @media (max-width: 600px) {
-      .auth-page .topnav {
-        padding: 0 14px;
+    @media (max-width: 460px) {
+      .auth-page .topnav-center {
+        left: 48%;
       }
 
       .auth-page .nav-logo {
-        height: 46px;
+        height: 40px;
       }
 
-      .auth-page #nav-user {
-        display: none;
-      }
-
-      .auth-page .topnav a {
-        font-size: 14px;
-        padding: 11px 12px;
+      .auth-page .topnav-right {
+        right: 10px;
+        gap: 7px;
       }
 
       .auth-page .pfp {
-        width: 42px;
-        height: 42px;
+        width: 38px;
+        height: 38px;
+      }
+
+      .auth-page .topnav a {
+        font-size: 13px;
+        padding: 11px 10px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .auth-page .auth-layout {
+        padding: 24px 12px;
       }
 
       .auth-page .auth-text,
       .auth-page .auth-card {
-        padding: 24px;
+        padding: 22px;
+      }
+
+      .auth-page .auth-badge {
+        font-size: 14px;
+      }
+
+      .auth-page .auth-text h1 {
+        font-size: 32px;
+      }
+
+      .auth-page .auth-card h2 {
+        font-size: 32px;
       }
     }
   </style>
@@ -413,14 +500,12 @@
   <header>
     <div class="topnav">
 
-      <!-- Center logo image in the top navigation bar -->
       <div class="topnav-center">
         <a href="/index.html" aria-label="Home">
           <img class="nav-logo" src="../assets/LuBucksLogo.png" alt="LU-Bucks Logo">
         </a>
       </div>
 
-      <!-- Right side: login status -->
       <div class="topnav-right">
         <a href="../Profile-Page/Profile.html" class="pfp">
           <img
