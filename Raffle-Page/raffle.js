@@ -132,7 +132,10 @@ async function handleVote(button) {
   const user = window.Auth?.getCurrentUser();
   const token = window.Auth?.getToken?.();
 
+  console.log("[Raffle] handleVote: user=", user?.username, "token present=", !!token, "token value=", token?.slice(0,20));
+
   if (!user || !token) {
+    console.warn("[Raffle] Not logged in or no token — user:", user, "token:", token);
     alert("Please log in before voting.");
     return;
   }
@@ -157,6 +160,7 @@ async function handleVote(button) {
   if (!confirmed) return;
 
   try {
+    console.log("[Raffle] POSTing vote:", { group, item }, "to", API_BASE);
     const res = await fetch(`${API_BASE}/raffle/vote`, {
       method: "POST",
       headers: {
@@ -167,6 +171,7 @@ async function handleVote(button) {
     });
 
     const data = await res.json().catch(() => ({}));
+    console.log("[Raffle] vote response:", res.status, data);
     if (!res.ok || !data?.ok) {
       throw new Error(data?.error || "Unable to save vote");
     }
