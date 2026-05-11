@@ -117,7 +117,15 @@ function loadSessionRaw() {
 }
 
 function getToken() {
-  return localStorage.getItem(TOKEN_KEY) || null;
+  const token = localStorage.getItem(TOKEN_KEY) || null;
+
+  // If backend auth is required, reject stale local fallback token.
+  if (!IS_LOCAL && token === "local-token") {
+    clearSession();
+    return null;
+  }
+
+  return token;
 }
 
 function clearSession() {

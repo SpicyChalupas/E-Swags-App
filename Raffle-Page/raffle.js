@@ -52,17 +52,15 @@ function displayUserInfo(user) {
 
 async function loadVotesFromServer() {
   const token = window.Auth?.getToken?.();
-  if (!token) {
-    renderVoteCounts();
-    renderMyVotes();
-    return;
-  }
 
   try {
+    const headers = {};
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+
     const res = await fetch(`${API_BASE}/raffle/votes`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
+      headers,
     });
 
     if (!res.ok) {
