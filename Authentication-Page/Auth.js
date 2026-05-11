@@ -6,8 +6,18 @@
 // Default to deployed App Runner URL, allow override via window.API_BASE
 const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com";
 
-// Simple local mode for Live Server testing
-const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const API_HOSTNAME = (() => {
+  try {
+    return new URL(API_BASE, window.location.origin).hostname;
+  } catch {
+    return "";
+  }
+})();
+
+// Local mode only when both frontend and API are local
+const IS_LOCAL =
+  ["localhost", "127.0.0.1"].includes(window.location.hostname) &&
+  ["localhost", "127.0.0.1"].includes(API_HOSTNAME);
 
 // Demo users for local mode
 const LOCAL_USERS_KEY = "eswag.localUsers";
@@ -107,7 +117,15 @@ function loadSessionRaw() {
 }
 
 function getToken() {
-  return localStorage.getItem(TOKEN_KEY) || null;
+  const token = localStorage.getItem(TOKEN_KEY) || null;
+
+  // If backend auth is required, reject stale local fallback token.
+  if (!IS_LOCAL && token === "local-token") {
+    clearSession();
+    return null;
+  }
+
+  return token;
 }
 
 function clearSession() {
