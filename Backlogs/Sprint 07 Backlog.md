@@ -37,7 +37,7 @@ Product Backlog SP Total: 70 points total
 | PTG-142 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Diego |
 | PTG-143 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Glaycon |
 | PTG-144 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Andrew |
-| PTG-145 | As a team member, I want to curate my section of the google slides. | 8 | 3 | Y | Ready | Edgar |
+| PTG-145 | As a team member, I want to curate my section of the google slides. | 8 | 3 | Y | Done | Edgar |
 | PTG-146 | As a developer, I want to go through all the pages and files, to help clean up any inconsistencies | 3 | 1 | Y | Done | Edgar |
 | PTG-147 | As the Product Owner, I want to video record and document every feature and functionality of the product as reference for future teams. I want to conceptualize the product as an easy-to-digest idea. | 7 | 5 | N | Done | Diego |
 | PTG-148 | As the Scrum Master, I want to video record and document every feature and functionality of the product as reference for future teams. I want to conceptualize the product as an easy-to-digest idea. | 7 | 5 | N | Ready | Andrew |
