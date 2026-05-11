@@ -35,7 +35,7 @@ Product Backlog SP Total: 70 points total
 | PTG-140 | As a team member, I want to create the google slides presentation, pick a theme, and share access with the rest of the team. | 8 | 4 | Y | Done | Glaycon |
 | PTG-141 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | done| Tom |
 | PTG-142 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Diego |
-| PTG-143 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Glaycon |
+| PTG-143 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | done | Glaycon |
 | PTG-144 | As a team member, I want to curate my section of the google slides. | 8 | 4 | Y | Ready | Andrew |
 | PTG-145 | As a team member, I want to curate my section of the google slides. | 8 | 3 | Y | Done | Edgar |
 | PTG-146 | As a developer, I want to go through all the pages and files, to help clean up any inconsistencies | 3 | 1 | Y | Done | Edgar |
