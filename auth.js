@@ -9,7 +9,17 @@ const LOGIN_PATH = "Authentication-Page/Authentication.html";
 // Default to deployed App Runner URL; still allow overriding via `window.API_BASE`
 const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com"; // Override with window.API_BASE if needed
 
-const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const API_HOSTNAME = (() => {
+  try {
+    return new URL(API_BASE, window.location.origin).hostname;
+  } catch {
+    return "";
+  }
+})();
+
+const IS_LOCAL =
+  ["localhost", "127.0.0.1"].includes(window.location.hostname) &&
+  ["localhost", "127.0.0.1"].includes(API_HOSTNAME);
 const LOCAL_USERS_KEY = "eswag.localUsers";
 const LOCAL_DEMO_USERS = [
   { username: "admin", displayName: "Admin User", role: "admin", credits: 1000, password: "admin123" },
