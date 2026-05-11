@@ -1,6 +1,6 @@
 // Raffle page script
 
-const API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com";
+const RAFFLE_API_BASE = window.API_BASE || "https://x2dfiunvsh.us-east-2.awsapprunner.com";
 
 let voteTotals = {
   "weekly-1": 0,
@@ -59,7 +59,7 @@ async function loadVotesFromServer() {
       headers.Authorization = `Bearer ${token}`;
     }
 
-    const res = await fetch(`${API_BASE}/raffle/votes`, {
+    const res = await fetch(`${RAFFLE_API_BASE}/raffle/votes`, {
       headers,
     });
 
@@ -160,8 +160,8 @@ async function handleVote(button) {
   if (!confirmed) return;
 
   try {
-    console.log("[Raffle] POSTing vote:", { group, item }, "to", API_BASE);
-    const res = await fetch(`${API_BASE}/raffle/vote`, {
+    console.log("[Raffle] POSTing vote:", { group, item }, "to", RAFFLE_API_BASE);
+    const res = await fetch(`${RAFFLE_API_BASE}/raffle/vote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
