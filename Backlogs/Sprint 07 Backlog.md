@@ -25,7 +25,7 @@ Product Backlog SP Total: 70 points total
 | **ID** | **User Story / Task** | **Priority (1-10)** | **Estimate (SP)** | **Spike (Y/N)** | **Status** | **Assigned** |
 |--------|------------------------|--------------|--------------|------------|--------------|--------------|
 | PTG-132 | As a developer, I want the raffle webpage to switch from local storage to backend database storage so users can see total votes from other users, not just their own vote. | 10 | 8 | N | Ready | Andrew |
-| PTG-133 | As a user, I want the login page's design to be updated. It should not say "E-Swag Store" but "LU-Bucks System". Text size should be bigger so it's easier to read. The login container should be bigger to fit the screen more. | 8 | 6 | N | Ready | Glaycon |
+| PTG-133 | As a user, I want the login page's design to be updated. It should not say "E-Swag Store" but "LU-Bucks System". Text size should be bigger so it's easier to read. The login container should be bigger to fit the screen more. | 8 | 6 | N | Done | Glaycon |
 | PTG-134 | As a developer, I want the header styling in "main.css". Fix the login and logout button to match the other nav buttons. | 4 | 2 | N | done | Tom |
 | PTG-135 | As a developer, I want the Google Form feedback form to give credits to the user who submits the form. Their number of credits should update on their account profile. | 10 | 7 | N | Ready | Edgar |
 | PTG-136 | As a developer, I want the Google Form's Name and Email to be required instead of optional. This will help us track who does the form. | 10 | 3 | N | Ready | Edgar |
