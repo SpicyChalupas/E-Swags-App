@@ -14,7 +14,7 @@ Scrum Master: Andrew
 
 Product Owner: Diego
 
-Sprint 8 Planning Date/Time: 8/12
+Sprint 8 Planning Date/Time: 5/12
 
 Sprint Planning Participants: Glaycon, Andrew, Edgar, Tom, Diego 
 
