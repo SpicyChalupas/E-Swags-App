@@ -118,7 +118,7 @@
 .update-box {
   background: #fff;
   border-radius: 10px;
-  padding: 18px;
+  padding: 35px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
   border: 1px solid var(--border);
 }
